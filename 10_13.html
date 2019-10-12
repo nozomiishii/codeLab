@@ -10,6 +10,23 @@
       padding:0;
       background-color:#535c68;
     }
+    .landing{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100vh;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .title h1{
+      color: goldenrod;
+      font-size: 72px;
+      text-align: center;
+    }
+
     .boxes{
       display: flex;
       height: 70vh;
@@ -44,32 +61,49 @@
     }
 
     .item{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       height: 100vh;
-      display: flex;
       z-index: 100;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       display: none;
     }
     .container{
-      flex: auto;
       color: goldenrod;
       font-size: 72px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+    }
+
+    .container h6:hover{
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+
+    .active{
+      display: block;
+    }
+
+    .hide{
+      display: none;
     }
   </style>
 </head>
 <body>
-  <!-- Treasure boxes -->
-  <div class="item">
+  <!-- Treasure boxes start-->
+  <div class="landing">
     <div class="container">
-      <h1>You've got this</h1>
+      <h1>- Treasure boxes 2 -</h1>
+      <h6 id="start">START!</h6>
     </div>
   </div>
-  <div class="title">
-    <h1 style="color: goldenrod; font-size: 72px; text-align: center; margin-top:50px;">- Treasure boxes 2 -</h1>
-  </div>
+
+  <!-- choose your treasure -->
   <div class="boxes">
     <div class="box" style="background-color: #f9ca24;">
       <h1>壱</h1>
@@ -88,18 +122,46 @@
       <p>💩</p>
     </div>
   </div>
+  <div class="title">
+    <h1 class="hide">Pick one as your treasure...</h1>
+  </div>
+
+  <!-- treasure is found -->
+  <div class="item">
+    <div class="container">
+      <h1>You've got this</h1>
+      <h6 id="try">Try again?</h6>
+    </div>
+  </div>
+
   <script>
     $(function(){
+      // opening
       $('.title').css('display','none').fadeIn(1000);
+      $('h6').hide().fadeIn(1000);
       $('.box').hide();
       $('.box').each(function(i){
         $(this).delay(1000 * i).fadeIn(5000);
       });
 
+      // start the game
+      $('#start').click(function(){
+        $('.landing').slideUp();
+        setTimeout(function(){
+          $('.title').children('h1').removeClass('hide');
+        },1000);
+      });
+      // choose treasure box
       $(".box").click(function(){
         $(this).find('h1').addClass('open');
         $(this).find('p').addClass('treasure');
+        $('.item').addClass('active');
       });
+
+      // try again
+      $('#try').click(function(){
+        $('.item').removeClass('active');
+      })
     })
   </script>
 </body>

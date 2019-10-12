@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10_14</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+    }
+
+    .main{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .btn{
+      width:160px;
+      height:80px;
+      color:white;
+      background-color:#30336b;
+      box-shadow: 0px 7px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .btn:hover{
+      opacity: 0.8;
+    }
+
+    .btn:active{
+      position:relative;
+      box-shadow: none;
+      top: 7px;
+    }
+    .virus{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 100;
+      display: none;
+      border: 1px solid red;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal {
+      background-color: #e6ecf0;
+      padding: 100px;
+      border-radius: 10px;
+      border: 1px solid red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .active{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="btn">Click!!</div>
+  </div>
+
+  <div class="virus">
+    <div class="modal">
+      <h1><strong>WARNING!!</strong></h1>
+      <p>☠Your computer has been infected with virus☠</p>
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      $('.btn').hide().fadeIn();
+      $('.btn').click(function(){
+        $('body').css('background-color','red');
+        setTimeout(function(){
+          $('.virus').addClass('active');
+        },2000);
+      });
+    });
+  </script>
+</body>
+</html>
