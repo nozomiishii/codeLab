@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10_12</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      background-color:#535c68;
+    }
+    .boxes{
+      display: flex;
+      height: 70vh;
+      align-items: center;
+      justify-content: space-around;
+
+    }
+    .box{
+      margin: 10px;
+      padding: 40px;
+      font-size: 30px;
+      height: 64px;
+      width: 64px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25%;
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
+    .box:hover{
+      transform: scale(1.4);
+    }
+    .open{
+      display: none;
+    }
+    .treasure{
+      display: block;
+    }
+    p{
+      font-size: 64px;
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Treasure boxes -->
+  <div class="title">
+    <h1 style=" color: goldenrod; font-size: 72px; text-align: center; margin-top:50px;">Treasure boxes</h1>
+  </div>
+  <div class="boxes">
+    <div class="box" style="background-color: #f9ca24;">
+      <h1>壱</h1>
+      <p>🗡</p>
+    </div>
+    <div class="box" style="background-color: #30336b;">
+      <h1>2</h1>
+      <p>🛡</p>
+    </div>
+    <div class="box" style="background-color: #eb4d4b;">
+      <h1>III</h1>
+      <p>💰</p>
+    </div>
+    <div class="box" style="background-color: #6ab04c;">
+      <h1>four</h1>
+      <p>💩</p>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      $('.title').css('display','none').fadeIn(1000);
+      $('.box').hide();
+      $('.box').each(function(i){
+        $(this).delay(1000 * i).fadeIn(5000);
+      });
+
+      $(".box").click(function(){
+        $(this).find('h1').addClass('open');
+        $(this).find('p').addClass('treasure');
+      });
+    })
+  </script>
+</body>
+</html>
+
