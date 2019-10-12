@@ -10,6 +10,8 @@
       padding:0;
       background-color:#535c68;
     }
+
+    /*Treasure boxes start*/
     .landing{
       position: fixed;
       top: 0;
@@ -21,12 +23,7 @@
       background-color: rgba(0, 0, 0, 0.7);
     }
 
-    .title h1{
-      color: goldenrod;
-      font-size: 72px;
-      text-align: center;
-    }
-
+    /*choose your treasure*/
     .boxes{
       display: flex;
       height: 70vh;
@@ -60,6 +57,13 @@
       display: none;
     }
 
+    .title h1{
+      color: goldenrod;
+      font-size: 72px;
+      text-align: center;
+    }
+
+    /*　treasure is found*/
     .item{
       position: fixed;
       top: 0;
@@ -73,11 +77,15 @@
     }
     .container{
       color: goldenrod;
-      font-size: 72px;
+      font-size: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+    }
+
+    .container span{
+      font-size: 200px;
     }
 
     .container h6:hover{
@@ -105,19 +113,19 @@
 
   <!-- choose your treasure -->
   <div class="boxes">
-    <div class="box" style="background-color: #f9ca24;">
+    <div class="box sword" style="background-color: #f9ca24;">
       <h1>壱</h1>
       <p>🗡</p>
     </div>
-    <div class="box" style="background-color: #30336b;">
+    <div class="box shield" style="background-color: #30336b;">
       <h1>2</h1>
       <p>🛡</p>
     </div>
-    <div class="box" style="background-color: #eb4d4b;">
+    <div class="box money" style="background-color: #eb4d4b;">
       <h1>III</h1>
       <p>💰</p>
     </div>
-    <div class="box" style="background-color: #6ab04c;">
+    <div class="box shit" style="background-color: #6ab04c;">
       <h1>four</h1>
       <p>💩</p>
     </div>
@@ -130,6 +138,7 @@
   <div class="item">
     <div class="container">
       <h1>You've got this</h1>
+      <span></span>
       <h6 id="try">Try again?</h6>
     </div>
   </div>
@@ -153,13 +162,26 @@
       });
       // choose treasure box
       $(".box").click(function(){
-        $(this).find('h1').addClass('open');
-        $(this).find('p').addClass('treasure');
+        var $this = $(this)
+        $this.find('h1').addClass('open');
+        $this.find('p').addClass('treasure');
         $('.item').addClass('active');
+        $('.title').children('h1').addClass('hide');
+        // found
+        if($this.hasClass('sword')){
+          $('.container').find('span').text('🗡');
+        } else if($this.hasClass('shield')){
+          $('.container').find('span').text('🛡');
+        } else if($this.hasClass('money')){
+          $('.container').find('span').text('💰');
+        } else if($this.hasClass('shit')){
+          $('.container').find('span').text('💩');
+        }
       });
 
       // try again
       $('#try').click(function(){
+        $('.title').children('h1').removeClass('hide');
         $('.item').removeClass('active');
       })
     })
