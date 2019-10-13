@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10_15_pouchMonsters</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+    }
+
+    /*opening page;*/
+    .title{
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      color: white;
+      background-color : #625499;
+      opacity:0.9;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .title h1{
+      font-size: 82px;
+      filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    }
+
+    .title p{
+      color:#625499;
+      background-color: white;
+      font-size: 64px;
+      padding:10px;
+      border-radius: 2px;
+    }
+    .title p:hover{
+      opacity: 0.7;
+      transform: scale(1.4);
+    }
+
+
+    /*game page;*/
+    .monsters{
+      list-style: none;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .monsters li{
+      flex: 1;
+      border: 1px solid red;
+    }
+
+    .monster{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- opening page -->
+  <div class="title">
+    <h1>POUCH MONSTERS</h1>
+    <p>START</p>
+  </div>
+
+  <!-- game page  -->
+  <div class="box">
+    <ul class='monsters'>
+      <li>
+        <div class="monster" style="background-color: #e74c3c;">
+          <h1>Firegon</h1>
+          <p>Strong fire like alrealy it's magma!</p>
+        </div>
+      </li>
+      <li>
+        <div class="monster" style="background-color: #3498db;">
+          <h1>Waturtle</h1>
+          <p>300 kPa water pressure. good enough to kill your iPhone!</p>
+        </div>
+      </li>
+      <li>
+        <div class="monster" style="background-color:#1abc9c;">
+          <h1>Weed</h1>
+          <p>
+            Well...ya..weed.
+            I mean weed. As you can see.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    $(function(){
+      // opening page
+      $('.title p').click(function(){
+        $('.title').slideUp();
+      })
+
+      // choose moster
+      const test = $('li').index($('.active'))
+      console.log(test);
+    });
+  </script>
+</body>
+</html>
