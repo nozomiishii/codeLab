@@ -17,9 +17,9 @@
       left:0;
       right:0;
       bottom:0;
+      z-index: 100;
       color: white;
       background-color : #625499;
-      opacity:0.9;
       display: flex;
       align-items:center;
       justify-content: center;
@@ -41,30 +41,68 @@
     .title p:hover{
       opacity: 0.7;
       transform: scale(1.4);
+      transition: 0.5s;
     }
 
 
     /*game page;*/
+    .box{
+      display: flex;
+      flex-direction: column;
+    }
     .monsters{
       list-style: none;
       display: flex;
-      height: 100vh;
+      height: 60vh;
       align-items: center;
       justify-content: center;
       padding: 10px;
     }
 
-    .monsters li{
-      flex: 1;
-      border: 1px solid red;
-    }
-
     .monster{
-      display: flex;
       flex-direction: column;
       align-items: center;
       align-content: center;
       margin: 50px;
+      display: none;
+    }
+    .active{
+      display: block;
+    }
+
+    /*balls*/
+    .balls{
+      position: fixed;
+      top:60vh;
+      width:100vw;
+      list-style: none;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+    }
+    .balls li{
+      width: 50px;
+      height: 50px;
+      padding: 50px;
+      border-radius: 100%;
+    }
+    .balls span{
+      display: block;
+      width: 100%;
+      height:100%;
+      border-radius: 100%;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      font-size: 20px;
+      filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.7));
+    }
+    .balls span:hover{
+      transform: scale(1.4);
+      opacity: 0.8;
+      color: white;
+      transition: 0.5s;
     }
   </style>
 </head>
@@ -78,29 +116,40 @@
   <!-- game page  -->
   <div class="box">
     <ul class='monsters'>
-      <li>
-        <div class="monster" style="background-color: #e74c3c;">
+
+        <li class="monster" style="background-color: #e74c3c;">
           <h1>Firegon</h1>
           <p>Strong fire like alrealy it's magma!</p>
-        </div>
-      </li>
-      <li>
-        <div class="monster" style="background-color: #3498db;">
+        </li>
+
+
+        <li class="monster" style="background-color: #3498db;">
           <h1>Waturtle</h1>
           <p>300 kPa water pressure. good enough to kill your iPhone!</p>
-        </div>
-      </li>
-      <li>
-        <div class="monster" style="background-color:#1abc9c;">
+        </li>
+
+
+        <li class="monster" style="background-color:#1abc9c;">
           <h1>Weed</h1>
           <p>
-            Well...ya..weed.
-            I mean weed. As you can see.
+            Well...ya..weed.I mean, weed. As you can see.
           </p>
-        </div>
-      </li>
+        </li>
+
+
+        <li class="monster active" style="color : #625499;">
+          <h1>CHOOSE YOUR POUCHMON</h1>
+          <p>click one of ball!!</p>
+        </li>
+
+    </ul>
+    <ul class="balls">
+      <li><span style="background-color: #e74c3c;">◎</span></li>
+      <li><span style="background-color: #3498db;">◎</span></li>
+      <li><span style="background-color: #1abc9c;">◎</span></li>
     </ul>
   </div>
+
 
   <script>
     $(function(){
@@ -110,8 +159,12 @@
       })
 
       // choose moster
-      const test = $('li').index($('.active'))
-      console.log(test);
+      $('.balls li').click(function(){
+        $('.active').removeClass('active');
+        const ballIndex = $('.balls li').index($(this));
+        console.log(ballIndex);
+        $('.monsters li').eq(ballIndex).addClass('active');
+      });
     });
   </script>
 </body>
