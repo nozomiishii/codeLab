@@ -39,7 +39,7 @@
 
     /*write css code here*/
     .cars ul{
-      height: 50vh;
+      height: 70vh;
       padding: 0;
       margin: 0 auto;
       list-style: none;
@@ -99,6 +99,11 @@
       transform: translateY(4px);
       border-bottom: none;
     }
+
+    /*comment*/
+    .comment{
+      text-align:center;
+    }
   </style>
 </head>
 <body>
@@ -110,7 +115,7 @@
   <!-- choose your car-->
   <div class="cars">
     <ul>
-      <li>
+      <li class="selected">
         <span>🚗</span>
       </li>
       <li>
@@ -135,12 +140,12 @@
   </div>
   <div class="arrow">
     <ul>
-      <li>←</li>
-      <li>→</li>
+      <li class="prev">←</li>
+      <li class="next">→</li>
     </ul>
   </div>
-  <div class="btn">
-
+  <div class="comment">
+    <h1>Choose Your Car</h1>
   </div>
 
 
@@ -151,10 +156,25 @@
         $('.start').slideUp();
       });
 
-      // write js code here
+      // select your car
     $('.cars li').click(function(){
       $('.selected').removeClass('selected');
       $(this).addClass('selected');
+    });
+
+      // select your car with arrow button
+    $('.arrow li').click(function(){
+      var $displaySlide = $('.selected');
+      $displaySlide.removeClass('selected');
+
+      if($(this).hasClass('next')){
+        console.log('next')
+        $displaySlide.next().addClass('selected');
+      } else {
+        console.log('prev')
+        $displaySlide.prev().addClass('selected');
+      }
+
     });
 
     });
