@@ -38,19 +38,110 @@
     }
 
     /*write css code here*/
+    .cars ul{
+      height: 50vh;
+      padding: 0;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      font-size: 62px;
+      justify-content: center;
+      align-items: center;
+    }
+    .cars li{
+      flex: auto;
+      text-align: center;
+    }
+    .cars span{
+      display: block;
+    }
+    .cars span:hover{
+      transform: scale(1.6);
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .selected{
+      border: 5px dashed #ff5252;
+    }
+    .confirm{
+      display: block;
+    }
 
-
-
+    /*arrow*/
+    .arrow ul{
+      list-style: none;
+      display: flex;
+      height: 10vh;
+      font-size: 32px;
+      justify-content: center;
+      margin:0 auto;
+      padding:0;
+    }
+    .arrow li{
+      width: 7vh;
+      height: 7vh;
+      padding: 0 10px;
+      margin: 0 50px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      border-bottom: solid 4px #292929;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+    }
+    .arrow li:hover{
+      opacity: 0.8;
+    }
+    .arrow li:active{
+      transform: translateY(4px);
+      border-bottom: none;
+    }
   </style>
 </head>
 <body>
-  <div class="start">
+  <div class="start" style="display: none;">
     <h1>🏁CAR RASING🏁</h1>
     <h6>START!!</h6>
   </div>
 
-  <!-- write html code here -->
+  <!-- choose your car-->
+  <div class="cars">
+    <ul>
+      <li>
+        <span>🚗</span>
+      </li>
+      <li>
+        <span>🚙</span>
+      </li>
+      <li>
+        <span>🚓</span>
+      </li>
+      <li>
+        <span>🚐</span>
+      </li>
+      <li>
+        <span>🚂</span>
+      </li>
+      <li>
+        <span>🛴</span>
+      </li>
+      <li>
+        <span>🛸</span>
+      </li>
+    </ul>
+  </div>
+  <div class="arrow">
+    <ul>
+      <li>←</li>
+      <li>→</li>
+    </ul>
+  </div>
+  <div class="btn">
 
+  </div>
 
 
   <script>
@@ -61,7 +152,10 @@
       });
 
       // write js code here
-
+    $('.cars li').click(function(){
+      $('.selected').removeClass('selected');
+      $(this).addClass('selected');
+    });
 
     });
   </script>
