@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    * {
+/*      margin:0;
+      padding:0;*/
+      box-sizing: border-box;
+    }
+    /*game start*/
+    .start{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100vh;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      /*justify-content: space-around;*/
+      flex-direction: column;
+      /*color*/
+      color:white;
+      /*size*/
+      font-size: 72px;
+      /*border: 1px solid red;*/
+    }
+/*    .start > *{
+      border: 1px solid red;
+    }
+*/
+    .start h6:hover{
+      transform: scale(1.4);
+      transition: 0.5s;
+      filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    }
+
+    /*write css code here*/
+
+
+    /*iphone*/
+    @media all and (max-width: 670px){
+      .start{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="start" >
+    <h1>Title</h1>
+    <h6>START!!</h6>
+  </div>
+
+  <!-- write html code here -->
+
+
+
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+
+      // write js code here
+
+
+    });
+  </script>
+</body>
+</html>
