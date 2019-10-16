@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>adventure</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
@@ -39,20 +39,40 @@
     }
 
     /*write css code here*/
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+      height: 30vh;
+      border: 1px solid red;
+    }
 
-
-
+    form {
+      display: flex;
+      flex-direction: column;
+    }
   </style>
 </head>
 <body>
   <div class="start" style="display: none;">
-    <h1>Title</h1>
+    <h1>Adventure</h1>
     <h6>START!!</h6>
   </div>
 
   <!-- write html code here -->
-
-
+  <div class="container">
+  </div>
+  <div class="hero container">
+    <h1>🦸🏻‍♂️</h1>
+    <p>My name is "<span class="output"></span>"</p>
+  </div>
+  <div class="form container">
+    <form>
+      <input type="text" placeholder="name">
+      <button>Enter</button>
+    </form>
+  </div>
 
   <script>
     $(function(){

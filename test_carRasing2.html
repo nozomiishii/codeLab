@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_16_car_rasing</title>
+  <title>carRasing2</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
@@ -37,14 +37,26 @@
       filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
     }
 
-    /*write css code here*/
+    /*comment*/
+    .comment{
+      height: 10vh;
+      text-align:center;
+    }
+    /*cars*/
+    .display ul{
+      height: 50vh;
+      font-size: 100px;
+      display: flex;
+    }
+    .btn ul{
+      height: 40vh;
+      font-size: 62px;
+      display: flex;
+    }
     .cars ul{
-      height: 70vh;
       padding: 0;
       margin: 0 auto;
       list-style: none;
-      display: flex;
-      font-size: 62px;
       justify-content: center;
       align-items: center;
     }
@@ -55,16 +67,21 @@
     .cars span{
       display: block;
     }
-    .cars span:hover{
-      transform: scale(1.6);
-      transition: 0.2s;
+    .cars li:hover{
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 5px solid #ff5252;
       cursor: pointer;
     }
     .selected{
       border: 5px dashed #ff5252;
     }
+    .selected span{
+      transform: translateX(-100vw);
+      transition: 1.0s;
+
+    }
     .confirm{
-      display: block;
+      display: flex;
     }
 
     /*arrow*/
@@ -100,22 +117,18 @@
       border-bottom: none;
     }
 
-    /*comment*/
-    .comment{
-      text-align:center;
-    }
   </style>
 </head>
 <body>
-  <div class="start" style="display: none;">
-    <h1>🏁CAR RASING🏁</h1>
+  <div class="start">
+    <h1>🏁CAR RASING 2🏁</h1>
     <h6>START!!</h6>
   </div>
 
-  <!-- choose your car-->
-  <div class="cars">
+  <!-- display car -->
+<!--   <div class="cars display">
     <ul>
-      <li class="selected">
+      <li>
         <span>🚗</span>
       </li>
       <li>
@@ -138,15 +151,42 @@
       </li>
     </ul>
   </div>
-  <div class="arrow">
+ -->
+  <!-- choose your car-->
+  <div class="comment">
+    <h1>Choose Your Car</h1>
+  </div>
+  <div class="cars btn">
+    <ul>
+      <li>
+        <span>🚗</span>
+      </li>
+      <li>
+        <span>🚙</span>
+      </li>
+      <li>
+        <span>🚓</span>
+      </li>
+      <li>
+        <span>🚐</span>
+      </li>
+      <li>
+        <span>🚂</span>
+      </li>
+      <li>
+        <span>🛴</span>
+      </li>
+      <li>
+        <span>🛸</span>
+      </li>
+    </ul>
+  </div>
+<!--   <div class="arrow">
     <ul>
       <li class="prev">←</li>
       <li class="next">→</li>
     </ul>
-  </div>
-  <div class="comment">
-    <h1>Choose Your Car</h1>
-  </div>
+  </div> -->
 
 
   <script>
@@ -157,26 +197,29 @@
       });
 
       // select your car
-    $('.cars li').click(function(){
-      $('.selected').removeClass('selected');
-      $(this).addClass('selected');
-    });
+      $('.cars li').click(function(){
+        $('.selected').removeClass('selected');
+        $(this).addClass('selected');
+        const car = $(this).html();
+        console.log(car);
+        const index = $(this).index();
+        console.log(index)
+      });
+
 
       // select your car with arrow button
-    $('.arrow li').click(function(){
-      var $displaySlide = $('.selected');
-      $displaySlide.removeClass('selected');
+      $('.arrow li').click(function(){
+        const $displaySlide = $('.selected');
+        $displaySlide.removeClass('selected');
 
-      if($(this).hasClass('next')){
-        console.log('next')
-        $displaySlide.next().addClass('selected');
-      } else {
-        console.log('prev')
-        $displaySlide.prev().addClass('selected');
-      }
-
-    });
-
+        if($(this).hasClass('next')){
+          console.log('next')
+          $displaySlide.next().addClass('selected');
+        } else {
+          console.log('prev')
+          $displaySlide.prev().addClass('selected');
+        }
+      });
     });
   </script>
 </body>
