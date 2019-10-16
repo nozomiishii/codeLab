@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_16_carRasing2</title>
+  <title>carRasing2</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
@@ -120,13 +120,13 @@
   </style>
 </head>
 <body>
-  <div class="start" style="display: none;">
+  <div class="start">
     <h1>🏁CAR RASING 2🏁</h1>
     <h6>START!!</h6>
   </div>
 
   <!-- display car -->
-  <div class="cars display">
+<!--   <div class="cars display">
     <ul>
       <li>
         <span>🚗</span>
@@ -151,7 +151,7 @@
       </li>
     </ul>
   </div>
-
+ -->
   <!-- choose your car-->
   <div class="comment">
     <h1>Choose Your Car</h1>
@@ -200,11 +200,16 @@
       $('.cars li').click(function(){
         $('.selected').removeClass('selected');
         $(this).addClass('selected');
+        const car = $(this).html();
+        console.log(car);
+        const index = $(this).index();
+        console.log(index)
       });
+
 
       // select your car with arrow button
       $('.arrow li').click(function(){
-        var $displaySlide = $('.selected');
+        const $displaySlide = $('.selected');
         $displaySlide.removeClass('selected');
 
         if($(this).hasClass('next')){
