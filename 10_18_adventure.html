@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>adventure2</title>
+  <title>adventure</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
-      margin:0;
-      padding:0;
+      /*border: 1px solid red;*/
     }
     * {
       box-sizing: border-box;
+      /*border: 1px solid white;*/
     }
     /*game start*/
     .start{
@@ -22,7 +22,7 @@
       bottom: 0;
       height: 100vh;
       z-index: 100;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: black;
       display: flex;
       align-items:center;
       justify-content: center;
@@ -46,7 +46,6 @@
       align-items:center;
       justify-content: center;
       height: 30vh;
-      border: 1px solid red;
     }
 
     /*form*/
@@ -56,14 +55,11 @@
       align-items: center;
       height: 100%;
       width: 50vw;
-      border: 1px solid red;
-
     }
     form > *{
       flex: auto;
       width: 60%;
       height: 30px;
-      border: 1px solid red;
       margin: 10px;
     }
     button {
@@ -83,7 +79,7 @@
   </style>
 </head>
 <body>
-  <div class="start" style="display: none;">
+  <div class="start">
     <h1>Adventure</h1>
     <h6>START!!</h6>
   </div>
@@ -94,7 +90,7 @@
   </div>
   <div class="hero container">
     <h1>👤<span></span></h1>
-    <p>My name is "<span class="output"></span>"</p>
+    <p>My name is...<span class="output"></span></p>
   </div>
   <div class="form container">
     <form>
