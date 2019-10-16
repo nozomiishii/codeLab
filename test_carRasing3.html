@@ -43,10 +43,17 @@
       text-align:center;
     }
     /*cars*/
-    .display ul{
+    .display{
       height: 50vh;
       font-size: 100px;
       display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .show{
+      font-size: 250px;
+      transform: translateX(calc(-50vw + 125px));
+      transition:1.0s;
     }
     .btn ul{
       height: 40vh;
@@ -120,38 +127,15 @@
   </style>
 </head>
 <body>
-  <div class="start">
+  <div class="start" style="display: none;">
     <h1>🏁CAR RASING 2🏁</h1>
     <h6>START!!</h6>
   </div>
 
   <!-- display car -->
-<!--   <div class="cars display">
-    <ul>
-      <li>
-        <span>🚗</span>
-      </li>
-      <li>
-        <span>🚙</span>
-      </li>
-      <li>
-        <span>🚓</span>
-      </li>
-      <li>
-        <span>🚐</span>
-      </li>
-      <li>
-        <span>🚂</span>
-      </li>
-      <li>
-        <span>🛴</span>
-      </li>
-      <li>
-        <span>🛸</span>
-      </li>
-    </ul>
+  <div class="display">
   </div>
- -->
+
   <!-- choose your car-->
   <div class="comment">
     <h1>Choose Your Car</h1>
@@ -198,10 +182,15 @@
 
       // select your car
       $('.cars li').click(function(){
+        $('.display').html('');
+        $('.show').removeClass('show');
         $('.selected').removeClass('selected');
         $(this).addClass('selected');
         const car = $(this).html();
-        console.log(car);
+        setTimeout(function(){
+          $('.display').html(car);
+          $('.display').addClass('show');
+        }, 500);
         const index = $(this).index();
         console.log(index)
       });
