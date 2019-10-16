@@ -49,6 +49,7 @@
       border: 1px solid red;
     }
 
+    /*form*/
     form {
       display: flex;
       flex-direction: column;
@@ -62,15 +63,24 @@
   </div>
 
   <!-- write html code here -->
-  <div class="container">
+  <div class="god container">
+    <h1>🧖‍♂️<span>Yo! Did you wake up?? Who are you?</span></h1>
   </div>
   <div class="hero container">
-    <h1>🦸🏻‍♂️</h1>
+    <h1>👤<span></span></h1>
     <p>My name is "<span class="output"></span>"</p>
   </div>
   <div class="form container">
     <form>
-      <input type="text" placeholder="name">
+      <input type="text" id="name" placeholder="name">
+      <select id="select-form">
+        <option value="👤">Tell me about yourself</option>
+        <option value="🧝">Elf</option>
+        <option value="🧚">Fairy</option>
+        <option value="🦸">Hero</option>
+        <option value="🧙">Majician</option>
+        <option value="🧜">Merperson</option>
+      </select>
       <button>Enter</button>
     </form>
   </div>
@@ -82,9 +92,20 @@
         $('.start').slideUp();
       });
 
-      // write js code here
-
-
+      // name your hero
+      $('form').submit(function(){
+        const role = $('#select-form').val();
+        const name = $('#name').val();
+        $('.hero h1').text(role);
+        $('.output').text(name);
+        if(role == '👤' || name == ''){
+          console.log('working');
+          $('.god span').text("Didn't you remember who you are?").css('color','red');
+        } else {
+          $('.god span').text(`aha! Now I know, your name is ${name}! ${role}`).css('color','black');
+        }
+        return false;
+      });
     });
   </script>
 </body>
