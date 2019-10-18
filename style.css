@@ -69,11 +69,13 @@ footer {
 }
 */
 .webpage a{
+  width:120px;
   padding: 10px;
   color: white;
   background-color: #4E5E2C;
   border-radius: 5px;
   box-shadow: 0 7px #191B1F;
+  text-align: center;
 }
 .webpage a:hover{
   box-shadow: none;
@@ -85,11 +87,13 @@ footer {
 }
 
 .paypal a{
+  width:120px;
   padding: 10px;
   color: white;
   background-color: #DEAF3F;
   border-radius: 5px;
   box-shadow: 0 7px #C29301;
+  text-align: center;
 }
 .paypal a:hover{
   box-shadow: none;
