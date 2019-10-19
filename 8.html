@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_28_adventure</title>
+  <title>10_27_carRasing2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
-      /*border: 1px solid red;*/
+      margin:0;
+      padding:0;
     }
     * {
       box-sizing: border-box;
-      /*border: 1px solid white;*/
     }
     /*game start*/
     .start{
@@ -22,90 +22,163 @@
       bottom: 0;
       height: 100vh;
       z-index: 100;
-      background-color: black;
+      background-color: white;
       display: flex;
       align-items:center;
       justify-content: center;
       flex-direction: column;
-      /*color*/
-      color:white;
-      /*size*/
+      color:black;
       font-size: 72px;
+      border: 20px dashed black;
     }
-
+    /*iphone*/
+    @media all and (max-width: 670px){
+      .start{
+        font-size:18px;
+        border: 5px dashed black;
+      }
+    }
     .start h6:hover{
       transform: scale(1.4);
       transition: 0.5s;
       filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
     }
 
-    /*write css code here*/
-    .container {
+    /*comment*/
+    .comment{
+      height: 10vh;
+      text-align:center;
+    }
+    /*cars*/
+    .display{
+      height: 50vh;
+      font-size: 100px;
       display: flex;
-      flex-direction: column;
-      align-items:center;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .show{
+      font-size: 250px;
+      transform: translateX(calc(-50vw + 125px));
+      transition:1.0s;
+    }
+    .btn ul{
+      height: 40vh;
+      font-size: 62px;
+      display: flex;
+    }
+    .cars ul{
+      padding: 0;
+      margin: 0 auto;
+      list-style: none;
       justify-content: center;
-      height: 30vh;
+      align-items: center;
+    }
+    .cars li{
+      flex: auto;
+      text-align: center;
+    }
+    .cars span{
+      display: block;
+    }
+    .cars li:hover{
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 5px solid #ff5252;
+      cursor: pointer;
+    }
+    .selected{
+      border: 5px dashed #ff5252;
+    }
+    .selected span{
+      transform: translateX(-100vw);
+      transition: 1.0s;
+
+    }
+    .confirm{
+      display: flex;
     }
 
-    /*form*/
-    form {
+    /*arrow*/
+    .arrow ul{
+      list-style: none;
       display: flex;
-      flex-direction: column;
+      height: 10vh;
+      font-size: 32px;
+      justify-content: center;
+      margin:0 auto;
+      padding:0;
+    }
+    .arrow li{
+      width: 7vh;
+      height: 7vh;
+      padding: 0 10px;
+      margin: 0 50px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      height: 100%;
-      width: 50vw;
+      border-radius: 3px;
+      border-bottom: solid 4px #292929;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
     }
-    form > *{
-      flex: auto;
-      width: 60%;
-      height: 30px;
-      margin: 10px;
-    }
-    button {
-      width:200px;
-      color:white;
-      font-size: 18px;
-      background-color:#52DE97;
-    }
-    button:hover{
+    .arrow li:hover{
       opacity: 0.8;
-      transition: 1s;
     }
-    .submit{
-      transform: rotateX(360deg);
-      transition: 1s;
+    .arrow li:active{
+      transform: translateY(4px);
+      border-bottom: none;
     }
+
   </style>
 </head>
 <body>
   <div class="start">
-    <h1>Adventure</h1>
+    <h1>🏁CAR RASING 2🏁</h1>
     <h6>START!!</h6>
   </div>
 
-  <!-- write html code here -->
-  <div class="god container">
-    <h1>🧖‍♂️<span>Yo! Did you wake up?? Who are you?</span></h1>
+  <!-- display car -->
+  <div class="display">
   </div>
-  <div class="hero container">
-    <h1>👤<span></span></h1>
-    <p>My name is...<span class="output"></span></p>
+
+  <!-- choose your car-->
+  <div class="comment">
+    <h1>Choose Your Car</h1>
   </div>
-  <div class="form container">
-    <form>
-      <input type="text" id="name" placeholder="name">
-      <select id="select-form">
-        <option value="👤">Tell me about yourself</option>
-        <option value="🧝">Elf</option>
-        <option value="🧚">Fairy</option>
-        <option value="🦸">Hero</option>
-        <option value="🧙">Majician</option>
-        <option value="🧜">Merperson</option>
-      </select>
-      <button class="btn">Enter</button>
-    </form>
+  <div class="cars btn">
+    <ul>
+      <li>
+        <span>🚗</span>
+      </li>
+      <li>
+        <span>🚙</span>
+      </li>
+      <li>
+        <span>🚓</span>
+      </li>
+      <li>
+        <span>🚐</span>
+      </li>
+      <li>
+        <span>🚂</span>
+      </li>
+      <li>
+        <span>🛴</span>
+      </li>
+      <li>
+        <span>🛸</span>
+      </li>
+    </ul>
   </div>
+<!--   <div class="arrow">
+    <ul>
+      <li class="prev">←</li>
+      <li class="next">→</li>
+    </ul>
+  </div> -->
+
 
   <script>
     $(function(){
@@ -113,20 +186,35 @@
       $('.start h6').click(function(){
         $('.start').slideUp();
       });
-      // name your hero
-      $('form').submit(function(){
-        const role = $('#select-form').val();
-        const name = $('#name').val();
-        $('.hero h1').text(role);
-        $('.output').text(name);
-        if(role == '👤' || name == ''){
-          console.log('working');
-          $('.god span').text("Didn't you remember who you are?").css('color','red');
+
+      // select your car
+      $('.cars li').click(function(){
+        $('.display').html('');
+        $('.show').removeClass('show');
+        $('.selected').removeClass('selected');
+        $(this).addClass('selected');
+        const car = $(this).html();
+        setTimeout(function(){
+          $('.display').html(car);
+          $('.display').addClass('show');
+        }, 500);
+        const index = $(this).index();
+        console.log(index)
+      });
+
+
+      // select your car with arrow button
+      $('.arrow li').click(function(){
+        const $displaySlide = $('.selected');
+        $displaySlide.removeClass('selected');
+
+        if($(this).hasClass('next')){
+          console.log('next')
+          $displaySlide.next().addClass('selected');
         } else {
-          $('.god span').text(`aha! Now I know, your name is ${name}! ${role}`).css('color','black');
+          console.log('prev')
+          $displaySlide.prev().addClass('selected');
         }
-        $('button').addClass('submit');
-        return false;
       });
     });
   </script>

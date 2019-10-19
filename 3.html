@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_23_treasureBoxes2</title>
+  <title>10_21_treasureBoxes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
@@ -14,20 +14,6 @@
     * {
       box-sizing: border-box;
     }
-
-    /*Treasure boxes start*/
-    .landing{
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      height: 100vh;
-      z-index: 100;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    /*choose your treasure*/
     .boxes{
       display: flex;
       height: 70vh;
@@ -49,7 +35,6 @@
     }
     .box:hover{
       transform: scale(1.4);
-      cursor: pointer;
     }
     .open{
       display: none;
@@ -62,134 +47,63 @@
       display: none;
     }
 
-    .title h1{
-      color: goldenrod;
-      font-size: 72px;
-      text-align: center;
-    }
-
-    /*　treasure is found*/
     .item{
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
       height: 100vh;
+      display: flex;
       z-index: 100;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.6);
       display: none;
     }
     .container{
+      flex: auto;
       color: goldenrod;
-      font-size: 64px;
+      font-size: 72px;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
-    }
-
-    .container span{
-      font-size: 200px;
-    }
-
-    .container h6:hover{
-      transform: scale(1.2);
-      opacity: 0.7;
-      cursor: pointer;
-    }
-
-    .active{
-      display: block;
-    }
-
-    .hide{
-      display: none;
     }
   </style>
 </head>
 <body>
-  <!-- Treasure boxes start-->
-  <div class="landing">
+  <!-- Treasure boxes -->
+  <div class="item">
     <div class="container">
-      <h1>- Treasure boxes 2 -</h1>
-      <h6 id="start">START!</h6>
+      <h1>You've got this</h1>
     </div>
   </div>
-
-  <!-- choose your treasure -->
+  <div class="title">
+    <h1 style="color: goldenrod; font-size: 72px; text-align: center; margin-top:50px;">Treasure boxes</h1>
+  </div>
   <div class="boxes">
-    <div class="box sword" style="background-color: #f9ca24;">
+    <div class="box" style="background-color: #f9ca24;">
       <h1>壱</h1>
       <p>🗡</p>
     </div>
-    <div class="box shield" style="background-color: #30336b;">
+    <div class="box" style="background-color: #30336b;">
       <h1>2</h1>
       <p>🛡</p>
     </div>
-    <div class="box money" style="background-color: #eb4d4b;">
+    <div class="box" style="background-color: #eb4d4b;">
       <h1>III</h1>
       <p>💰</p>
     </div>
-    <div class="box shit" style="background-color: #6ab04c;">
+    <div class="box" style="background-color: #6ab04c;">
       <h1>four</h1>
       <p>💩</p>
     </div>
   </div>
-  <div class="title">
-    <h1 class="hide">Pick one as your treasure...</h1>
-  </div>
-
-  <!-- treasure is found -->
-  <div class="item">
-    <div class="container">
-      <h1>You've got this</h1>
-      <span></span>
-      <h6 id="try">Try again?</h6>
-    </div>
-  </div>
-
   <script>
     $(function(){
-      // opening
       $('.title').css('display','none').fadeIn(1000);
-      $('h6').hide().fadeIn(1000);
       $('.box').hide();
       $('.box').each(function(i){
         $(this).delay(1000 * i).fadeIn(5000);
       });
 
-      // start the game
-      $('#start').click(function(){
-        $('.landing').slideUp();
-        setTimeout(function(){
-          $('.title').children('h1').removeClass('hide');
-        },1000);
-      });
-      // choose treasure box
       $(".box").click(function(){
-        var $this = $(this)
-        $this.find('h1').addClass('open');
-        $this.find('p').addClass('treasure');
-        $('.item').addClass('active');
-        $('.title').children('h1').addClass('hide');
-        // found
-        if($this.hasClass('sword')){
-          $('.container').find('span').text('🗡');
-        } else if($this.hasClass('shield')){
-          $('.container').find('span').text('🛡');
-        } else if($this.hasClass('money')){
-          $('.container').find('span').text('💰');
-        } else if($this.hasClass('shit')){
-          $('.container').find('span').text('💩');
-        }
+        $(this).find('h1').addClass('open');
+        $(this).find('p').addClass('treasure');
       });
-
-      // try again
-      $('#try').click(function(){
-        $('.title').children('h1').removeClass('hide');
-        $('.item').removeClass('active');
-      })
     })
   </script>
 </body>

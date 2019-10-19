@@ -2,110 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_21_treasureBoxes</title>
+  <title>10_21_clickNumber</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
-      margin:0;
-      padding:0;
-      background-color:#535c68;
+      background-color: rgba(34,66,87,0.8);
+      color: silver;
     }
     * {
       box-sizing: border-box;
     }
-    .boxes{
-      display: flex;
-      height: 70vh;
-      align-items: center;
-      justify-content: space-around;
-
-    }
-    .box{
-      margin: 10px;
-      padding: 40px;
-      font-size: 30px;
-      height: 64px;
-      width: 64px;
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 25%;
-      filter: drop-shadow(5px 5px 5px #aaa);
-    }
-    .box:hover{
-      transform: scale(1.4);
-    }
-    .open{
+    .spotOn{
       display: none;
+      text-align: center;
+      font-size: 69px;
     }
-    .treasure{
-      display: block;
-    }
-    p{
-      font-size: 64px;
-      display: none;
-    }
-
-    .item{
-      height: 100vh;
+    .day2 ul{
       display: flex;
-      z-index: 100;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: none;
+      margin-top:150px;
     }
-    .container{
-      flex: auto;
-      color: goldenrod;
-      font-size: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .day2 li{
+      flex:auto;
+      list-style: none;
+/*      border: 1px solid yellow;*/
+    }
+    .day2 li:hover{
+      transform: scale(1.1);
+      color: pink;
     }
   </style>
 </head>
 <body>
-  <!-- Treasure boxes -->
-  <div class="item">
-    <div class="container">
-      <h1>You've got this</h1>
-    </div>
-  </div>
-  <div class="title">
-    <h1 style="color: goldenrod; font-size: 72px; text-align: center; margin-top:50px;">Treasure boxes</h1>
-  </div>
-  <div class="boxes">
-    <div class="box" style="background-color: #f9ca24;">
-      <h1>壱</h1>
-      <p>🗡</p>
-    </div>
-    <div class="box" style="background-color: #30336b;">
-      <h1>2</h1>
-      <p>🛡</p>
-    </div>
-    <div class="box" style="background-color: #eb4d4b;">
-      <h1>III</h1>
-      <p>💰</p>
-    </div>
-    <div class="box" style="background-color: #6ab04c;">
-      <h1>four</h1>
-      <p>💩</p>
-    </div>
+  <div class="day2">
+    <h1 style="text-align: center">当てろ!! FIND IT!<span>!</span></h1>
+    <div class="spotOn">あたりだ</div>
+    <ul>
+      <li style="font-size: 29px">1</li>
+      <li style="font-size: 100px">2</li>
+      <li style="font-size: 34px">3</li>
+      <li style="font-size: 487px">4</li>
+      <li style="font-size: 32px">5</li>
+      <li style="font-size: 29px">6</li>
+      <li style="font-size: 295px">7</li>
+      <li style="font-size: 29px">8</li>
+      <li style="font-size: 295px">9</li>
+    </ul>
   </div>
   <script>
     $(function(){
-      $('.title').css('display','none').fadeIn(1000);
-      $('.box').hide();
-      $('.box').each(function(i){
-        $(this).delay(1000 * i).fadeIn(5000);
+      $('h1').css('display','none').fadeIn(2000);
+      $('span').css('display','none').fadeIn(2500);;
+      $('li').css('display','none').fadeIn(4000);
+      $('span').click(function(){
+        $('.spotOn').fadeIn();
+      })
+      $('li').click(function(){
+        $(this).fadeOut(2000);
+        $(this).text('ちがーう').css('font-size','40px');
       });
-
-      $(".box").click(function(){
-        $(this).find('h1').addClass('open');
-        $(this).find('p').addClass('treasure');
-      });
-    })
+    });
   </script>
 </body>
 </html>
-

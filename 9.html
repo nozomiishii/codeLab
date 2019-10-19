@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10_28_adventure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    body{
+      /*border: 1px solid red;*/
+    }
+    * {
+      box-sizing: border-box;
+      /*border: 1px solid white;*/
+    }
+    /*game start*/
+    .start{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100vh;
+      z-index: 100;
+      background-color: black;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      flex-direction: column;
+      /*color*/
+      color:white;
+      /*size*/
+      font-size: 72px;
+    }
+
+    .start h6:hover{
+      transform: scale(1.4);
+      transition: 0.5s;
+      filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    }
+
+    /*write css code here*/
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+      height: 30vh;
+    }
+
+    /*form*/
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 50vw;
+    }
+    form > *{
+      flex: auto;
+      width: 60%;
+      height: 30px;
+      margin: 10px;
+    }
+    button {
+      width:200px;
+      color:white;
+      font-size: 18px;
+      background-color:#52DE97;
+    }
+    button:hover{
+      opacity: 0.8;
+      transition: 1s;
+    }
+    .submit{
+      transform: rotateX(360deg);
+      transition: 1s;
+    }
+  </style>
+</head>
+<body>
+  <div class="start">
+    <h1>Adventure</h1>
+    <h6>START!!</h6>
+  </div>
+
+  <!-- write html code here -->
+  <div class="god container">
+    <h1>🧖‍♂️<span>Yo! Did you wake up?? Who are you?</span></h1>
+  </div>
+  <div class="hero container">
+    <h1>👤<span></span></h1>
+    <p>My name is...<span class="output"></span></p>
+  </div>
+  <div class="form container">
+    <form>
+      <input type="text" id="name" placeholder="name">
+      <select id="select-form">
+        <option value="👤">Tell me about yourself</option>
+        <option value="🧝">Elf</option>
+        <option value="🧚">Fairy</option>
+        <option value="🦸">Hero</option>
+        <option value="🧙">Majician</option>
+        <option value="🧜">Merperson</option>
+      </select>
+      <button class="btn">Enter</button>
+    </form>
+  </div>
+
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+      // name your hero
+      $('form').submit(function(){
+        const role = $('#select-form').val();
+        const name = $('#name').val();
+        $('.hero h1').text(role);
+        $('.output').text(name);
+        if(role == '👤' || name == ''){
+          console.log('working');
+          $('.god span').text("Didn't you remember who you are?").css('color','red');
+        } else {
+          $('.god span').text(`aha! Now I know, your name is ${name}! ${role}`).css('color','black');
+        }
+        $('button').addClass('submit');
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>

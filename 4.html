@@ -1,100 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_24_infected</title>
+  <title>10_23_treasureBoxes2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
       margin:0;
       padding:0;
+      background-color:#535c68;
     }
     * {
       box-sizing: border-box;
     }
 
-    .main{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /*Treasure boxes start*/
+    .landing{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
       height: 100vh;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.7);
     }
-    .btn{
-      width:160px;
-      height:80px;
-      color:white;
-      background-color:#30336b;
-      box-shadow: 0px 7px rgba(0,0,0,0.5);
+
+    /*choose your treasure*/
+    .boxes{
       display: flex;
+      height: 70vh;
+      align-items: center;
+      justify-content: space-around;
+
+    }
+    .box{
+      margin: 10px;
+      padding: 40px;
+      font-size: 30px;
+      height: 64px;
+      width: 64px;
+      display:flex;
       align-items: center;
       justify-content: center;
+      border-radius: 25%;
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
+    .box:hover{
+      transform: scale(1.4);
       cursor: pointer;
-      border-radius: 3px;
+    }
+    .open{
+      display: none;
+    }
+    .treasure{
+      display: block;
+    }
+    p{
+      font-size: 64px;
+      display: none;
     }
 
-    .btn:hover{
-      opacity: 0.8;
+    .title h1{
+      color: goldenrod;
+      font-size: 72px;
+      text-align: center;
     }
 
-    .btn:active{
-      position:relative;
-      box-shadow: none;
-      top: 7px;
-    }
-    .virus{
+    /*　treasure is found*/
+    .item{
       position: fixed;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.6);
+      height: 100vh;
       z-index: 100;
+      background-color: rgba(0, 0, 0, 0.7);
       display: none;
-      border: 1px solid red;
-      align-items: center;
-      justify-content: center;
     }
-
-    .modal {
-      background-color: #e6ecf0;
-      padding: 100px;
-      border-radius: 10px;
-      border: 1px solid red;
+    .container{
+      color: goldenrod;
+      font-size: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
     }
+
+    .container span{
+      font-size: 200px;
+    }
+
+    .container h6:hover{
+      transform: scale(1.2);
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
     .active{
-      display: flex;
+      display: block;
+    }
+
+    .hide{
+      display: none;
     }
   </style>
 </head>
 <body>
-  <div class="main">
-    <div class="btn">Click!!</div>
+  <!-- Treasure boxes start-->
+  <div class="landing">
+    <div class="container">
+      <h1>- Treasure boxes 2 -</h1>
+      <h6 id="start">START!</h6>
+    </div>
   </div>
 
-  <div class="virus">
-    <div class="modal">
-      <h1><strong>WARNING!!</strong></h1>
-      <p>☠Your computer has been infected with virus☠</p>
-      <p>Go to gym right away and improve Your immunity!</p>
+  <!-- choose your treasure -->
+  <div class="boxes">
+    <div class="box sword" style="background-color: #f9ca24;">
+      <h1>壱</h1>
+      <p>🗡</p>
+    </div>
+    <div class="box shield" style="background-color: #30336b;">
+      <h1>2</h1>
+      <p>🛡</p>
+    </div>
+    <div class="box money" style="background-color: #eb4d4b;">
+      <h1>III</h1>
+      <p>💰</p>
+    </div>
+    <div class="box shit" style="background-color: #6ab04c;">
+      <h1>four</h1>
+      <p>💩</p>
+    </div>
+  </div>
+  <div class="title">
+    <h1 class="hide">Pick one as your treasure...</h1>
+  </div>
+
+  <!-- treasure is found -->
+  <div class="item">
+    <div class="container">
+      <h1>You've got this</h1>
+      <span></span>
+      <h6 id="try">Try again?</h6>
     </div>
   </div>
 
   <script>
     $(function(){
-      $('.btn').hide().fadeIn();
-      $('.btn').click(function(){
-        $('body').css('background-color','red');
-        setTimeout(function(){
-          $('.virus').addClass('active');
-        },2000);
+      // opening
+      $('.title').css('display','none').fadeIn(1000);
+      $('h6').hide().fadeIn(1000);
+      $('.box').hide();
+      $('.box').each(function(i){
+        $(this).delay(1000 * i).fadeIn(5000);
       });
-    });
+
+      // start the game
+      $('#start').click(function(){
+        $('.landing').slideUp();
+        setTimeout(function(){
+          $('.title').children('h1').removeClass('hide');
+        },1000);
+      });
+      // choose treasure box
+      $(".box").click(function(){
+        var $this = $(this)
+        $this.find('h1').addClass('open');
+        $this.find('p').addClass('treasure');
+        $('.item').addClass('active');
+        $('.title').children('h1').addClass('hide');
+        // found
+        if($this.hasClass('sword')){
+          $('.container').find('span').text('🗡');
+        } else if($this.hasClass('shield')){
+          $('.container').find('span').text('🛡');
+        } else if($this.hasClass('money')){
+          $('.container').find('span').text('💰');
+        } else if($this.hasClass('shit')){
+          $('.container').find('span').text('💩');
+        }
+      });
+
+      // try again
+      $('#try').click(function(){
+        $('.title').children('h1').removeClass('hide');
+        $('.item').removeClass('active');
+      })
+    })
   </script>
 </body>
 </html>
+
