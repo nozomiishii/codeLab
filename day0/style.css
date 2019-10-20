@@ -17,14 +17,16 @@ body{
 }
 .title{
   display: flex;
-  padding: 10px
-  height: 35vh;
   /*border: 1px solid red;*/
 }
-
 .title img{
   height: 300px;
   width: 300px;
+}
+@media all and (max-width: 670px){
+  .title{
+    flex-direction:column;
+  }
 }
 .main p{
   /*border: 1px solid red;*/
@@ -106,3 +108,21 @@ body{
   margin-top: 5vh;
   /*border: 1px solid red;*/
 }
+
+/*js==================*/
+.hide{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
