@@ -102,6 +102,7 @@ p{
   border: 1px solid red;
 }
 
+
 /*iphone*/
 @media all and (max-width: 670px){
   .start{
