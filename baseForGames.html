@@ -18,11 +18,28 @@
   <meta name="twitter:card" content="summary"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="baseForGames.css">
-　<style>
-  </style>
 </head>
 <body>
+  <header>
+    <div id='logo'>
+      <img src="kusayari.png" alt="kusayari">
+      <h1 class='english'>-KUSAYARI-</h1>
+      <h1 class='japanese hide'>-くさやり-</h1>
+    </div>
+    <div class="header-menus">
+      <ul>
+        <li class="webpage">
+          <a href="http://www.nozomiishii.jp" target="_blank">NOZOMI</a>
+        </li>
+        <li class="paypal">
+          <a href="https://paypal.me/nozomiishii?locale.x=ja_JP" target="_blank">投げ銭 - Tip -</a>
+        </li>
+        <li id="language" class='btn'>
+          🌏ENGLISH <span>→</span> 🍣にほんご
+        </li>
+      </ul>
+    </div>
+  </header>
   <div class="start" style="display:none">
     <h1>Title</h1>
     <h6>START!!</h6>
@@ -44,6 +61,17 @@
       </ul>
     </div>
     <div id="copyright">
+      <ul>
+        <li>
+          <a href="https://twitter.com/nozomiishii_jp" target="_blank">Twitter</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/nozomiishii.jp" target="_blank">Instagram</a>
+        </li>
+        <li>
+          <a href="https://github.com/nozomiishii" target="_blank">GitHub</a>
+        </li>
+      </ul>
       <p>© 2019 Nozomi Ishii</p>
     </div>
   </footer>
@@ -53,6 +81,19 @@
       $('.start h6').click(function(){
         $('.start').slideUp();
       });
+
+      // toggle language
+      $('.btn').click(function(){
+        if($('.japanese').hasClass('hide')){
+          $('.english').addClass('hide');
+          $('.japanese').removeClass('hide');
+          $('.btn span').text('←');
+        } else if($('.english').hasClass('hide')){
+          $('.japanese').addClass('hide');
+          $('.english').removeClass('hide');
+          $('.btn span').text('→');
+        }
+      })
 
       // write js code here
 
