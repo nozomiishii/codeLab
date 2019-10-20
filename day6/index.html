@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_27_carRasing2</title>
+  <title>10_26_carRasing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <meta name="twitter:title" content="kusayari" />
+  <meta name="twitter:description" content="26th OCT / Day 6 - carRasing -"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day6/day6.png"/>
+  <meta name="twitter:card" content="summary"/>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
     body{
@@ -31,46 +39,21 @@
       font-size: 72px;
       border: 20px dashed black;
     }
-    /*iphone*/
-    @media all and (max-width: 670px){
-      .start{
-        font-size:18px;
-        border: 5px dashed black;
-      }
-    }
+
     .start h6:hover{
       transform: scale(1.4);
       transition: 0.5s;
       filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
     }
 
-    /*comment*/
-    .comment{
-      height: 10vh;
-      text-align:center;
-    }
-    /*cars*/
-    .display{
-      height: 50vh;
-      font-size: 100px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    .show{
-      font-size: 250px;
-      transform: translateX(calc(-50vw + 125px));
-      transition:1.0s;
-    }
-    .btn ul{
-      height: 40vh;
-      font-size: 62px;
-      display: flex;
-    }
+    /*write css code here*/
     .cars ul{
+      height: 70vh;
       padding: 0;
       margin: 0 auto;
       list-style: none;
+      display: flex;
+      font-size: 62px;
       justify-content: center;
       align-items: center;
     }
@@ -81,21 +64,16 @@
     .cars span{
       display: block;
     }
-    .cars li:hover{
-      background-color: rgba(0, 0, 0, 0.8);
-      border: 5px solid #ff5252;
+    .cars span:hover{
+      transform: scale(1.6);
+      transition: 0.2s;
       cursor: pointer;
     }
     .selected{
       border: 5px dashed #ff5252;
     }
-    .selected span{
-      transform: translateX(-100vw);
-      transition: 1.0s;
-
-    }
     .confirm{
-      display: flex;
+      display: block;
     }
 
     /*arrow*/
@@ -131,25 +109,22 @@
       border-bottom: none;
     }
 
+    /*comment*/
+    .comment{
+      text-align:center;
+    }
   </style>
 </head>
 <body>
-  <div class="start">
-    <h1>🏁CAR RASING 2🏁</h1>
+  <div class="start" style="display: none;">
+    <h1>🏁CAR RASING🏁</h1>
     <h6>START!!</h6>
   </div>
 
-  <!-- display car -->
-  <div class="display">
-  </div>
-
   <!-- choose your car-->
-  <div class="comment">
-    <h1>Choose Your Car</h1>
-  </div>
-  <div class="cars btn">
+  <div class="cars">
     <ul>
-      <li>
+      <li class="selected">
         <span>🚗</span>
       </li>
       <li>
@@ -178,6 +153,9 @@
       <li class="next">→</li>
     </ul>
   </div> -->
+  <div class="comment">
+    <h1>Choose Your Car</h1>
+  </div>
 
 
   <script>
@@ -188,34 +166,26 @@
       });
 
       // select your car
-      $('.cars li').click(function(){
-        $('.display').html('');
-        $('.show').removeClass('show');
-        $('.selected').removeClass('selected');
-        $(this).addClass('selected');
-        const car = $(this).html();
-        setTimeout(function(){
-          $('.display').html(car);
-          $('.display').addClass('show');
-        }, 500);
-        const index = $(this).index();
-        console.log(index)
-      });
-
+    $('.cars li').click(function(){
+      $('.selected').removeClass('selected');
+      $(this).addClass('selected');
+    });
 
       // select your car with arrow button
-      $('.arrow li').click(function(){
-        const $displaySlide = $('.selected');
-        $displaySlide.removeClass('selected');
+    $('.arrow li').click(function(){
+      var $displaySlide = $('.selected');
+      $displaySlide.removeClass('selected');
 
-        if($(this).hasClass('next')){
-          console.log('next')
-          $displaySlide.next().addClass('selected');
-        } else {
-          console.log('prev')
-          $displaySlide.prev().addClass('selected');
-        }
-      });
+      if($(this).hasClass('next')){
+        console.log('next')
+        $displaySlide.next().addClass('selected');
+      } else {
+        console.log('prev')
+        $displaySlide.prev().addClass('selected');
+      }
+
+    });
+
     });
   </script>
 </body>
