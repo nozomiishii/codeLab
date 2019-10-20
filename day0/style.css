@@ -23,8 +23,10 @@ body{
   height: 300px;
   width: 300px;
 }
+
 @media all and (max-width: 670px){
   .title{
+    display:flex;
     flex-direction:column;
   }
 }
@@ -40,7 +42,7 @@ body{
 }
 
 #language li{
-  border: 1px solid #293462;
+  border: 2px solid #293462;
   padding: 10px;
   margin: 10px;
 }
@@ -50,6 +52,9 @@ body{
   background-color: #293462;
 }
 
+#language span{
+  color: #F25A8C;
+}
 /*tip=============================================*/
 #tip ul{
   display: flex;

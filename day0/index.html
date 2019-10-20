@@ -17,7 +17,8 @@
 <body>
   <div class="day1">
     <div class="title">
-      <h1>KUSAYARI</h1>
+      <h1 class='english'>-KUSAYARI-</h1>
+      <h1 class='japanese hide'>-くさやり-</h1>
       <img src="kusayari.png" alt="kusayari">
     </div>
     <div class="main">
@@ -33,13 +34,20 @@
         </p>
       </div>
       <div class="japanese hide">
-        <p>はじまるよ！</p>
+        <p>
+          ようこそ、ぼくのコード研究所　-くさやり-　へ！<br>
+          毎日クソゲーや作品を更新していきます。<br>
+          100日くらい続いたらいいなあって思っています。<br>
+          チャンネル登録お願いしますって言いたいけどそんなボタンもまだ作れないんだよなあ<br>
+          でも楽しみにしてくれたら嬉しいです。<br>
+          読んでくれてありがとうございます。<br>
+          それではDAY1で会いましょう。
+        </p>
       </div>
     </div>
     <div id="language">
       <ul>
-        <li id='japanese'>🍣にほんご</li>
-        <li id='english'>🌏ENGLISH</li>
+        <li class='btn'>🌏ENGLISH <span>→</span> 🍣にほんご</li>
       </ul>
     </div>
     <div id="tip">
@@ -58,7 +66,17 @@
   </div>
   <script>
     $(function(){
-
+      $('.btn').click(function(){
+        if($('.japanese').hasClass('hide')){
+          $('.english').addClass('hide');
+          $('.japanese').removeClass('hide');
+          $('.btn span').text('←');
+        } else if($('.english').hasClass('hide')){
+          $('.japanese').addClass('hide');
+          $('.english').removeClass('hide');
+          $('.btn span').text('→');
+        }
+      })
     });
   </script>
 </body>
