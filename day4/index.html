@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_24_infected</title>
+  <title>10_24_carRasing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
   <meta name="twitter:site" content="@nozomiishii_jp" />
   <meta name="twitter:title" content="kusayari" />
-  <meta name="twitter:description" content="24th OCT / Day 4 - infected-"/>
-  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day4/day4.png"/>
+  <meta name="twitter:description" content="24th OCT / Day 4 - carRasing -"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day6/day6.png"/>
   <meta name="twitter:card" content="summary"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -22,86 +21,171 @@
     * {
       box-sizing: border-box;
     }
-
-    .main{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    .btn{
-      width:160px;
-      height:80px;
-      color:white;
-      background-color:#30336b;
-      box-shadow: 0px 7px rgba(0,0,0,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border-radius: 3px;
-    }
-
-    .btn:hover{
-      opacity: 0.8;
-    }
-
-    .btn:active{
-      position:relative;
-      box-shadow: none;
-      top: 7px;
-    }
-    .virus{
+    /*game start*/
+    .start{
       position: fixed;
       top: 0;
       right: 0;
-      bottom: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      height: 100vh;
       z-index: 100;
-      display: none;
-      border: 1px solid red;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal {
-      background-color: #e6ecf0;
-      padding: 100px;
-      border-radius: 10px;
-      border: 1px solid red;
+      background-color: white;
       display: flex;
-      align-items: center;
+      align-items:center;
       justify-content: center;
       flex-direction: column;
+      color:black;
+      font-size: 72px;
+      border: 20px dashed black;
     }
-    .active{
+
+    .start h6:hover{
+      transform: scale(1.4);
+      transition: 0.5s;
+      filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    }
+
+    /*write css code here*/
+    .cars ul{
+      height: 70vh;
+      padding: 0;
+      margin: 0 auto;
+      list-style: none;
       display: flex;
+      font-size: 62px;
+      justify-content: center;
+      align-items: center;
+    }
+    .cars li{
+      flex: auto;
+      text-align: center;
+    }
+    .cars span{
+      display: block;
+    }
+    .cars span:hover{
+      transform: scale(1.6);
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .selected{
+      border: 5px dashed #ff5252;
+    }
+    .confirm{
+      display: block;
+    }
+
+    /*arrow*/
+    .arrow ul{
+      list-style: none;
+      display: flex;
+      height: 10vh;
+      font-size: 32px;
+      justify-content: center;
+      margin:0 auto;
+      padding:0;
+    }
+    .arrow li{
+      width: 7vh;
+      height: 7vh;
+      padding: 0 10px;
+      margin: 0 50px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      border-bottom: solid 4px #292929;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+    }
+    .arrow li:hover{
+      opacity: 0.8;
+    }
+    .arrow li:active{
+      transform: translateY(4px);
+      border-bottom: none;
+    }
+
+    /*comment*/
+    .comment{
+      text-align:center;
     }
   </style>
 </head>
 <body>
-  <div class="main">
-    <div class="btn">Click!!</div>
+  <div class="start" style="display: none;">
+    <h1>🏁CAR RASING🏁</h1>
+    <h6>START!!</h6>
   </div>
 
-  <div class="virus">
-    <div class="modal">
-      <h1><strong>WARNING!!</strong></h1>
-      <p>☠Your computer has been infected with virus☠</p>
-      <p>Go to gym right now and improve Your immunity!</p>
-    </div>
+  <!-- choose your car-->
+  <div class="cars">
+    <ul>
+      <li class="selected">
+        <span>🚗</span>
+      </li>
+      <li>
+        <span>🚙</span>
+      </li>
+      <li>
+        <span>🚓</span>
+      </li>
+      <li>
+        <span>🚐</span>
+      </li>
+      <li>
+        <span>🚂</span>
+      </li>
+      <li>
+        <span>🛴</span>
+      </li>
+      <li>
+        <span>🛸</span>
+      </li>
+    </ul>
   </div>
+<!--   <div class="arrow">
+    <ul>
+      <li class="prev">←</li>
+      <li class="next">→</li>
+    </ul>
+  </div> -->
+  <div class="comment">
+    <h1>Choose Your Car</h1>
+  </div>
+
 
   <script>
     $(function(){
-      $('.btn').hide().fadeIn();
-      $('.btn').click(function(){
-        $('body').css('background-color','red');
-        setTimeout(function(){
-          $('.virus').addClass('active');
-        },2000);
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
       });
+
+      // select your car
+    $('.cars li').click(function(){
+      $('.selected').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+      // select your car with arrow button
+    $('.arrow li').click(function(){
+      var $displaySlide = $('.selected');
+      $displaySlide.removeClass('selected');
+
+      if($(this).hasClass('next')){
+        console.log('next')
+        $displaySlide.next().addClass('selected');
+      } else {
+        console.log('prev')
+        $displaySlide.prev().addClass('selected');
+      }
+
+    });
+
     });
   </script>
 </body>
