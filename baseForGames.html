@@ -29,13 +29,17 @@
     <div class="header-menus">
       <ul>
         <li class="webpage">
-          <a href="http://www.nozomiishii.jp" target="_blank">NOZOMI</a>
+          <a href="http://www.nozomiishii.jp" target="_blank"><span class='japanese hide'>のぞみ</span><span class='english'>Nozomi</span></a>
         </li>
         <li class="paypal">
-          <a href="https://paypal.me/nozomiishii?locale.x=ja_JP" target="_blank">投げ銭 - Tip -</a>
+          <a href="https://paypal.me/nozomiishii?locale.x=ja_JP" target="_blank">
+            <span class='japanese hide'>投げ銭</span><span class='english'>Tip</span></a>
         </li>
         <li id="language" class='btn'>
           🌏ENGLISH <span>→</span> 🍣にほんご
+        </li>
+        <li id='close-btn'>
+          ×
         </li>
       </ul>
     </div>
@@ -49,32 +53,6 @@
   <div class="game" >
   </div>
 
-  <footer>
-    <div id="tip">
-      <ul>
-        <li class="webpage">
-          <a href="http://www.nozomiishii.jp" target="_blank">NOZOMI</a>
-        </li>
-        <li class="paypal">
-          <a href="https://paypal.me/nozomiishii?locale.x=ja_JP" target="_blank">投げ銭 - Tip -</a>
-        </li>
-      </ul>
-    </div>
-    <div id="copyright">
-      <ul>
-        <li>
-          <a href="https://twitter.com/nozomiishii_jp" target="_blank">Twitter</a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/nozomiishii.jp" target="_blank">Instagram</a>
-        </li>
-        <li>
-          <a href="https://github.com/nozomiishii" target="_blank">GitHub</a>
-        </li>
-      </ul>
-      <p>© 2019 Nozomi Ishii</p>
-    </div>
-  </footer>
   <script>
     $(function(){
       // start game
@@ -93,6 +71,11 @@
           $('.english').removeClass('hide');
           $('.btn span').text('→');
         }
+      })
+
+      // hide header
+      $('#close-btn').click(function(){
+        $("header").hide();
       })
 
       // write js code here

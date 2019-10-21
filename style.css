@@ -5,7 +5,14 @@
   text-decoration: none;
   list-style: none;
 }
+
+body{
+  display:flex;
+  flex-direction:column;
+}
 /*game start*/
+
+
 .start{
   position: fixed;
   top: 0;
@@ -55,6 +62,7 @@ header {
 #logo img{
   width: 50px;
   height: 50px;
+  margin: 0 10px;
 }
 
 .hide{
@@ -63,7 +71,6 @@ header {
 
 /*header menus*/
 .header-menus ul{
-  border: 1px solid red;
   position: absolute;
   right:0;
   display: flex;
@@ -93,6 +100,24 @@ header {
 
 #language span{
   color: #F25A8C;
+}
+
+#close-btn{
+  margin: 0 20px;
+  font-size: 28px;
+  color: #5C5C5C;
+}
+
+#close-btn:hover{
+  margin: 0 10px;
+  padding: 0 10px;
+  color: white;
+  background-color:#5C5C5C;
+  box-shadow: 0 3px #5C5C5C;
+  border-radius: 3px;
+  display:flex;
+  align-items: center;
+  transition: 0.5s;
 }
 
 /*footer================================*/
