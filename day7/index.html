@@ -1,1 +1,96 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10_27_week</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <meta name="twitter:title" content="kusayari" />
+  <meta name="twitter:description" content="27th OCT / Day 7 - week -"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day7/day7.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+    }
+
+    .title h1{
+      font-size: 72px;
+      padding: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id='logo'>
+      <img src="kusayari.png" alt="kusayari">
+      <h1 class='english'>-KUSAYARI-</h1>
+      <h1 class='japanese hide'>-くさやり-</h1>
+    </div>
+    <div class="header-menus">
+      <ul>
+        <li class="webpage">
+          <a href="http://www.nozomiishii.jp" target="_blank"><span class='japanese hide'>のぞみ</span><span class='english'>Nozomi</span></a>
+        </li>
+        <li class="paypal">
+          <a href="https://paypal.me/nozomiishii?locale.x=ja_JP" target="_blank">
+            <span class='japanese hide'>投げ銭</span><span class='english'>Tip</span></a>
+        </li>
+        <li id="language" class='btn'>
+          🌏ENGLISH <span>→</span> 🍣にほんご
+        </li>
+        <li id='close-btn'>
+          ×
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="title">
+    <h1>🧖‍♂️</h1>
+    <h2>one week has past! I just made this nice header↑↑↑</h2>
+  </div>
+  <div class="change-btn">
+    click!
+  </div>
+  <script>
+    $(function(){
+      // toggle language
+      $('.btn').click(function(){
+        if($('.japanese').hasClass('hide')){
+          $('.english').addClass('hide');
+          $('.japanese').removeClass('hide');
+          $('.btn span').text('←');
+        } else if($('.english').hasClass('hide')){
+          $('.japanese').addClass('hide');
+          $('.english').removeClass('hide');
+          $('.btn span').text('→');
+        }
+      })
+
+      // hide header
+      $('#close-btn').click(function(){
+        $("header").hide();
+      })
+
+      $('.change-btn').click(function(){
+        $('.title h1').text('🦄');
+        $('.title h2').text('yay!');
+      })
+
+    });
+  </script>
+</body>
+</html>

@@ -10,6 +10,28 @@ body{
   display:flex;
   flex-direction:column;
 }
+
+/*day7=========================*/
+.title{
+  text-align:center;
+}
+
+.change-btn{
+  border:1px solid red;
+  margin-top: 50px;
+  padding:30px;
+}
+
+.change-btn:hover{
+  color: white;
+  background-color:blue;
+}
+
+
+
+
+
+/*default*===========================================/
 /*game start*/
 
 
@@ -197,7 +219,6 @@ p{
   margin-top: 5vh;
   border: 1px solid red;
 }
-
 
 /*iphone*/
 @media all and (max-width: 670px){
