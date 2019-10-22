@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10_27_week</title>
+  <title>10_27_niceHeader</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -59,8 +59,11 @@
     </div>
   </header>
   <div class="title">
-    <h1>🧖‍♂️</h1>
-    <h2>one week has past! I just made this nice header↑↑↑</h2>
+    <h1 class="intro">🧖‍♂️</h1>
+    <h2>
+      one week has past! I just made this nice header↑↑↑<br>
+      not working on moblie tho..
+    </h2>
   </div>
   <div class="change-btn">
     click!
@@ -86,10 +89,16 @@
       })
 
       $('.change-btn').click(function(){
-        $('.title h1').text('🦄');
-        $('.title h2').text('yay!');
+        if($('.title h1').hasClass('intro')){
+          $('.title h1').removeClass('intro');
+          $('.title h1').text('🦄');
+          $('.title h2').html('yay!<br>I will make moblie ver. till tomorrow');
+        } else {
+          $('.title h1').addClass('intro');
+          $('.title h1').text('🧖‍♂️');
+          $('.title h2').html('one week has past! I just made this nice header↑↑↑<br>not working on moblie tho..');
+        }
       })
-
     });
   </script>
 </body>

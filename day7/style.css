@@ -17,7 +17,7 @@ body{
 }
 
 .change-btn{
-  border:1px solid red;
+  border:1px solid black;
   margin-top: 50px;
   padding:30px;
 }
@@ -76,11 +76,6 @@ header {
   display: flex;
   padding: 10px;
 }
-/*@media all and(max-width: 670px){
-  header {
-    order:1;
-  }
-}*/
 
 #logo {
   display: flex;
@@ -224,5 +219,8 @@ p{
 @media all and (max-width: 670px){
   .start{
     font-size:18px;
+  }
+  .header-menus {
+    display:none;
   }
 }
