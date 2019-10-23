@@ -29,7 +29,7 @@ body{
 #logo {
   display: flex;
   align-items: center;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 #logo img{
   width: 50px;
@@ -46,17 +46,17 @@ footer{
   bottom: 0;
 }
 #copyright p{
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   text-align:center;
-  padding:20px;
+  padding:5px;
 }
 #mobile-footer ul{
-  height:10vh;
+  height:7vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 #mobile-footer li{
@@ -94,15 +94,13 @@ footer{
 }
 .webpage {
   background-color: #4E5E2C;
-  box-shadow: 0 3px #191B1F;
+  box-shadow: 0 3px ⇧;
 
 }
 .paypal {
   background-color: #DEAF3F;
   box-shadow: 0 3px #C29301;
 }
-
-
 
 #close-btn{
   color: white;
@@ -111,6 +109,20 @@ footer{
   border-radius: 3px;
   display:flex;
   align-items: center;
+}
+
+#open-btn{
+  display: none;
+  position: absolute;
+  bottom:0;
+  right:0;
+  height:8vh;
+  width:20vw;
+  border:1px solid #5C5C5C;
+}
+#open-btn{
+  line-height: 8vh;
+  text-align:center;
 }
 }
 

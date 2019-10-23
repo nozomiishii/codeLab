@@ -52,6 +52,9 @@
       <p>© 2019 Nozomi Ishii</p>
     </div>
   </footer>
+  <div id="open-btn">
+    <p>⇧</p>  　
+  </div>
   <script>
     $(function(){
       // toggle language
@@ -70,6 +73,14 @@
       // hide header
       $('#close-btn').click(function(){
         $("header").hide();
+        $("footer").hide();
+        $("#open-btn").show();
+      })
+
+      $('#open-btn').click(function(){
+        $("#open-btn").hide();
+        $("header").show();
+        $("footer").show();
       })
 
     });
