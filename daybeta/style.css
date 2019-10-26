@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+
+header{
+  height: 8vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+
+header img{
+  width: 8vh;
+  border: 2px solid #4E5E2C;
+  opacity: 0.8;
+}
+header img:hover{
+  opacity: 1;
+}
+
+.start {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  color:white;
+  font-size: 72px;
+  line-height: 50vh;
+  text-align:center;
+}
+
+.game{
+  height:100vh;
+}
