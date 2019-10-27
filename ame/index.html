@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>10_30_ame</title>
+  <title>10_31_candyAme</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -12,7 +12,7 @@
   <!-- title -->
   <meta name="twitter:title" content="kusayari" />
   <!-- day -->
-  <meta name="twitter:description" content="20th OCT / Day 0 - Kusayari lounched -"/>
+  <meta name="twitter:description" content="31th OCT / Day 31 - Kusayari lounched -"/>
   <!-- url -->
   <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day/kusayari.png"/>
   <meta name="twitter:card" content="summary"/>
@@ -21,7 +21,7 @@
 </head>
 <body>
   <div class="start" style='display:none;'>
-    <h1></h1>
+    <h1>candyAme</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
@@ -37,16 +37,32 @@
       <li>🍮</li>
     </ul>
   </div>
-
+  <div class="eat">
+    🤤
+  </div>
+  <div class="game-end">
+    <div class="comment">
+      <h1>🤷</h1>
+      <h6>たべすぎだな</h6>
+    </div>
+  </div>
   <script>
     $(function(){
       // start game
       $('.start h6').click(function(){
         $('.start').slideUp();
       });
-
       // write js code here
-
+      let eat = 0
+      $('.sweets li').click(function(){
+        eat++
+        const candy = $(this).text();
+        if(eat == 3){
+          $('.game-end').show();
+        } else {
+          $('.eat').show().fadeOut(1000);
+        }
+      })
     });
   </script>
 </body>

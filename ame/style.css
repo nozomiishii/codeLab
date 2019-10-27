@@ -55,14 +55,86 @@
   flex:1;
   text-align: center;
   animation-name: drop;
-  animation-duration: 3s;
-  animation-fill-mode: both;
   animation-iteration-count: infinite;
+}
+
+.sweets li:nth-child(1){
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+.sweets li:nth-child(2){
+  animation-duration: 5s;
+}
+.sweets li:nth-child(3){
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+.sweets li:nth-child(4){
+  animation-duration: 6s;
+}
+.sweets li:nth-child(5){
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+}
+.sweets li:nth-child(6){
+  animation-duration: 9s;
+}
+.sweets li:nth-child(7){
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+
+}
+.sweets li:nth-child(8){
+  animation-duration: 20s;
+}
+
+.eat{
+  height:100vh;
+  width: 100vw;
+  line-height: 100vh;
+  text-align: center;
+  z-index: 98;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 100px;
+  display: none;
+}
+
+.game-end{
+  height:100vh;
+  width: 100vw;
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 40px;
+  display: none;
+  color:white;
+}
+.game-end h6{
+  font-size: 20px;
+}
+.comment{
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes drop{
   from{ transform: translateY(0);}
   to{ transform: translateY(100vh);}
+}
+
+@keyframes ate{
+
 }
 
 

@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>10_24_infected</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <!-- twitter -->
   <meta name="twitter:site" content="@nozomiishii_jp" />
   <meta name="twitter:title" content="kusayari" />
@@ -15,12 +14,12 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <style>
-    body{
-      margin:0;
-      padding:0;
-    }
     * {
       box-sizing: border-box;
+      margin:0;
+      padding:0;
+      text-decoration: none;
+      list-style: none;
     }
 
     .main{
@@ -78,18 +77,38 @@
     .active{
       display: flex;
     }
+    h6{
+      font-size: 54px;
+    }
+    button{
+      width: 100px;
+      height: 50px;
+      background-color:#F8D700;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    a {
+      color:white;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <div class="main">
     <div class="btn">Click!!</div>
   </div>
-
   <div class="virus">
     <div class="modal">
       <h1><strong>WARNING!!</strong></h1>
-      <p>☠Your computer has been infected with virus☠</p>
+      <p>Your computer may be infected in the future,</p>
+      <p>because you yourself are not strong enough</p>
       <p>Go to gym right now and improve Your immunity!</p>
+      <p>あなたが弱いとコンピュータが感染するかもしれません</p>
+      <p>さあ今すぐにジムにいって免疫力を高めよう</p>
+      <h6>🏋🏋🏋</h6>
+      <button><a href="http://www.goldsgym.jp/" target="_blank">gold's gym</a></button>
+      <button><a href="https://jp.iherb.com/" target="_blank">iHerb</a></button>
     </div>
   </div>
   <script>
@@ -99,9 +118,6 @@
         $('body').css('background-color','red');
         setTimeout(function(){
           $('.virus').addClass('active');
-        },2000);
-        setTimeout(function(){
-          $('.virus').;
         },2000);
       });
     });
