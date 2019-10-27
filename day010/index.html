@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>10_20_kusayari</title>
+  <title>forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -20,13 +20,45 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
-  <div class="start" >
-    <h1>Title</h1>
+
+  <div class="start">
+    <h1>🌲🌲forest🌲🌲</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
-  <div class="game" >
-    <h1>game time</h1>
+  <div class="game">
+      <div class="river">
+        <div class="leaf red">
+          🍁
+        </div>
+        <div class="leaf green">
+          🌿
+        </div>
+        <div class="leaf brown">
+          🍂
+        </div>
+      </div>
+      <div class="animals">
+          <div class="squirrel animal">
+            🐿
+            <p></p>
+          </div>
+          <div class="deer animal">
+            🦌🦌🦌
+            <p></p>
+          </div>
+          <div class="bird animal">
+            🦜🦜🦜
+            <p></p>
+          </div>
+          <div class="butterfly animal">
+            🦋🦋
+            <p></p>
+          </div>
+      </div>
+      <div class="woods">
+          🌲🌲<span>🌲</span>🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲
+      </div>
   </div>
 
   <script>
@@ -37,8 +69,21 @@
       });
 
       // write js code here
+      $('.leaf').click(function(){
+        $(this).text('🧖‍♂️');
+      })
 
-
+      $('.animal').click(function(){
+        console.log('work');
+        if($(this).hasClass('squirrel')){
+          $('.squirrel p').text('栗くれよ');
+        } else {
+          $(this).find('p').text('りすくんが君をさがしていたよ')
+        }
+      })
+      $('.woods span').click(function(){
+        $(this).html('🧘')
+      });
     });
   </script>
 </body>

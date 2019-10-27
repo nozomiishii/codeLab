@@ -6,8 +6,8 @@
   list-style: none;
 }
 @media all and (max-width: 670px){
-  *{
-    font-size:18px;
+  .sweets>*{
+    font-size:10vw !important;
   }
 }
 .start{
@@ -37,18 +37,33 @@
   filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
 /*iphone*/
-.game{
-  height:100vh;
+.game {
+  background-color:#f8a5c2;
+  height: 100vh;
+  width: 100vw;
 }
 
+.sweets{
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
 
+.sweets li{
+  border: 1px solid red;
+  font-size: 60px;
+  flex:1;
+  text-align: center;
+  animation-name: drop;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
 
-
-
-
-
-
-
+@keyframes drop{
+  from{ transform: translateY(0);}
+  to{ transform: translateY(100vh);}
+}
 
 
 

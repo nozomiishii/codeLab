@@ -6,8 +6,8 @@
   list-style: none;
 }
 @media all and (max-width: 670px){
-  *{
-    font-size:18px;
+  .cars li{
+    font-size:8vh !important;
   }
 }
 .start{
@@ -41,8 +41,27 @@
   height:100vh;
 }
 
+.cars li{
+  font-size: 60px;
+  animation-name: run;
+  animation-duration: 5s;
+}
 
+.winner{
+  display: none;
+}
 
+button{
+  height:10vh;
+  width: 10vw;
+  background-color: #293462;
+  color: white;
+}
+
+@keyframes run{
+  from{ transform: translateX(100vw) }
+  to{ transform: translateX(0); }
+}
 
 
 

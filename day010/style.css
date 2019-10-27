@@ -7,8 +7,9 @@
 }
 @media all and (max-width: 670px){
   *{
-    font-size:18px;
+    font-size:32px !important;
   }
+
 }
 .start{
   position: fixed;
@@ -18,7 +19,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: #A3CB38;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -39,4 +40,125 @@
 /*iphone*/
 .game{
   height:100vh;
+  background-color: #BDC581;
 }
+
+.river{
+  position: absolute;
+  top: 10vh;
+  background-color:#3498db;
+  width: 100vw;
+}
+
+.leaf{
+  font-size: 60px;
+  animation-name: floating;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.red{
+  animation-duration: 6s;
+}
+
+.green{
+  animation-duration:4s;
+}
+
+.brown{
+  animation-duration: 5s;
+}
+
+.woods{
+  position: absolute;
+  bottom: 0;
+  font-size: 90px;
+}
+
+.squirrel{
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.deer{
+  font-size:  70px;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+}
+
+.bird{
+  font-size: 50px;
+  position: absolute;
+  top: 70%;
+  left: 30%;
+}
+
+.butterfly{
+  font-size: 30px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+}
+
+p{
+  font-size: 18px;
+}
+
+@keyframes floating{
+  from{
+    transform: translateX(-10vw);
+  }
+  to{
+    transform: translateX(100vw);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
