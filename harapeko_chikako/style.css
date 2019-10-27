@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 670px){
+  *{
+    font-size:10vw !important;
+  }
+  .eat{
+    font-size: 100px !important;
+  }
+}
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: #f8a5c2;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.start img{
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+.game {
+  background-color:#f8a5c2;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sweets{
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sweets li{
+  font-size: 60px;
+  flex:1;
+  text-align: center;
+  animation-name: drop;
+  animation-iteration-count: infinite;
+}
+
+.sweets li:nth-child(1){
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+.sweets li:nth-child(2){
+  animation-duration: 5s;
+}
+.sweets li:nth-child(3){
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+.sweets li:nth-child(4){
+  animation-duration: 6s;
+}
+.sweets li:nth-child(5){
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+}
+.sweets li:nth-child(6){
+  animation-duration: 9s;
+}
+.sweets li:nth-child(7){
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+
+}
+.sweets li:nth-child(8){
+  animation-duration: 20s;
+}
+
+.eat{
+  height:100vh;
+  width: 100vw;
+  line-height: 100vh;
+  text-align: center;
+  z-index: 98;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 100px;
+  display: none;
+}
+
+.game-end{
+  height:100vh;
+  width: 100vw;
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 40px;
+  display: none;
+  color:white;
+}
+.game-end h6{
+  font-size: 20px;
+}
+.comment{
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment img{
+  height:100px;
+  width: 100px;
+}
+
+.count {
+  color: white;
+}
+@keyframes drop{
+  from{ transform: translateY(0);}
+  to{ transform: translateY(100vh);}
+}
+
+@keyframes ate{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
