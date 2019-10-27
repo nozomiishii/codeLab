@@ -139,6 +139,10 @@
   height:100px;
   width: 100px;
 }
+
+.count {
+  color: white;
+}
 @keyframes drop{
   from{ transform: translateY(0);}
   to{ transform: translateY(100vh);}

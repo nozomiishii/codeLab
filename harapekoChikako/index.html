@@ -27,6 +27,8 @@
   </div>
   <!-- write html code here -->
   <div class="game">
+    <div class="count">
+    </div>
     <ul class="sweets">
       <li>🧁</li>
       <li>🥧</li>
@@ -40,6 +42,8 @@
   </div>
   <div class="eat">
     🤤
+    <br>
+    <span></span>
   </div>
   <div class="game-end">
     <div class="comment">
@@ -62,6 +66,7 @@
           $('.game-end').show();
         } else {
           $('.eat').show().fadeOut(1000);
+          $('.count').text('🤤:'+ eat + 'うまい');
         }
       })
     });
