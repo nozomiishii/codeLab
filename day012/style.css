@@ -6,9 +6,18 @@
   list-style: none;
 }
 @media all and (max-width: 670px){
-  .sweets>*{
+  *{
     font-size:10vw !important;
   }
+  .eat{
+    font-size: 100px !important;
+  }
+  .start h2{
+    font-size:90px !important;
+  }
+  .comment h5{
+  font-size:90px !important;
+}
 }
 .start{
   position: fixed;
@@ -18,15 +27,19 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: #f8a5c2;
   display: flex;
   align-items:center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column;r
   /*color*/
   color:white;
   /*size*/
   font-size: 72px;
+}
+
+.start h1,h6{
+  color:white;
 }
 .start>*{
   margin: 24px auto;
@@ -50,7 +63,6 @@
 }
 
 .sweets li{
-  border: 1px solid red;
   font-size: 60px;
   flex:1;
   text-align: center;
@@ -128,6 +140,17 @@
   justify-content: center;
 }
 
+.comment h5{
+  font-size:90px;
+}
+
+.start h2{
+  font-size:90px;
+}
+
+.count {
+  color: white;
+}
 @keyframes drop{
   from{ transform: translateY(0);}
   to{ transform: translateY(100vh);}

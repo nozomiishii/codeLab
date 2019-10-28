@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>10_31_candyAme</title>
+  <title>11_1_Harapeko</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -12,20 +12,25 @@
   <!-- title -->
   <meta name="twitter:title" content="kusayari" />
   <!-- day -->
-  <meta name="twitter:description" content="31th OCT / Day 31 - Kusayari lounched -"/>
+  <meta name="twitter:description" content="1st NOV / Day 12 - Harapeko -"/>
   <!-- url -->
-  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day/kusayari.png"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day012/day012.png"/>
   <meta name="twitter:card" content="summary"/>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
-  <div class="start" style='display:none;'>
-    <h1>candyAme</h1>
+  <div class="start">
+    <h1>はらぺこ<br>
+    HARAPEKO</h1>
+    <h2>🥺</h2>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
   <div class="game">
+    <div class="count">
+    </div>
     <ul class="sweets">
       <li>🧁</li>
       <li>🥧</li>
@@ -39,10 +44,12 @@
   </div>
   <div class="eat">
     🤤
+    <br>
+    <span></span>
   </div>
   <div class="game-end">
     <div class="comment">
-      <h1>🤷</h1>
+      <h5>🤷</h5>
       <h6>たべすぎだな</h6>
     </div>
   </div>
@@ -57,10 +64,11 @@
       $('.sweets li').click(function(){
         eat++
         const candy = $(this).text();
-        if(eat == 3){
+        if(eat == 10){
           $('.game-end').show();
         } else {
           $('.eat').show().fadeOut(1000);
+          $('.count').text('🤤:'+ eat + 'うまい');
         }
       })
     });
