@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day11 -infected-
+day12 -Harapeko-
 
-https://nozomiishii.github.io/codeLab/day011/
+https://nozomiishii.github.io/codeLab/day012/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 

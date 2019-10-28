@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>carRasing3</title>
+  <title>10_20_kusayari</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -22,24 +22,15 @@
 <body>
 
   <div class="start" style='display:none;'>
-    <h1>carRasing3</h1>
+    <h1>Title</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
   <div class="game">
-    <ul class="cars">
-      <li><span>🚗</span></li>
-      <li><span>🚙</span></li>
-      <li><span>🚓</span></li>
-      <li><span>🚐</span></li>
-      <li><span>🚂</span></li>
-      <li><span>🛴</span></li>
-      <li><span>🛸</span></li>
-    </ul>
-    <div class="winner">🕺</div>
-    <div class="btn-container">
-      <button>GO!!</button>
+    <div class="items">
+      <div class="item">🧘</div>
     </div>
+    <button>shoot</button>
   </div>
 
   <script>
@@ -51,13 +42,9 @@
 
       // write js code here
       $('button').click(function(){
-        $('.cars').addClass('rasing');
-        $('.winner').addClass('hidden-runner');
-      })
-
-      $('.cars span').click(function(){
-        $('.selected').removeClass('selected');
-        $(this).toggleClass('selected');
+        if($('.item').css('transform','translateX(50%)')){
+          $('.item').fadeOut();
+        }
       })
 
     });
