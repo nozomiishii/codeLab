@@ -22,12 +22,25 @@
 <body>
 
   <div class="start" style='display:none;'>
-    <h1>Title</h1>
+    <h1>🐊Wani Attack🐊</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
   <div class="game">
-    <h1>game time</h1>
+    <div class="crocodiles">
+      <div class="crocodile">🐊</div>
+      <div class="crocodile">🐊</div>
+      <div class="crocodile">🐊</div>
+      <div class="crocodile">🐊</div>
+      <div class="crocodile">🐊</div>
+      <div class="crocodile">🐊</div>
+      <div class="crocodile">🐊</div>
+      <div class="crocodile">🐊</div>
+    </div>
+    <div class="den">
+      <div class='score'>YOUR SCORE IS: 🐊 ✕　<span>0</span>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -38,7 +51,11 @@
       });
 
       // write js code here
-
+      let score = 0
+      $('.crocodile').click(function(){
+        score++
+        $('.score span').text(score);
+      })
 
     });
   </script>
