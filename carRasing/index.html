@@ -21,8 +21,8 @@
 </head>
 <body>
 
-  <div class="start" style='display:none;'>
-    <h1>carRasing3</h1>
+  <div class="start">
+    <h1>🕺Car Rasing3🕺</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
@@ -37,9 +37,16 @@
       <li><span>🛸</span></li>
     </ul>
     <div class="winner">🕺</div>
+    <div class="rule">
+      <p>tap and choose one of car you like. and then press "GO!!" button</p>
+    </div>
     <div class="btn-container">
       <button>GO!!</button>
     </div>
+  </div>
+  <div class="end-game">
+    <h1>🕺</h1>
+    <p>YOU LOSE, I WIN!</p>
   </div>
 
   <script>
@@ -53,6 +60,9 @@
       $('button').click(function(){
         $('.cars').addClass('rasing');
         $('.winner').addClass('hidden-runner');
+        setTimeout(function(){
+          $('.end-game').addClass('active');
+        },7000 );
       })
 
       $('.cars span').click(function(){

@@ -18,15 +18,16 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: white;
   display: flex;
   align-items:center;
   justify-content: center;
   flex-direction: column;
   /*color*/
-  color:white;
+  color:black;
   /*size*/
   font-size: 72px;
+  border: 20px dashed black;
 }
 .start>*{
   margin: 24px auto;
@@ -41,6 +42,9 @@
   height:100vh;
 }
 
+.cars{
+  background-color: #95a5a6;
+}
 .cars li{
   font-size: 60px;
   transform: translateX(90vw);
@@ -91,12 +95,41 @@
   justify-content: center;
 }
 button{
+  position: absolute;
+  top:85vh;
   height:10vh;
   width: 10vw;
   background-color: #293462;
   color: white;
 }
 
+.rule{
+  font-size: 40px;
+  text-align:center;
+}
+
+
+.end-game{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 101;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.active{
+  display: flex;
+}
 @keyframes run{
   from{ transform: translateX(90vw);}
   to{ transform: translateX(0); }
