@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>11_3_Wani Attack</title>
+  <title>11_3_waniAttack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -14,28 +14,28 @@
   <!-- day -->
   <meta name="twitter:description" content="3rd NOV / Day 14 - Wani Attack -"/>
   <!-- url -->
-  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day/kusayari.png"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day014/day014.png"/>
   <meta name="twitter:card" content="summary"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 
-  <div class="start" style='display:none;'>
+  <div class="start">
     <h1>🐊Wani Attack🐊</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
   <div class="game">
     <div class="crocodiles">
-      <div class="crocodile">🐊</div>
-      <div class="crocodile">🐊</div>
-      <div class="crocodile">🐊</div>
-      <div class="crocodile">🐊</div>
-      <div class="crocodile">🐊</div>
-      <div class="crocodile">🐊</div>
-      <div class="crocodile">🐊</div>
-      <div class="crocodile">🐊</div>
+      <div class="crocodile"><span>🐊</span></div>
+      <div class="crocodile"><span>🐊</span></div>
+      <div class="crocodile"><span>🐊</span></div>
+      <div class="crocodile"><span>🐊</span></div>
+      <div class="crocodile"><span>🐊</span></div>
+      <div class="crocodile"><span>🐊</span></div>
+      <div class="crocodile"><span>🐊</span></div>
+      <div class="crocodile"><span>🐊</span></div>
     </div>
     <div class="den">
       <div class='score'>YOUR SCORE IS: 🐊 ✕　<span>0</span>
@@ -53,10 +53,13 @@
       // write js code here
       let score = 0
       $('.crocodile').click(function(){
+        $(this).addClass('clicked');
+        setTimeout(function(){
+          $('.clicked').removeClass('clicked');
+        },4000);
         score++
         $('.score span').text(score);
       })
-
     });
   </script>
 </body>
