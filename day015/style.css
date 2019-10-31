@@ -89,6 +89,7 @@
 .zombie{
   font-size: 7vw;
   flex:1;
+  text-align:center;
 }
 
 @keyframes scare {
