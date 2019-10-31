@@ -41,21 +41,64 @@
   height:100vh;
 }
 
-.our-place{
-  position: absolute;
+.zombies{
+  height:70vh;
+}
+.sanctuary{
+　height:15vh;
+  display: flex;
+  width: 100vw;
 }
 
+.block{
+  flex: 2 auto;
+  height:15vh;
+  background-color: #485460;
+}
 
+.princess{
+  flex: 1 auto;
+  background-color: #d2dae2;
+  height: 15vh;
+  text-align: center;
+}
+.princess h1{
+  animation: scare 1s linear alternate infinite;
+  font-size: 7vw;
+}
 .hero{
   position: absolute;
   bottom: 0;
   width: 100vw;
-  height: 10vh;
+  height: 15vh;
   border: 10px double #1B3559;
 }
+.hero h6{
+  font-size: 22px;
+  position: fixed;
+  bottom:0;
+  right:0;
+  padding: 30px;
+}
 
+.zombies{
+  background-color:#84817a;
+  display: flex;
+}
 
+.zombie{
+  font-size: 7vw;
+  flex:1;
+}
 
+@keyframes scare {
+  0%{
+    transform: translateX(-10px);
+  }
+  100%{
+    transform: translateX(10px);
+  }
+}
 
 
 
