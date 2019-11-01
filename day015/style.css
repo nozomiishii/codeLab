@@ -42,7 +42,7 @@
 }
 
 .zombies{
-  height:60vh;
+  height:70vh;
 }
 .sanctuary{
   height:15vh;
@@ -65,13 +65,15 @@
   font-size: 7vw;
 }
 .hero{
+  position: relative;
   width: 100vw;
   height: 15vh;
   border: 10px double #1B3559;
 }
 .hero h6{
-  font-size: 22px;
-  padding: 30px;
+  font-size: 40px;
+  text-align: right;
+  margin-right: 20px
 }
 
 .zombies{
