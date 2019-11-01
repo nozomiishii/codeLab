@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day14 -waniAttack-
+day15 -zombie-
 
-https://nozomiishii.github.io/codeLab/day014/
+https://nozomiishii.github.io/codeLab/day015/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 

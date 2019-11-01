@@ -18,7 +18,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: #84817a;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -92,6 +92,34 @@
   text-align:center;
 }
 
+.zombie:nth-child(1){
+  animation: edgeAttacking 21s 3s infinite;
+}
+.zombie:nth-child(2){
+  animation: middleAttacking 11s 3s infinite;
+}
+.zombie:nth-child(3){
+  animation: middleAttacking 18s 3s infinite;
+}
+.zombie:nth-child(4){
+  animation: centerAttacking 20s 3s infinite;
+}
+.zombie:nth-child(5){
+  animation: centerAttacking 11s 3s infinite;
+}
+.zombie:nth-child(6){
+  animation: middleAttacking 16s 3s infinite;
+}
+.zombie:nth-child(7){
+  animation: middleAttacking 19s 3s infinite;
+}
+.zombie:nth-child(8){
+  animation: edgeAttacking 18s 3s infinite;
+}
+
+.killed{
+  display: none;
+}
 @keyframes scare {
   0%{
     transform: translateX(-10px);
@@ -101,9 +129,38 @@
   }
 }
 
+@keyframes centerAttacking {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(70vh);
+  }
+}
 
+@keyframes middleAttacking {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translate(40vw, 0);t
+  }
+  40%{
+    transform: translate(-40vw, 0);
+  }
+  100%{
+    transform: translateY(70vh);
+  }
+}
 
-
+@keyframes edgeAttacking {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(70vh);
+  }
+}
 
 
 

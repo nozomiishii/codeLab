@@ -21,15 +21,13 @@
 </head>
 <body>
 
-  <div class="start" style='display:none;'>
+  <div class="start">
     <h1>🧟zombie🧟</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
   <div class="game">
     <div class="zombies">
-      <div class="zombie">🧟</div>
-      <div class="zombie">🧟</div>
       <div class="zombie">🧟</div>
       <div class="zombie">🧟</div>
       <div class="zombie">🧟</div>
@@ -60,7 +58,16 @@
       });
 
       // write js code here
-      $('')
+      let kill=0
+      $('.zombie').click(function(){
+        kill++
+        $('.hero h6').find('span').text(kill);
+        $(this).addClass('killed');
+      });
+
+      setInterval(function(){
+        $('.killed').removeClass('killed');
+      }, 1000);
 
     });
   </script>
