@@ -65,8 +65,6 @@
   font-size: 7vw;
 }
 .hero{
-  position: absolute;
-  bottom: 0;
   width: 100vw;
   height: 15vh;
   border: 10px double #1B3559;
