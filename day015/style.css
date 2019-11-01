@@ -45,21 +45,19 @@
   height:70vh;
 }
 .sanctuary{
-　height:15vh;
+  height:15vh;
   display: flex;
   width: 100vw;
 }
 
 .block{
   flex: 2 auto;
-  height:15vh;
   background-color: #485460;
 }
 
 .princess{
   flex: 1 auto;
   background-color: #d2dae2;
-  height: 15vh;
   text-align: center;
 }
 .princess h1{
