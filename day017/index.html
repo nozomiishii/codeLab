@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_6_battleship</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="6th NOV / Day 17 - battleship -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day016/day016.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="start">
+    <h1>🚢Battleship🚢</h1>
+    <h6>START!!</h6>
+  </div>
+  <!-- write html code here -->
+  <div class="game">
+    <h1>Find enemy ships<span class="target ship">🚢</span>!!</h1>
+  </div>
+  <div class="sea">
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area ship">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area">🌊</div>
+    <div class="target area ship">🌊</div>
+    <div class="target area">🌊</div>
+  </div>
+  <div class="explanation">
+    <h2>The rest of enemy ships: <span class="target ship">🚢</span>×<span class="score">4</span></h2>
+  </div>
+  <div class="attacked">
+    <h3>💥🚢!!SINK!!🚢💥</h3>
+  </div>
+  <div class="end">
+    <h3>YOU WIN</h3>
+  </div>
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+      // write js code here
+      var ships = 4
+      $('.target').click(function(){
+        if(ships == 1){
+          console.log('work');
+          $('.end').show();
+        }else if($(this).hasClass('ship')){
+          $('.attacked').show().fadeOut(2000);
+          $(this).text('💥');
+          $(this).removeClass('ship');
+          ships = ships - 1
+          $('.score').text(ships);
+        } else {
+          $(this).text('🌫');
+        }
+        console.log($('.score').text());
+      })
+    });
+  </script>
+</body>
+</html>
+
