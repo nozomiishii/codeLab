@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_5_LetMeSleep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="5th NOV / Day 16 - LetMeSleep -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day016/day016.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="start">
+    <h1>🌚let me sleep🌚</h1>
+    <h6>START!!</h6>
+  </div>
+  <!-- write html code here -->
+  <div class="comment">
+    <h3>Click suns and let me sleep</h3>
+  </div>
+  <div class="game">
+    <div class="suns">
+      <div class="sun"><h2>🌞</h2></div>
+      <div class="sun"><h2>🌞</h2></div>
+      <div class="sun"><h2>🌞</h2></div>
+      <div class="sun"><h2>🌞</h2></div>
+      <div class="me"><h2>😵</h2></div>
+      <div class="sun"><h2>🌞</h2></div>
+      <div class="sun"><h2>🌞</h2></div>
+      <div class="sun"><h2>🌞</h2></div>
+      <div class="sun"><h2>🌞</h2></div>
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+
+      // write js code here
+      $('.sun').click(function(){
+        $(this).addClass('hide');
+        setTimeout(function(){
+          $('.hide').removeClass('hide');
+        },8000);
+
+        if($('.hide').length == 3){
+          $('.me h2').text('🥺');
+        } else if($('.hide').length == 8){
+          $('.me h2').text('😴');
+          $('.sun h2').text('🌚');
+          $('.comment h3').text('Thank you. Good night!')
+          $('.game').addClass('gameEnd');
+        } else if($('.hide').length > 5){
+          $('.me h2').text('🥰');
+        }
+      })
+
+    });
+  </script>
+</body>
+</html>
+

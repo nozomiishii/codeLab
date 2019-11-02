@@ -6,7 +6,7 @@
   list-style: none;
 }
 @media all and (max-width: 670px){
-  *{
+  .start{
     font-size:18px !important;
   }
 }
