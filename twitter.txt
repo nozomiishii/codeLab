@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day17 -battleship-
+day18 -risukun-
 
-https://nozomiishii.github.io/codeLab/day017/
+https://nozomiishii.github.io/codeLab/day018/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 
