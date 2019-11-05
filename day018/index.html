@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_7_risukun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="7th NOV / Day 18 - risukun -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day018/day018.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="start">
+    <h1>🐿りすくん</h1>
+    <h6>START!!</h6>
+  </div>
+  <!-- write html code here -->
+  <div class="game">
+    <div class="comment">
+      <h1>よう！よくきたな！栗くれよ</h1>
+    </div>
+    <div class="risukun">
+      <h1>🐿</h1>
+      <div class='ax'>🪓</div>
+    </div>
+    <div class="your-choice">
+      <div class="choice">
+        <span class="roll">🌰</span>
+      </div>
+      <div class="choice">
+        <span class="roll">🥮</span>
+      </div>
+      <div class="choice">
+        <span class="roll">🦊</span>
+      </div>
+      <div class="choice">
+        <span class="roll">🪓</span>
+      </div>
+    </div>
+    <div class="forest">
+      <a href="https://nozomiishii.github.io/codeLab/day010/">🌲森へ行く🌲</a>
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+
+      // write js code here
+      $('.choice:nth-child(1)').click(function(){
+        $('.throw').removeClass('throw');
+        $('.comment h1').text('お前いいやつだな。もっと栗くれよ');
+        $('.risukun h1').text('❤️🐿');
+      });
+
+      $('.choice:nth-child(2)').click(function(){
+        $('.throw').removeClass('throw');
+        $('.comment h1').text('なんだいこれは');
+        $('.risukun h1').text('🦧');
+      });
+
+      $('.choice:nth-child(3)').click(function(){
+        $('.throw').removeClass('throw');
+        $('.comment h1').text('天敵です。やめてください。');
+        $('.risukun h1').text('💆');
+      });
+
+      $('.choice:nth-child(4)').click(function(){
+        $('.comment h1').text('おいサイコパス！');
+        $('.ax').addClass('throw');
+        $('.risukun h1').text('🐿');
+      });
+    });
+  </script>
+</body>
+</html>
+

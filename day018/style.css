@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 670px){
+  .start{
+    font-size:18px !important;
+  }
+  .comment h1{
+    font-size:18px !important;
+  }
+  .choice{
+    font-size: 10vw !important;;
+  }
+}
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: #874D14;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+.game{
+  height:100vh;
+  background: #A3CB39;
+}
+
+.comment{
+  height: 20vh;
+  text-align: center;
+  color: #874D14;
+  border: 10px double #874D14;
+  background: white;
+}
+.comment h1{
+  line-height: 20vh;
+}
+
+.risukun{
+  height: 50vh;
+  text-align: center;
+  position: relative;
+}
+.risukun h1{
+  line-height: 40vh;
+  font-size: 180px;
+  animation: walk 0.5s infinite alternate steps(3);
+}
+
+.your-choice{
+  height:20vh;
+  display: flex;
+}
+
+.choice{
+  flex: 1 auto;
+  height: 10vh;
+  margin: 10px;
+  font-size: 70px;
+  box-shadow: 2px 2px #874D14;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background: white;
+}
+
+.choice:hover{
+  background: #874D14;
+}
+.forest{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forest a{
+  width: 50vw;
+  height: 8vh;
+  line-height: 8vh;
+  display: block;
+  background: #026832;
+  text-align: center;
+  color: white;
+  border: 3px groove #E0AC0E;
+}
+
+.forest:hover{
+  animation: spin 5s infinite;
+}
+
+.roll{
+  animation: rolling 20s infinite linear;
+}
+
+.ax {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  font-size: 30px;
+  display: none;
+}
+.throw{
+  display: block;
+  font-size: 60px;
+  animation: throwing 1s;
+}
+@keyframes spin{
+  0%{transform: rotateY(0);}
+  50%{transform: rotateY(180deg);}
+  100%{transform: rotateY(360deg);}
+}
+
+@keyframes rolling{
+  0%{transform: rotateZ(0);}
+  50%{transform: rotateZ(180deg);}
+  100%{transform: rotateZ(360deg);}
+}
+
+@keyframes walk{
+  form{transform: translateX(-10px);}
+  to{transform: translateX(10px);}
+}
+
+@keyframes throwing{
+  form{transform: translateX(100vw) rotateZ(0);}
+  to{transform: translateX(-100vw) rotateZ(-180deg);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
