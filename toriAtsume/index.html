@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_8_toriAtsume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="9th NOV / Day 20 - toriAtsume -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day020/day020.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="start" style='display:none;'>
+    <h1>🦜toriAtsume🦜</h1>
+    <h6>START!!</h6>
+  </div>
+  <!-- write html code here -->
+  <div class="game">
+    <div class="comment">
+      <h1>🦜:僕の仲間たちをあつめてね</h1>
+    </div>
+    <div class="birds">
+      <div class="bird">🦜</div>
+      <div class="bird">🦉</div>
+      <div class="bird">🕊</div>
+      <div class="bird">🦩</div>
+      <div class="bird">🐓</div>
+      <div class="bird">🦆</div>
+      <div class="bird">🦅</div>
+      <div class="bird">🦃</div>
+    </div>
+    <div class="collections">
+      <div class="collection"><h1></h1></div>
+      <div class="basket">🔳</div>
+    </div>
+  　<div class="forest">
+      <a href="https://nozomiishii.github.io/codeLab/day010/">🌲森へ行く🌲</a>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+
+      // write js code here
+      $('.bird').click(function(){
+        $('.collected').removeClass('collected');
+        $('.collection h1').text('');
+        const getBird = $(this).text();
+        $('.collection h1').text(getBird).addClass('collected');
+      })
+
+    });
+  </script>
+</body>
+</html>
+
