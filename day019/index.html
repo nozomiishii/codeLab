@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>11_5_LetMeSleep</title>
+  <title>11_8_omikuji</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -12,9 +12,9 @@
   <!-- title -->
   <meta name="twitter:title" content="kusayari" />
   <!-- day -->
-  <meta name="twitter:description" content="5th NOV / Day 16 - LetMeSleep -"/>
+  <meta name="twitter:description" content="8th NOV / Day 19 - omikuji -"/>
   <!-- url -->
-  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day016/day016.png"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day019/day019.png"/>
   <meta name="twitter:card" content="summary"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -22,12 +22,32 @@
 <body>
 
   <div class="start" style='display:none;'>
-    <h1>Title</h1>
+    <h1>Omikuji</h1>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
   <div class="game">
-    <h1>game time</h1>
+    <div class="comment">
+      <h1>Omikuji</h1>
+      <p>1回100円</p>
+    </div>
+    <div class="omikuji">
+      <h1>⛩</h1>
+    </div>
+    <div class="ask">
+      <h1>いくらで占いますか？</h1>
+    </div>
+    <div id="money">
+      <div class="money handred">
+        <h2>100円</h2>
+      </div>
+      <div class="money fifty">
+        <h2>50円</h2>
+      </div>
+      <div class="money zero">
+        <h2>石ころ</h2>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -38,7 +58,21 @@
       });
 
       // write js code here
-
+    $('.money').click(function(){
+      if($(this).hasClass('zero')){
+        $('.omikuji h1').text('👹👹👹');
+      }else if($(this).hasClass('fifty')){
+        $('.omikuji h1').text('はい、吉ー');
+      }else{
+        $('.omikuji h1').text('⛩').addClass('omikuji-start');
+        const arr = [ "大吉", "中吉", "吉"];
+        const result = arr[ Math.floor( Math.random() * arr.length ) ] ;
+        setTimeout(function(){
+          $('.omikuji h1').text(result);
+          $('.omikuji-start').removeClass('omikuji-start');
+        }, 3000);
+      }
+    })
 
     });
   </script>

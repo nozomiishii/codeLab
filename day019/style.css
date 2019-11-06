@@ -39,24 +39,79 @@
 /*iphone*/
 .game{
   height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.comment{
+  height: 20vh;
+}
+.comment h1{
+  font-size: 72px;
+  line-height: 20vh;
+}
+.comment p{
+  text-align: center;
+}
 
+.omikuji{
+  height: 50vh;
+}
 
+.omikuji h1{
+  font-size: 92px;
+  line-height: 50vh;
+}
 
+.ask{
+  height: 10vh;
+}
 
+#money{
+  height: 20vh;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
 
+.money{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+}
 
+.handred{
+  background: #ffb142;
+  box-shadow: 2px 4px #cc8e35
+}
 
+.fifty{
+  background: #d1ccc0;
+  box-shadow:2px 4px #84817a;
+}
 
+.zero{
+  background: #e74c3c;
+  box-shadow: 2px 4px#c0392b;
+}
 
+.money:hover{
+  opacity: 0.8;
+  box-shadow: none;
+  position: relative;
+  top:2px;
+}
 
+.omikuji-start{
+  animation:omikuji-starting 1s 3 alternate linear;
+}
 
-
-
-
-
-
+@keyframes omikuji-starting{
+  from{transform: translateX(10px);}
+  to{transform: translateX(-10px);}
+}
 
 
 
