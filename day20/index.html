@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>11_8_omikuji</title>
+  <title>11_9_Adventure2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -12,17 +12,18 @@
   <!-- title -->
   <meta name="twitter:title" content="kusayari" />
   <!-- day -->
-  <meta name="twitter:description" content="8th NOV / Day 19 - omikuji -"/>
+  <meta name="twitter:description" content="9th NOV / Day 20 - Adventure2 -"/>
   <!-- url -->
-  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day019/day019.png"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day020/day020.png"/>
   <meta name="twitter:card" content="summary"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 
-  <div class="start" style='display:none;'>
-    <h1>Title</h1>
+  <div class="start">
+    <h1>Adventure2</h1>
+    <p>🌳⚡️🔥🌊🌚</p>
     <h6>START!!</h6>
   </div>
   <!-- write html code here -->
@@ -35,21 +36,23 @@
       </h1>
     </div>
     <div class="grid-container">
-      <div class="blue"></div>
-      <div class="red"></div>
-      <div class="yellow"></div>
-      <div class="green"></div>
-      <div class="black"></div>
+      <div class="grid-item blue"></div>
+      <div class="grid-item red"></div>
+      <div class="grid-item yellow"></div>
+      <div class="grid-item green"></div>
+      <div class="grid-item black"></div>
     </div>
     <div class="buttons">
-      <div class="button">🌊</div>
-      <div class="button">🔥</div>
-      <div class="button">⚡️</div>
-      <div class="button">🌳</div>
-      <div class="button">🌚</div>
+      <div class="button wave">🌊</div>
+      <div class="button fire">🔥</div>
+      <div class="button light">⚡️</div>
+      <div class="button weed">🌳</div>
+      <div class="button face"><a href="https://nozomiishii.github.io/codeLab/day016/">🌚</a></div>
     </div>
   </div>
-
+  <div class="high" style="display: none;">
+    <h1>🌳🤤🌳</h1>
+  </div>
   <script>
     $(function(){
       // start game
@@ -58,7 +61,23 @@
       });
 
       // write js code here
-
+      $('.button').click(function(){
+        $('.fire-action').removeClass('fire-action');
+        $('.wave-action').removeClass('wave-action');
+        $('.weed-action').removeClass('weed-action');
+        $('.light-action').removeClass('light-action');
+        if($(this).hasClass('wave')){
+          $('.grid-item').addClass('wave-action');
+          $('body').addClass('wave-action');
+        }else if($(this).hasClass('fire')){
+          $('.wave-action').removeClass('wave-action');
+          $('.grid-item').addClass('fire-action');
+        }else if($(this).hasClass('light')){
+          $('.grid-item').addClass('light-action');
+        }else if($(this).hasClass('weed')){
+          $('.high').show().fadeOut(1000);
+        }
+      })
 
     });
   </script>
