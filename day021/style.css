@@ -45,9 +45,11 @@
   height: 20vh;
   display: flex;
   align-items:center;
+  justify-content: center;
 }
 
 .comment h1{
+  width: 100vw;
   border: 5px dotted #6ab04c;
   background: white;
   text-align: center;
