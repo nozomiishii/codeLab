@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_10_harvest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="10th NOV / Day 21 - harvest -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day021/day021.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="start">
+    <h1>🥕Harvest🥕</h1>
+    <h6>START!!</h6>
+  </div>
+  <!-- write html code here -->
+  <div class="game">
+    <div class="comment">
+      <h1>the harvest season has come</h1>
+    </div>
+    <div class="carrot town">
+      <div class="area me"></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+      <div class="area"><p>🥕</p></div>
+    </div>
+
+    <div class="human town" style="display: none">
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+      <div class="area"><p>👨🏻‍🌾</p></div>
+    </div>
+
+    <div class="devil">
+      🥕
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+
+      // write js code here
+      let carrots = 1
+      $('.area').click(function(){
+        if(carrots > 20){
+          $('.devil').css('display',"flex").delay(200).fadeOut();
+          $('.carrot').hide();
+          $('.human').show();
+          $('.comment h1').text('🥕:"harvest time!!!"');
+          $('.game').css('background','black');
+          $('.it').removeClass('it');
+          $(this).addClass('it');
+          $(this).find('p').text('');
+        } else {
+          carrots++
+          $('.me').removeClass('me');
+          $(this).addClass('me');
+          $(this).find('p').text('');
+        }
+      })
+    });
+  </script>
+</body>
+</html>
+
