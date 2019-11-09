@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 670px){
+  .start{
+    font-size:18px !important;
+  }
+}
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+.game{
+  height:100vh;
+  width:100vw;
+}
+
+.comment h1{
+  height: 20vh;
+  text-align: center;
+  font-size: 48px;
+  padding: 10px;
+}
+.me{
+  height: 50vh;
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  align-items: center;
+}
+
+.meMonster{
+  height: 30vh;
+  font-size: 60px;
+}
+
+.meRed{
+  background-color:#e74c3c;
+}
+
+.meBlue{
+  background-color:#3498db;
+  grid-column: 3 / 4;
+}
+
+.meGreen{
+  background-color:#1abc9c;
+  grid-column: 5 / 6;
+}
+
+.you{
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.monster{
+  flex: 1 auto;
+  font-size: 10vw;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+
+}
+
+.red{
+  background-color:#e74c3c;
+}
+
+.blue{
+  background-color:#3498db;
+}
+
+.green{
+  background-color:#1abc9c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
