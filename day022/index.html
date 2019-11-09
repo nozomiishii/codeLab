@@ -34,6 +34,7 @@
       <div class="meMonster meRed">🦖🔥</div>
       <div class="meMonster meBlue">🦕🌊</div>
       <div class="meMonster meGreen">🤤🌳</div>
+
     </div>
     <div class="you">
       <div class="monster red">🦖🔥</div>
@@ -42,6 +43,14 @@
     </div>
   </div>
 
+  <div class="result win">
+    you win
+    <h6><a href="https://nozomiishii.github.io/codeLab/day022/">again</a></h6>
+  </div>
+  <div class="result lose">
+    you lose
+    <h6><a href="https://nozomiishii.github.io/codeLab/day022/">again</a></h6>
+  </div>
   <script>
     $(function(){
       // start game
@@ -51,6 +60,33 @@
 
       // write js code here
 
+    $('.monster').click(function(){
+      const $red = $(this).hasClass('red');
+      const $blue = $(this).hasClass('blue');
+      const $green = $(this).hasClass('green');
+      // battle
+        let win = 0
+        const arr = [ "red", "blue", "green"];
+        const result = arr[ Math.floor( Math.random() * arr.length ) ] ;
+        setTimeout(function(){
+          if(result == 'green' && $red){
+            win++
+            console.log("you win");
+            $('.win').addClass('active');
+          } else if(result == 'red' && $blue){
+            win++
+            console.log("you win");
+            $('.win').addClass('active');
+          } else if(result == 'blue' && $green){
+            win++
+            console.log("you win");
+            $('.win').addClass('active');
+          } else {
+            console.log('lose');
+            $('.lose').addClass('active');
+          }
+        }, );
+    })
 
     });
   </script>
