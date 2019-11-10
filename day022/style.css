@@ -18,7 +18,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: #625499;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -53,7 +53,7 @@
 }
 .meMonsters{
   width: 60vw;
-  height: 50vh;
+  height: 40vh;
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -92,6 +92,13 @@
  to{ transform: translateY(-10px); }
 }
 
+.yourmonsters{
+  height: 10vh;
+  width: 100vw;
+  text-align:center;
+  border: 5px double #0C1A31;
+  line-height: 10vh;
+}
 .you{
   height: 30vh;
   display: flex;
@@ -128,20 +135,36 @@
   height: 100vh;
   width: 100vw;
   z-index: 101;
-  background-color: black;
   display: none;
   align-items:center;
   justify-content: center;
   flex-direction: column;
-  /*color*/
-  color:white;
   /*size*/
   font-size: 18px;
+}
+
+.result a{
+  font-size: 32px;
+  color:white;
+  display: block;
+}
+
+.win{
+  color:white;
+  font-size: 42px;
+  background-color: #F8D700;
+}
+
+.lose{
+  color:white;
+  font-size: 42px;
+  background-color: #0C1A31;
 }
 
 .active{
   display:flex;
 }
+
 
 
 
