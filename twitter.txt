@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day21 -harvest-
+day22 -pouchMonsters2-
 
-https://nozomiishii.github.io/codeLab/day021/
+https://nozomiishii.github.io/codeLab/day022/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 
