@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 670px){
+  .start{
+    font-size:18px !important;
+  }
+}
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+.game{
+  height:100vh;
+}
+
+.button{
+  position: absolute;
+  bottom: 20vh;
+  height: 80px;
+  width:200px;
+  padding:0 15px;
+  border:5px outset #102F57;
+  color: white;
+  background-color: #0E172A;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.button:hover{
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.button:active{
+  animation: roll 2s;
+}
+
+@keyframes roll{
+  0%{transform: rotateX(0deg);}
+  50%{transform: rotateX(180deg);}
+  100%{transform: rotateX(360deg);}
+}
+
+.comment{
+  height: 20vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day22 -pouchMonsters2-
+day23 -htmlCanvas-
 
-https://nozomiishii.github.io/codeLab/day022/
+https://nozomiishii.github.io/codeLab/day023/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 
