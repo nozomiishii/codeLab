@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 670px){
+  .start{
+    font-size:18px !important;
+  }
+}
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+
+
+.sun{
+  width: 100vw;
+  font-size: 70px;
+  position: absolute;
+
+}
+.cloud{
+  width: 100vw;
+  position: relative;
+}
+
+.cloud h1{
+  position: absolute;
+  font-size: 70px;
+  top:30px;
+  right:0;
+  animation: floating 50s linear both infinite;
+}
+
+@keyframes floating{
+  0%{transform: translateX(0); opacity: 0.2;}
+  25%{transform: translateX(-25vw );opacity: 1;}
+  50%{transform: translateX(-50vw); opacity: 0.2;}
+  100%{transform: translateX(-100vw);opacity: 1;}
+}
+
+.sky{
+  width: 100vw;
+  background-color: #829FD9;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sky h1{
+  color: white;
+  animation: jump 1s infinite both;
+}
+
+@keyframes jump {
+  0%{transform: translateY(0);}
+  10%{transform: translateY(5px);}
+  50%{transform: translateY(-20px);}
+  100%{transform: translateY(0);}
+}
+
+#human{
+  position: fixed;
+  top: 80vh;
+  width: 100vw;
+  font-size: 60px;
+  text-align: center;
+}
+.sea{
+  background-color:#5C73F2;
+  height: 200vh;
+}
+.level1{
+  background-color: #0029FA;
+  height: 200vh;
+}
+.level2{
+  background-color: #3E38F2;
+  height: 200vh;
+}
+.level3{
+  background-color:#230A59;
+  height: 200vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

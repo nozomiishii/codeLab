@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day24 -htmlCanvas2-
+day25 -Dive-
 
-https://nozomiishii.github.io/codeLab/day024/
+https://nozomiishii.github.io/codeLab/day025/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 

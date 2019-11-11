@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_14_Dive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="14th NOV / Day 25 - Dive -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day025/day025.png"/>
+  <meta name="twitter:card" content="summary"/>
+</head>
+<body>
+    <div class="sun">☀️</div>
+    <div class="cloud"><h1>☁️☁️</h1></div>
+    <div class="sky"><h1>↓Dive↓</h1></div>
+    <div id="human">🏊</div>
+    <div class="sea"></div>
+    <div class="level1"></div>
+    <div class="level2"></div>
+    <div class="level3"></div>
+
+  <script>
+    const human = document.getElementById('human');
+    let height = window.innerHeight;
+
+    window.addEventListener('scroll', () => {
+      console.log(scrollY);
+      if(scrollY > height * 6){
+        console.log('4');
+        human.innerText = "🧘";
+      } else if(scrollY > height * 4){
+        console.log('3');
+        human.innerText = "🦑";
+      } else if(scrollY > height *2){
+        console.log('2');
+        human.innerText = "🐟";
+      } else {
+        human.innerText = "🏊";
+      }
+    });
+  </script>
+</body>
+</html>
+
