@@ -5,7 +5,7 @@
   text-decoration: none;
   list-style: none;
 }
-@media all and (max-width: 670px){
+@media all and (max-width: 1000px){
   .start{
     font-size:18px !important;
   }

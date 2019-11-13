@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day26 -goWatchMovie-
+day27 -goWatchMovie2-
 
-https://nozomiishii.github.io/codeLab/day026/
+https://nozomiishii.github.io/codeLab/day027/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 
