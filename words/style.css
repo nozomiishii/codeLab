@@ -9,9 +9,6 @@
   .start{
     font-size:18px !important;
   }
-  .comment h1{
-    font-size:18px !important;
-  }
 }
 .start{
   position: fixed;
@@ -21,7 +18,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: #f0932b;
+  background-color: black;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -42,44 +39,39 @@
 /*iphone*/
 .game{
   height:100vh;
-  background: #428C3F;
 }
-
-.comment{
+.commnet{
+  position: fixed;
+  z-index: -1;
+}
+.comment h1{
   height: 10vh;
-  border: 4px double #004554;
-}
-
-.corns{
-  margin-top: 10vh;
-  display:grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: minmax(10vh, auto);
-}
-
-.corn{
-  background:#F2B05E;
-  border: 2px solid #06735F;
-}
-
-.grow{
-  text-align: center;
   line-height: 10vh;
-  font-size: 32px;
-  animation: growing 1s infinite both alternate steps(3);
+  text-align: center;
+  font-size: 60px;
+  animation: side 1s alternate infinite both steps(5);
 }
 
-@keyframes growing{
+@keyframes side {
   from{transform: translateX(-5px);}
   to{transform: translateX(5px);}
 }
 
-
-.harvest{
-  height: 10vh;
-  margin-top: 5vh;
+.me{
+  width: 100vw;
+  height:30vh;
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
   text-align: center;
 }
+
+
+
+
+
+
+
 
 
 

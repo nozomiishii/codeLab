@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_15_goWatchMovie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="15th NOV / Day 26 - goWatchMovie -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day026/day026.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="start" style='display:none;'>
+    <h1>Title</h1>
+    <h6>START!!</h6>
+  </div>
+  <!-- write html code here -->
+  <div class="game">
+    <div class="comment">
+      <h1>🦸🏻‍♂️</h1>
+    </div>
+    <div class="attack">
+    </div>
+    <div class="me">
+      <h1>👨🏻‍🎤</h1>
+      <input type="text" name="text">
+
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
+
