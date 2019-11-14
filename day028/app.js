@@ -17,8 +17,11 @@ btn.addEventListener('click', function(){
   newWord.appendChild(wordContent);
   attack.appendChild(newWord);
   newWord.classList.add('shout');
+
   count -= 5
-  console.log(count)
+  if(input.value){
+    window.scrollTo(0,0);
+  }
   if(count == 0){
     end.classList.remove('over');
   }else if(count < 20){
