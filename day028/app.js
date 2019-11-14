@@ -20,7 +20,12 @@ btn.addEventListener('click', function(){
 
   count -= 5
   if(input.value){
-    window.scrollTo(0,0);
+    const me = arguments.callee;
+    const nowY = window.pageYOffset;
+    window.scrollTo(0, nowY - 100);
+    if (nowY > 0) {
+      window.setTimeout(me, 10);
+    }
   }
   if(count == 0){
     end.classList.remove('over');
