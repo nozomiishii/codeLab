@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .start{
+    font-size:18px !important;
+  }
+}
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: #00171F;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+.game{
+  height:100vh;
+  background: #00171F;
+}
+
+.life{
+  width: 100vw;
+  top:0;
+  left: 33vw;
+}
+
+.comment h1{
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+  font-size: 60px;
+  animation: side 1s alternate infinite both steps(5);
+}
+
+@keyframes side {
+  from{transform: translateX(-5px);}
+  to{transform: translateX(5px);}
+}
+
+.me{
+  width: 100vw;
+  height: 50vh;
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  width: 200px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.btn{
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  background: #fc5c65;
+  color: white;
+  border: 2px solid #eb3b5a;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.shout{
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  bottom: 35vh;
+  animation:shouting 3s both linear;
+  font-size: 32px;
+  color: #fc5c65;
+}
+
+@keyframes shouting{
+  from{transform: translateY(0);}
+  to{transform: translateY(-50vh);}
+}
+
+.life{
+  height:5vh;
+  width: 100vw;
+  background:#F8D700;
+}
+
+.end{
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 104;
+  display:flex;
+  background-color: #00171F;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 20px;
+}
+.over{
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
