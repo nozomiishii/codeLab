@@ -109,6 +109,15 @@
   to{transform: translateX(-2px);}
 }
 
+.broke {
+  animation: breaking 4s;
+  z-index: 5;
+}
+
+@keyframes breaking{
+  to{background: #6D214F;}
+}
+
 .garlics{
   position: absolute;
   top: 0;
@@ -174,11 +183,35 @@
   100%{opacity: 0;}
 }
 
+.yay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: -2;
+  background-color: #6D214F;
+  display: flex;
+  opacity: 0;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:#645328;
+  /*size*/
+  font-size: 72px;
+}
 
+.yayClicked{
+  animation: yayClicking 1s both;
+}
 
-
-
-
+@keyframes yayClicking{
+  0%{opacity: 0; transform: rotateY(90deg)}
+  50%{opacity: 1; z-index: 101; transform: rotateY(180deg)}
+  100%{opacity: 1; z-index: 101; transform: rotateY(360deg)}
+}
 
 
 
