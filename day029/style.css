@@ -83,6 +83,17 @@
   animation: sealed 1s alternate infinite both steps(4);
 }
 
+.unsealed{
+  animation: unsealing 4s both;
+}
+
+@keyframes unsealing{
+  0%{transform: translateY(0);}
+  10%{transform: translateY(-5vh);}
+  50%{transform: translateY(70vh);}
+  100%{transform: translateY(-100vh);}
+}
+
 .helphelp{
   display:inline-block;
   animation: helphelp 1s alternate infinite both steps(4);
@@ -133,12 +144,35 @@
   to{transform: rotateZ(-30deg) scale(1.4);}
 }
 
+.nope{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: -1;
+  background-color: #111111;
+  display: flex;
+  opacity: 0;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:#645328;
+  /*size*/
+  font-size: 72px;
+}
 
+.nopeClicked{
+  animation: nopeClicking 1s both;
+}
 
-
-
-
-
+@keyframes nopeClicking{
+  0%{opacity: 0;}
+  50%{opacity: 1; z-index: 3;}
+  100%{opacity: 0;}
+}
 
 
 
