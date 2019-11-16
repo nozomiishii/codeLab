@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day28 -wordPower-
+day29 -garlic-
 
-https://nozomiishii.github.io/codeLab/day028/
+https://nozomiishii.github.io/codeLab/day029/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 
