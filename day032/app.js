@@ -18,8 +18,8 @@ const hentai = document.querySelector('.hentai');
 attack.addEventListener('click',function(){
   lifeCounts--
   life.removeChild(life.lastChild);
-
-  if(lifeCounts > 12){
+  potion.classList.remove('hide');
+  if(lifeCounts > 8){
     potion.classList.add('hide');
   } else if(lifeCounts < 1){
     lifeCounts ++
@@ -47,7 +47,7 @@ potion.addEventListener('click',function(){
   const heart = document.createTextNode('🧡')
   lifeCount.appendChild(heart);
   life.appendChild(lifeCount);
-  if(lifeCounts > 12){
+  if(lifeCounts > 8){
     potion.classList.add('hide');
     console
   } else{
