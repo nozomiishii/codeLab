@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>11_22_treasureBoxes3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="22nd NOV / Day 33 - treasureBoxes3 -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day033/day033.png"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+
+  <div class="start" style="display: none">
+    <h1>treasureBoxes3</h1>
+    <h1>🗡🛡💰</h1>
+    <h6>START!!</h6>
+  </div>
+  <!-- write html code here -->
+  <div class="game">
+    <div class="comment">
+      <h1>🧙‍♀️:Pick one as your treasure...</h1>
+    </div>
+    <div class="treasures">
+      <div class="treasure">
+        <div class="box box1">🎁</div>
+      </div>
+      <div class="treasure">
+        <div class="box box2">🎁</div>
+      </div>
+      <div class="treasure">
+        <div class="box box3">🎁</div>
+      </div>
+      <div class="treasure">
+        <div class="box box4">🎁</div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden">
+    🎁
+  </div>
+🗡
+🛡
+💰
+💩
+  <script>
+    $(function(){
+      // start game
+      $('.start h6').click(function(){
+        $('.start').slideUp();
+      });
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .start{
+    font-size:22px !important;
+  }
+  .comment h1{
+    font-size:28px !important;
+  }
+  .start h1{
+    margin: 0 auto;
+  }
+}
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background: radial-gradient(#535C68,#111111);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:goldenrod;
+  /*size*/
+  font-size: 72px;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+.game{
+  height:100vh;
+  background: radial-gradient(#111111,#535C68);
+}
+
+.comment{
+  height: 10vh;
+  border: 4px inset #655329;
+  font-size:22px;
+  color: #655329;
+  background: white;
+}
+
+.treasures{
+  height: 80vh;
+  padding: 20px;
+  position: relative;
+}
+
+.treasure{
+  height: 20vh;
+  width: 100px;
+}
+
+.box{
+  height: 100px;
+  width: 100px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.box:hover{
+  border: 4px inset #655329;
+  border-radius: 100%;
+  transform: scale(1.2);
+  animation: shaking 0.5s both linear;
+}
+
+@keyframes shaking{
+  0%{transform: rotateZ(0);}
+  50%{transform: rotateZ(180deg);}
+  100%{transform: rotateZ(360deg);}
+}
+
+
+.box1{
+  animation:choosing 2s both linear infinite;
+  position: absolute;
+  left: 50vw;
+}
+.box2{
+  animation:choosing 2s both linear infinite reverse;
+  position: absolute;
+  left: 10vw;
+}
+.box3{
+  animation:choosing 2s both linear infinite alternate;
+  position: absolute;
+  left: 70vw;
+}
+.box4{
+  animation:choosing 2s both linear infinite alternate-reverse;
+  position: absolute;
+  left: 30vw;
+}
+
+@keyframes choosing{
+ form{transform: scale(1);}
+ to{transform: scale(1.3);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
