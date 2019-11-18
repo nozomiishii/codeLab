@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .start{
+    font-size:18px !important;
+  }
+  .comment h1{
+    font-size:18px !important;
+  }
+}
+
+/*h2 is charactor size*/
+h2{
+  font-size: 60px;
+}
+
+.start{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.start>*{
+  margin: 24px auto;
+}
+.start h6:hover{
+  transform: scale(1.4);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+/*iphone*/
+.game{
+  height:100vh;
+  background: #394a6d;
+}
+
+.comment{
+  height:10vh;
+  border: 4px double #3c4245;
+  background: #e5e5e5;
+}
+
+.hero{
+  padding: 50px;
+  height: 40vh;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h2{
+  margin-top: 60px;
+}
+
+.ourOption{
+  height: 40px;
+  text-align: center;
+}
+
+.options{
+  display:flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.option{
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option:hover{
+  opacity: 0.8;
+  border: 3px inset #8105d8;
+}
+
+
+.potion{
+  background: #ffa0d2;
+}
+
+.attack{
+  background:#42dee1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
