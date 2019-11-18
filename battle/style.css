@@ -19,6 +19,19 @@ h2{
   font-size: 60px;
 }
 
+.battle:nth-child(even){
+  animation: battling 1s alternate steps(6) both infinite;
+}
+
+.battle:nth-child(odd){
+  animation: battling 1s alternate-reverse steps(6) both infinite;
+}
+
+@keyframes battling{
+  form{transform: translateX(-12px);}
+  to{transform: translateX(12px);}
+}
+
 .start{
   position: fixed;
   top: 0;
@@ -84,7 +97,7 @@ h2{
   width: 80px;
   height: 80px;
   font-size: 40px;
-  margin: 20px;
+  margin: 60px 30px;
   padding: 10px;
   border-radius: 100%;
   display:flex;
@@ -97,6 +110,17 @@ h2{
   border: 3px inset #8105d8;
 }
 
+.option:nth-child(even){
+  animation: choosing 1s alternate linear both infinite;
+}
+
+.option:nth-child(odd){
+  animation: choosing 1s alternate-reverse linear both infinite;
+}
+@keyframes choosing{
+  form{transform: scale(0);}
+  to{transform: scale(1.1);}
+}
 
 .potion{
   background: #ffa0d2;
