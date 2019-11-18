@@ -61,8 +61,19 @@ h2{
 /*iphone*/
 .game{
   height:100vh;
+  width: 100vw;
   background: #394a6d;
   opacity: 0.9;
+}
+
+.hit{
+  background: #da2d2d;
+  animation: hitting 0.1s 3 both alternate linear;
+}
+
+@keyframes hitting{
+  from{transform: translate(20px, 5px);}
+  to{transform: translate(-20px, -5px);}
 }
 
 .comment{
@@ -150,7 +161,7 @@ h2{
   height: 100vh;
   z-index: 100;
   background-color: #FDA7DF;
-  display: flex;
+  display: none;
   align-items:center;
   justify-content: center;
   flex-direction: column;
@@ -159,6 +170,18 @@ h2{
   /*size*/
   font-size: 72px;
 }
+
+.clicked{
+  display: flex;
+  animation: clicking 3s both linear;
+}
+
+@keyframes clicking{
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
 
 
 
