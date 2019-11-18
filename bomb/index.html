@@ -16,15 +16,13 @@
   <!-- url -->
   <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day031/day031.png"/>
   <meta name="twitter:card" content="summary"/>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 
 
-  <div class="start" style='display:none;'>
+  <div class="op">
     <h1>bomb</h1>
-    <h6>START!!</h6>
+    <h4 id='start'>START!!</h4>
   </div>
   <!-- write html code here -->
   <div class="game">
@@ -41,15 +39,6 @@
       </h1>
     </div>
   </div>
-
-  <script>
-    $(function(){
-      // start game
-      $('.start h6').click(function(){
-        $('.start').slideUp();
-      });
-    });
-  </script>
   <script src="app.js"></script>
 </body>
 </html>

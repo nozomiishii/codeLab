@@ -1,6 +1,11 @@
-let number = 0
+//check
+console.log('js is here');
+//game start
+const start = document.getElementById('start');
+const op = document.querySelector('.op');
 
-while(number < 3){
-  window.alert("!!!");
-  number++
-}
+start.addEventListener('click',function(){
+  op.classList.add('start');
+});
+
+// write game code from here

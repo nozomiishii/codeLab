@@ -6,11 +6,11 @@
   list-style: none;
 }
 @media all and (max-width: 1000px){
-  .start{
-    font-size:22px !important;
+  .op{
+    font-size:26px !important;
   }
 }
-.start{
+.op{
   position: fixed;
   top: 0;
   right: 0;
@@ -28,19 +28,28 @@
   /*size*/
   font-size: 72px;
 }
-.start>*{
+.op>*{
   margin: 24px auto;
 }
-.start h6:hover{
+.op h4:hover{
   transform: scale(1.4);
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
-/*iphone*/
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(2vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
 .game{
   height:100vh;
 }
-
 
 
 
