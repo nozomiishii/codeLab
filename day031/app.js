@@ -17,18 +17,21 @@ for(choice of choices){
 
 
 start.addEventListener('click',function(){
-    // btn.classList.add('hide');
-  const setTimer = setInterval(function(){
-    timer.textContent = time;
-    console.log(time);
-    time--
-    if(time < 0){
-      console.log('finish!')
-      clearInterval(setTimer);
-    }
-  }, 1000);
+  start.classList.add('hide');
+  if(time>0){
+    const setTimer = setInterval(function(){
+      timer.textContent = time;
+      console.log(time);
+      time--
+      if(time < 0){
+        console.log('finish!')
+        clearInterval(setTimer);
+      }
+    }, 1000);
+  }
 });
 
 clear.addEventListener('click',function(){
   time = 0;
+  start.classList.remove('hide');
 });
