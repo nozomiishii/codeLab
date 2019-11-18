@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day31 -timer2-
+day32 -vsHero-
 
-https://nozomiishii.github.io/codeLab/day031/
+https://nozomiishii.github.io/codeLab/day032/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
 

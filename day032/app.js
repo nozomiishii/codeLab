@@ -1,4 +1,4 @@
-let lifeCounts = 12;
+let lifeCounts = 8;
 const life = document.querySelector('.life');
 console.log(life);
 

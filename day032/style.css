@@ -7,7 +7,7 @@
 }
 @media all and (max-width: 1000px){
   .start{
-    font-size:18px !important;
+    font-size:32px !important;
   }
   .comment h1{
     font-size:18px !important;
@@ -40,7 +40,7 @@ h2{
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background: linear-gradient(#23374d 50%, #e5e5e5 50%);
   display: flex;
   align-items:center;
   justify-content: center;
@@ -52,6 +52,10 @@ h2{
 }
 .start>*{
   margin: 24px auto;
+}
+
+.start h6{
+  color:#23374d;
 }
 .start h6:hover{
   transform: scale(1.4);
