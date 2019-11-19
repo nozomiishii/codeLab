@@ -22,7 +22,7 @@
 <body>
 
 
-  <div class="start" style="display: none">
+  <div class="start">
     <h1>treasureBoxes3</h1>
     <h1>🗡🛡💰</h1>
     <h6>START!!</h6>
@@ -47,14 +47,25 @@
       </div>
     </div>
   </div>
-  <div class="hidden">
-    🎁
+  <div class="hidden-area">
+    <div class="hidden">
+      🎁
+    </div>
   </div>
+  <div class="end good">
+    <h1>YOU'VE GOT THIS</h1>
+    <h2></h2>
+  </div>
+  <div class="end bad">
+    <h1>👸Thickie</h1>
+  </div>
+
   <script>
     $(function(){
       // start game
       $('.start h6').click(function(){
         $('.start').slideUp();
+        $('.treasures').addClass('startGame');
       });
     });
   </script>
