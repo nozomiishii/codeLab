@@ -9,3 +9,6 @@ start.addEventListener('click',function(){
 });
 
 // write game code from here
+
+
+

@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day33 -treasureBoxes3-
+day34 -trip-
 
-https://nozomiishii.github.io/codeLab/day033/
+https://nozomiishii.github.io/codeLab/day034/
 
-#くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者
+#くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 
