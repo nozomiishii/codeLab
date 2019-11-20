@@ -9,3 +9,10 @@ start.addEventListener('click',function(){
 });
 
 // write game code from here
+const you = document.querySelector('.you');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', function(){
+  you.classList.add('walk');
+  console.log('!!')
+});

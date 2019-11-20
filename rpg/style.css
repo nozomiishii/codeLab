@@ -81,20 +81,54 @@
   border: 1px solid red;
 }
 
+/*game animations*/
+
+/*player walk thorough weed*/
+.square{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  text-align: center;
+}
+.weed{
+  transform: translateY(40vh);
+}
+.you{
+}
+.walk{
+  animation: walking 2s linear forwards;
+}
+@keyframes walking{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(40vh);}
+}
+
 /*comment*/
 .comment{
+  width: 100vw;
   color:black;
   position: absolute;
   top:60vh;
   z-index: 2;
   padding: 10px;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
 .btn{
   margin-top: 60px;
+  padding: 20px;
   align-self: center;
+  border:4px inset #378BBD;
+  color:white;
+  background: #378BBD;
+  border-radius: 2px;
+}
+
+.btn:hover{
+  opacity: 0.8;
+  border:4px outset #378BBD;
 }
 
 
