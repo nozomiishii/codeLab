@@ -1,6 +1,6 @@
 //check
 console.log('js is here');
-//game starts
+//game start
 const start = document.getElementById('start');
 const op = document.querySelector('.op');
 

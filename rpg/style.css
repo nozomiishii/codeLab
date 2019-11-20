@@ -51,18 +51,51 @@
   height:100vh;
 }
 
+/*game page*/
+.field{
+  position: relative;
+  height:60vh;
+  width:100vw;
+  font-size: 60px;
+  text-align: center;
+}
 
+.wander{
+  background: #768640;
+  position: absolute;
+  top:0;
+  z-index: 2;
+}
 
+.battle{
+  background: #378BBD;
+  position: absolute;
+  top:0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.vase{
+  border: 1px solid red;
+}
 
+/*comment*/
+.comment{
+  color:black;
+  position: absolute;
+  top:60vh;
+  z-index: 2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
 
-
-
-
-
-
-
-
+.btn{
+  margin-top: 60px;
+  align-self: center;
+}
 
 
 
