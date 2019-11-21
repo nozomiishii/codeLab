@@ -18,7 +18,8 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  /*background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);*/
+  background: linear-gradient(to top left, #378BBD 50%, #6DAE4D 50%);
   display: flex;
   align-items:center;
   justify-content: center;
@@ -68,7 +69,7 @@
 }
 
 .battle{
-  background: #378BBD;
+  background: #3F454D;
   position: absolute;
   top:0;
   z-index: 1;
@@ -113,8 +114,13 @@
 }
 
 /*will add to '.battle'*/
-
-
+.appare{
+  animation: apparing 3s linear both;
+}
+@keyframes apparing{
+  from{z-index: 1; opacity:0;}
+  to{z-index: 3; opacity:1;}
+}
 /*comment*/
 .comment{
   width: 100vw;

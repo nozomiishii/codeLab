@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day34 -trip-
+day35 -GRPG-
 
-https://nozomiishii.github.io/codeLab/day034/
+https://nozomiishii.github.io/codeLab/day035/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 

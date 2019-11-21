@@ -12,8 +12,16 @@ start.addEventListener('click',function(){
 const you = document.querySelector('.you');
 const btn = document.querySelector('.btn');
 const wander = document.querySelector('.wander');
+const battle = document.querySelector('.battle');
+const comment = document.querySelector('.comment p');
+
 btn.addEventListener('click', function(){
   you.classList.add('walk');
   wander.classList.add('flash');
-
+  setTimeout(function(){
+    battle.classList.add('appare');
+  },4000);
+  setTimeout(function(){
+    comment.textContent = '🧖‍♂️:"A vase came out. and that\'s it!"';
+  },7000);
 });
