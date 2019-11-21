@@ -11,8 +11,9 @@ start.addEventListener('click',function(){
 // write game code from here
 const you = document.querySelector('.you');
 const btn = document.querySelector('.btn');
-
+const wander = document.querySelector('.wander');
 btn.addEventListener('click', function(){
   you.classList.add('walk');
-  console.log('!!')
+  wander.classList.add('flash');
+
 });

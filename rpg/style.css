@@ -61,7 +61,7 @@
 }
 
 .wander{
-  background: #768640;
+  background: #6DAE4D;
   position: absolute;
   top:0;
   z-index: 2;
@@ -78,7 +78,7 @@
 }
 
 .vase{
-  border: 1px solid red;
+
 }
 
 /*game animations*/
@@ -93,15 +93,27 @@
 .weed{
   transform: translateY(40vh);
 }
-.you{
-}
 .walk{
-  animation: walking 3s forwards steps(4);
+  animation: walking 3s forwards steps(3);
 }
 @keyframes walking{
   0%{transform: translateY(0);}
   100%{transform: translateY(40vh);}
 }
+
+
+/*when player into weed,vase come out*/
+/*will add to '.wander'*/
+.flash{
+  animation: flashing 0.2s 3s 6 linear;
+}
+@keyframes flashing{
+  form{background: #3F454D;}
+  to{background: #111111;}
+}
+
+/*will add to '.battle'*/
+
 
 /*comment*/
 .comment{
