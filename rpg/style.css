@@ -96,7 +96,7 @@
 .you{
 }
 .walk{
-  animation: walking 2s linear forwards;
+  animation: walking 3s forwards steps(4);
 }
 @keyframes walking{
   0%{transform: translateY(0);}
