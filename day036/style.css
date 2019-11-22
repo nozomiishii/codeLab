@@ -134,13 +134,15 @@
 }
 
 .btn{
-  margin-top: 60px;
+  width: 100px;
+  margin: 10px;
   padding: 20px;
   align-self: center;
   border:4px inset #378BBD;
   color:white;
   background: #378BBD;
   border-radius: 2px;
+  text-align: center;
 }
 
 .btn:hover{
@@ -150,6 +152,25 @@
 
 
 /*ep.2 genie came out*/
+.ep2{
+  visibility: hidden;
+  display: flex;
+}
+
+.spell a{
+  display: block;
+  color:white;
+}
+
+.runaway{
+  background: #F10001;
+}
+
+.spell{
+  background: #FDB036;
+}
+
+
 .vase{
   animation: floating 4s infinite both alternate linear;
 }
@@ -177,10 +198,18 @@
   100%{opacity: 1; transform: translateX(-10px); scale(1);}
 }
 
-
-
-
-
+/*clicked runaway btn but you can't runaway and get attacked*/
+.attacked{
+  background:#F10001;
+  animation: attacking 0.1s 3 alternate;
+  position: absolute;
+  top:0;
+  z-index: 3;
+}
+@keyframes attacking{
+  from{transform: translate(-10px, -10px);}
+  to{transform: translate(10px, 10px);}
+}
 
 
 

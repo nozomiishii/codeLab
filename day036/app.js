@@ -21,7 +21,7 @@ ep1.addEventListener('click', function(){
   wander.classList.add('flash');
   setTimeout(function(){
     // vase come out
-    wander.style.background ="#111111"
+    wander.style.display ="none";
     battle.classList.add('appare');
   },4000);
   setTimeout(function(){
@@ -47,12 +47,25 @@ monster.comment();
 
 const vase = document.querySelector('.vase');
 const genie = document.querySelector('.genie');
+const ep2 = document.querySelector('.ep2');
 
 vase.addEventListener('click', function(){
   genie.classList.add('rub');
-  comment.textContent = `I'm ${monster.name}. Attack:${monster.attack} Defense: ${monster.defense} HP:${monster.hp}`
+  comment.textContent = `I'm ${monster.name}. Attack:${monster.attack} Defense: ${monster.defense} HP:${monster.hp}`;
+  ep2.style.visibility = "visible";
 });
 
+const runaway = document.querySelector('.runaway');
+
+runaway.addEventListener('click', function(){
+  battle.classList.add('attacked');
+  battle.classList.remove('appare');
+  comment.textContent ="you can't runaway!!!"
+  setTimeout(function(){
+    battle.classList.remove('attacked');
+    comment.textContent = `I'm ${monster.name}. Attack:${monster.attack} Defense: ${monster.defense} HP:${monster.hp}`;
+  },1000)
+});
 
 
 
