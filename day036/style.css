@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .op{
+    font-size:26px !important;
+  }
+}
+.op{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  /*background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);*/
+  background: linear-gradient(to top left, #378BBD 50%, #6DAE4D 50%);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.op>*{
+  margin: 24px auto;
+}
+.op h4:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(1vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
+.game{
+  height:100vh;
+}
+
+/*game page*/
+.field{
+  position: relative;
+  height:60vh;
+  width:100vw;
+  font-size: 60px;
+  text-align: center;
+}
+
+.wander{
+  background: #6DAE4D;
+  position: absolute;
+  top:0;
+  z-index: 2;
+  display: none
+}
+
+.battle{
+  background: #3F454D;
+  position: absolute;
+  top:0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*game animations*/
+
+/*player walk thorough weed*/
+.square{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  text-align: center;
+}
+.weed{
+  transform: translateY(40vh);
+}
+.walk{
+  animation: walking 3s forwards steps(3);
+}
+@keyframes walking{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(40vh);}
+}
+
+
+/*when player into weed,vase come out*/
+/*will add to '.wander'*/
+.flash{
+  animation: flashing 0.2s 3s 6 linear;
+}
+@keyframes flashing{
+  form{background: #3F454D;}
+  to{background: #111111;}
+}
+
+/*will add to '.battle'*/
+.appare{
+  animation: apparing 3s linear both;
+}
+@keyframes apparing{
+  from{z-index: 1; opacity:0;}
+  to{z-index: 3; opacity:1;}
+}
+/*comment*/
+.comment{
+  width: 100vw;
+  color:black;
+  position: absolute;
+  top:60vh;
+  z-index: 2;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn{
+  margin-top: 60px;
+  padding: 20px;
+  align-self: center;
+  border:4px inset #378BBD;
+  color:white;
+  background: #378BBD;
+  border-radius: 2px;
+}
+
+.btn:hover{
+  opacity: 0.8;
+  border:4px outset #378BBD;
+}
+
+
+/*ep.2 genie came out*/
+.vase{
+  animation: floating 4s infinite both alternate linear;
+}
+@keyframes floating{
+  0%{transform: translate(-10px, -10px);}
+  50%{transform: translate(0);}
+  100%{transform: translate(10px, -10px);}
+}
+
+.genie{
+  font-size:1.5em;
+  opacity: 0;
+  animation: genie 2s infinite both linear alternate;
+}
+@keyframes genie{
+  0%{opacity: 1; transform: translateX(10px); scale(1);}
+  50%{opacity: 0.3; transform: translateX(0); scale(1.1);}
+  100%{opacity: 1; transform: translateX(-10px); scale(1);}
+}
+
+.rub {
+  animation: rubbing 2s forwards ease-out;
+}
+@keyframes rubbing{
+  from{transform: translateY(10vh); opacity: 0;}
+  to{transform: translateY(0); opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
