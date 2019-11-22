@@ -66,7 +66,7 @@
   position: absolute;
   top:0;
   z-index: 2;
-  display: none
+  /*display: none*/
 }
 
 .battle{
@@ -162,22 +162,20 @@
 .genie{
   font-size:1.5em;
   opacity: 0;
-  animation: genie 2s infinite both linear alternate;
+}
+
+.rub {
+  animation: rubbing 2s forwards ease-out, genie 2s 2s infinite linear alternate;
+}
+@keyframes rubbing{
+  from{transform: translateY(10vh); opacity: 0;}
+  to{transform: translateY(0); opacity: 1;}
 }
 @keyframes genie{
   0%{opacity: 1; transform: translateX(10px); scale(1);}
   50%{opacity: 0.3; transform: translateX(0); scale(1.1);}
   100%{opacity: 1; transform: translateX(-10px); scale(1);}
 }
-
-.rub {
-  animation: rubbing 2s forwards ease-out;
-}
-@keyframes rubbing{
-  from{transform: translateY(10vh); opacity: 0;}
-  to{transform: translateY(0); opacity: 1;}
-}
-
 
 
 
