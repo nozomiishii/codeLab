@@ -50,13 +50,14 @@
 .game{
   height:100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 
-.comment:after{
+.enemy:after{
   font-size: 60px;
   content: "👤";
   animation: enemy 0.5s infinite both linear;
@@ -70,7 +71,30 @@
   100%{content: "🧙‍♀️"}
 }
 
+.comment{
+  height:40vh;
+}
 
+.startBtn{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background:#247794;
+  border:2px solid #004980;
+  color:#DED7C7;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startBtn:hover{
+  opacity: 0.8;
+}
+
+.startBtn:active{
+  border:20px solid #004980;
+}
 
 
 
