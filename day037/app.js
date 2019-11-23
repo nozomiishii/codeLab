@@ -52,20 +52,24 @@ const ep3 = document.querySelector('.ep3');
 
 vase.addEventListener('click', function(){
   genie.classList.add('rub');
-  comment.textContent = `I'm ${monster.name}. Attack:${monster.attack} Defense: ${monster.defense} HP:${monster.hp}`;
+    comment.textContent ="Genie came out!!"
+    const p = document.createElement("p");
+    const commentBox = document.querySelector(".commentBox");
+    const genieContent = document.createTextNode(`I'm ${monster.name}. Attack:${monster.attack} Defense: ${monster.defense} HP:${monster.hp}`);
+    p.appendChild(genieContent);
+    commentBox.appendChild(p);
   ep2.style.visibility = "visible";
 });
 
 const runaway = document.querySelector('.runaway');
 const monsterBox = document.querySelector('.monsterBox');
-const p = document.createElement("p");
 
 let count = 0;
 runaway.addEventListener('click', function(){
   count++;
   if(count >= 3){
 
-    comment.textContent = "genie attacked you!";
+    comment.textContent = "Genie attacked you!";
     comment.style.fontSize = "30px";
     setTimeout(function(){
       battle.classList.add('genieAttacked');
@@ -79,9 +83,14 @@ runaway.addEventListener('click', function(){
     battle.classList.add('attacked');
     battle.classList.remove('appare');
     comment.textContent ="you can't runaway!!!"
+    // add genie comments
+    const p = document.createElement("p");
+    const commentBox = document.querySelector(".commentBox");
+    const genieContent = document.createTextNode(`I'm also ${monster.name}. Attack:${monster.attack} Defense: ${monster.defense} HP:${monster.hp}`);
+    p.appendChild(genieContent);
+    commentBox.appendChild(p);
     setTimeout(function(){
       battle.classList.remove('attacked');
-      comment.textContent = `I'm ${monster.name}. Attack:${monster.attack} Defense: ${monster.defense} HP:${monster.hp}`;
     },1000)
     const clone = monsterBox.cloneNode(true);
     battle.appendChild(clone);
