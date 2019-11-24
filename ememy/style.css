@@ -18,13 +18,13 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background: repeating-radial-gradient(#465881, #465881 10%, white 10%, white 20%);
   display: flex;
   align-items:center;
   justify-content: center;
   flex-direction: column;
   /*color*/
-  color:white;
+  color:#f39422;
   /*size*/
   font-size: 72px;
 }
@@ -54,6 +54,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: repeating-radial-gradient(#465881, #465881 10%, white 10%, white 20%);
 }
 
 
@@ -64,9 +65,9 @@
 }
 
 @keyframes enemy{
-  0%{content: "👨🏻‍🎤"}
-  25%{content: "👩🏻‍🚒"}
-  50%{content: "🦸🏻‍♂️"}
+  0%{content: "🦸🏻‍♂️"}
+  25%{content: "🧝🏻‍♀️"}
+  50%{content: "🧞‍♂️"}
   75%{content: "🧖‍♂️"}
   100%{content: "🧙‍♀️"}
 }
@@ -74,12 +75,20 @@
 .comment{
   height:40vh;
 }
+.comment h1{
+  color: #f39422;
+}
+.comment p{
+  padding: 10px;
+  margin: 10px;
+  font-size: 100px;
+}
 
 .startBtn{
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
-  background:#247794;
+  background:#f39422;
   border:2px solid #004980;
   color:#DED7C7;
   font-size: 22px;
