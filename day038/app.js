@@ -9,10 +9,10 @@ start.addEventListener('click',function(){
 });
 
 // write game code from here
-const startBtn = document.querySelector('.startBtn')
-const stopBtn = document.querySelector('.stopbtn')
-const comment = document.querySelector('.comment')
-const commentP = document.querySelector('.comment p')
+const startBtn = document.querySelector('.startBtn');
+const stopBtn = document.querySelector('.stopbtn');
+const comment = document.querySelector('.comment');
+const commentP = document.querySelector('.comment p');
 
 const enemies = ["🦸🏻‍♂️", "🧝🏻‍♀️", "🧞‍♂️", "🧖‍♂️", "🧙‍♀️"]
 startBtn.addEventListener('click',function(){
