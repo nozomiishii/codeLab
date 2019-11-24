@@ -18,13 +18,13 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: repeating-radial-gradient(#465881, #465881 10%, white 10%, white 20%);
+  background: linear-gradient(#23374D, #23374D,#E5E5E5);
   display: flex;
   align-items:center;
   justify-content: center;
   flex-direction: column;
   /*color*/
-  color:#f39422;
+  color:white;
   /*size*/
   font-size: 72px;
 }
@@ -54,7 +54,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: repeating-radial-gradient(#465881, #465881 10%, white 10%, white 20%);
+  background: repeating-radial-gradient(#465881, #465881 20%, white 20%, white 40%);
 }
 
 

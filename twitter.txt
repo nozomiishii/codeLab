@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day37 -GRPG3-
+day38 -vsHeroes-
 
-https://nozomiishii.github.io/codeLab/day037/
+https://nozomiishii.github.io/codeLab/day038/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 
