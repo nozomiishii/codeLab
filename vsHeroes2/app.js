@@ -15,17 +15,6 @@ const comment = document.querySelector('.comment');
 const commentP = document.querySelector('.comment p');
 const enemiesBox = document.querySelector('.enemies-box');
 
-
-// const enemies = ["🦸🏻‍♂️", "🧝🏻‍♀️", "🧞‍♂️", "🧖‍♂️", "🧙‍♀️"]
-
-// for(enemy of enemies){
-//   const gridItem = document.createElement('h1');
-//   const gridContent = document.createTextNode(enemy);
-//   gridItem.appendChild(gridContent);
-//   enemiesBox.appendChild(gridItem);
-// }
-
-
 class Enemy{
   constructor(emoji, name, attack, defense, hp){
     this.emoji = emoji,
@@ -44,4 +33,60 @@ const wizard = new Enemy("🧙‍♀️", "wizard", 80, 80, 80);
 
 const enemies = [hero, elf, genie, man, wizard];
 
-console.log(enemies[0].emoji);
+for(enemy of enemies){
+  const gridItem = document.createElement('h1');
+  const gridContent = document.createTextNode(enemy.emoji);
+  gridItem.appendChild(gridContent);
+  enemiesBox.appendChild(gridItem);
+}
+
+// get enemies information
+const enemyLists = document.querySelectorAll('.enemies-box h1');
+const checked = document.querySelector('.checked');
+const status = document.querySelector('.status');
+const emoji = document.querySelector('.emoji');
+const name = document.querySelector('.name');
+const attack = document.querySelector('.attack');
+const defense = document.querySelector('.defense');
+const hp = document.querySelector('.hp');
+
+for(enemy of enemyLists){
+  enemy.addEventListener('click',function(){
+    this.classList.add('checked');
+
+    emoji.innerHTML = this.emoji;
+    name.innerHTML = this.name;
+    attack.innerHTML = this.attack;
+    defense.innerHTML = this.defense;
+    hp.innerHTML = this.hp;
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -74,10 +74,12 @@
 }
 
 /*created h1 by js*/
+.enemies-box h1{
+  display: block;
+}
 
 .enemies-box h1:hover{
-  border: 1px solid #23374D;
-  background: repeating-radial-gradient(#23374D,#23374D 1px,#E5E5E5 1px, #E5E5E5 2px);
+  border: 3px solid #23374D;
 }
 
 .checked{
