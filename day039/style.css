@@ -18,7 +18,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: conic-gradient(red, blue);
+  background: conic-gradient(from 45deg,#dff6f0, #46b3e6);
   display: flex;
   align-items:center;
   justify-content: center;
