@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day38 -vsHeroes-
+day39 -birdWatching-
 
-https://nozomiishii.github.io/codeLab/day038/
+https://nozomiishii.github.io/codeLab/day039/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 
