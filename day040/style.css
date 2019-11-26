@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .op{
+    font-size:26px !important;
+  }
+}
+.op{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.op>*{
+  margin: 24px auto;
+}
+.op h4:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(1vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
+.game{
+  height:100vh;
+  background: #465881;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.comment{
+  height:20vh;
+  font-size: 40px;
+  color: #dd6892;
+}
+
+.sun{
+  height: 30vh;
+  font-size: 50px;
+}
+
+.box{
+  height:20vh;
+}
+  input[type=range] {
+    -webkit-appearance:none;
+    background:#e5e5e5;
+    height:10px;
+    width:240px;
+    border-radius:8px;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    background:#dd6892;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
