@@ -10,12 +10,46 @@ start.addEventListener('click',function(){
 
 // write game code from here
 
-const shine = document.querySelector('input');
-const sun = document.querySelector('.sun');
+const sun = document.querySelector('.sun span');
+const size = document.querySelector('#size');
+const rotate = document.querySelector('#rotate');
+const switchOn = document.getElementById('switchOn');
+const switchOff = document.getElementById('switchOff');
 
 
-shine.addEventListener('change',function(){
-  sun.style.fontSize = `${this.value + 10}px`;
+// changing the size
+size.addEventListener('change',function(){
+  sun.style.fontSize = `${this.value + 5}px`;
   console.log(this.value);
-})
+});
 
+// changing the direction
+rotate.addEventListener('change',function(){
+  sun.style.transform = `rotateZ(${this.value}deg)`;
+  console.log(this.value);
+});
+
+// make it animate
+
+animation.addEventListener('change',function(){
+  if(switchOn.checked){
+    sun.classList.add('moveRotate');
+  } else {
+    sun.classList.remove('moveRotate');
+  }
+});
+
+// change the icon
+const icons = ['🌚','🌛','🌝','🌜'];
+
+let i = 0
+sun.addEventListener('click',function(){
+  if(i >= icons.length ){
+    sun.innerHTML = '🌞';
+    i = 0
+  } else{
+    sun.innerHTML = icons[i];
+    i++
+    console.log(i);
+  }
+});

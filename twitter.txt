@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day40 -sun-
+day41 -sun2-
 
-https://nozomiishii.github.io/codeLab/day040/
+https://nozomiishii.github.io/codeLab/day041/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 
