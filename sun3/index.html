@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- title -->
+  <title>12_01_sun2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- twitter -->
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp"/>
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="1st DEC / Day 42 - sun3 -"/>
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day042/day042.png"/>
+  <meta name="twitter:card" content="summary"/>
+</head>
+<body>
+
+  <div class="op" style="display: none;">
+    <h1>sun3</h1>
+    <p>🌚🌛🌜🌝</p>
+    <h4 id='start'>START!!</h4>
+  </div>
+  <!-- write html code here -->
+  <div class="game">
+    <div class="comment">
+      <h1></h1>
+    </div>
+    <div class="sun"><span>🌞</span></div>
+    <div class="box">
+      <input id="size" type="range" min="0" max="20" value="0">
+      <input id="rotate" type="range" min="0" max="360" value="0">
+      <form id="animation">
+        <label><input type="radio" id='switchOff' name="switch"/>OFF</label>
+        <label><input type="radio" id='switchOn' name="switch" value='on'/>ON</label>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
