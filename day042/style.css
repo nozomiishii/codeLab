@@ -134,12 +134,12 @@
   opacity: 0;
   height:100vh;
   width: 100vw;
-  animation: tripingMore 0.2s infinite both linear alternate;
+  animation: tripingMore 0.3s infinite both linear alternate;
 }
 
 @keyframes tripingMore{
-  0%{background: repeating-radial-gradient(#06AFC7, #06AFC7 10px, #FE5FAE 10px, #FE5FAE 20px);}
-  100%{background: repeating-radial-gradient(#FE5FAE, #FE5FAE 10px,#06AFC7 10px, #06AFC7 20px);}
+  0%{background: -webkit-repeating-radial-gradient(#06AFC7, #06AFC7 10px, #FE5FAE 10px, #FE5FAE 20px);}
+  100%{background: -webkit-repeating-radial-gradient(#FE5FAE, #FE5FAE 10px,#06AFC7 10px, #06AFC7 20px);}
 }
 
 .high{

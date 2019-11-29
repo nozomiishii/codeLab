@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day42 -trip2-
+day43 -rabbitAndTurtle-
 
-https://nozomiishii.github.io/codeLab/day042/
+https://nozomiishii.github.io/codeLab/day043/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 

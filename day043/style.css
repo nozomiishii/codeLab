@@ -18,7 +18,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background: conic-gradient(#60B263, #EAEAE9);;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -50,19 +50,46 @@ body{
   background:#95E878;
 }
 .game{
-  height:60vh;
+  height:80vh;
   position: relative;
   background: #F8E6BD;
 }
 .turtle{
   position: absolute;
-  font-size: 32px;
+  font-size: 42px;
   transform: rotateY(180deg);
+}
+.result{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 80px;
+  height: 80px;
+  background: #06AFC7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.rabbit{
+  position: absolute;
+  top:10%;
+  right:0;
+  font-size: 42px;
+  animation: rabbit 40s forwards steps(40);
+}
+
+@keyframes rabbit{
+  from{transform: translateY(0);}
+  to{transform: translateY(50vh);}
 }
 
 .throwDicebtn{
   position: absolute;
-  bottom: 10vh;
+  bottom: 0;
   left: 50%;
   transform:translate(-50%,-50%);
   width: 80px;
@@ -85,6 +112,24 @@ body{
   100%{transform:rotateZ(20deg);}
 }
 
+.end{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: none;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 18px;
+}
 
 
 
