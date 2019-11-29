@@ -134,15 +134,12 @@
   opacity: 0;
   height:100vh;
   width: 100vw;
-  animation: triping 1s infinite both linear alternate;
+  animation: tripingMore 0.2s infinite both linear alternate;
 }
 
-@keyframes triping{
-  0%{background: radial-gradient(#D41B20 0%, #6A9417);}
-  25%{background: radial-gradient(#D41B20 25%, #6A9417);}
-  50%{background: radial-gradient(#D41B20 50%, #6A9417);}
-  75%{background: radial-gradient(#D41B20 75%, #6A9417);}
-  100%{background: radial-gradient(#D41B20 100%, #6A9417);}
+@keyframes tripingMore{
+  0%{background: repeating-radial-gradient(#06AFC7, #06AFC7 10px, #FE5FAE 10px, #FE5FAE 20px);}
+  100%{background: repeating-radial-gradient(#FE5FAE, #FE5FAE 10px,#06AFC7 10px, #06AFC7 20px);}
 }
 
 .high{
