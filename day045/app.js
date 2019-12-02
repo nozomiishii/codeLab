@@ -65,7 +65,7 @@ const backH1 = document.querySelector('.back h1');
 const backP = document.querySelector('.back p');
 
 card.addEventListener('click', function(){
-const random = Math.floor(Math.random() * 2);
+const random = Math.floor(Math.random() * tarots.length);
   front.classList.toggle('frontFliped');
   back.classList.toggle('backFliped');
   backH1.innerHTML = tarots[random].emoji;
