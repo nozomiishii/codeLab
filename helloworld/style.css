@@ -67,9 +67,23 @@
 }
 
 .btn{
-  width: 200px;
+  width: 160px;
+  height: 80px;
+  background:#f7be16;
+  box-shadow: 0px 8px #ec9b3b;
+  color: white;
+  border-radius: 4px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.btn:active{
+  box-shadow: none;
+  position: relative;
+  top: 7px;
+}
 
 
 
