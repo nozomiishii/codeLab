@@ -24,7 +24,7 @@ throwDicebtn.addEventListener('click',function(){
   nowSquare += random
   turtle.style.left = `${nowSquare}px`;
   console.log(nowSquare);
-  if(nowSquare == 200){
+  if(nowSquare > 180){
     end.style.display = 'flex';
   }
 });
