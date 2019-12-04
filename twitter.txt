@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day45 -tarot2-
+day46 -helloWorld-
 
-https://nozomiishii.github.io/codeLab/day045/
+https://nozomiishii.github.io/codeLab/day046/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 
