@@ -34,6 +34,46 @@ btn.addEventListener('click',function(){
 
 function changeColor(){
   console.log('start');
-  colorValue++
-  color.style.background = `linear-gradient(to left, rgb(${colorValue}, 100, 100), rgb(200,200,200))`;
+  colorValue ++;
+  color.style.background = `linear-gradient(to left, rgb(${colorValue}, 0, 0), rgb(0,255,255))`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
