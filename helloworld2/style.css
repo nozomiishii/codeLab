@@ -58,12 +58,21 @@
   line-height: 50vh;
 }
 
+
 .comment h1{
+  width: 200vw;
+  overflow: hidden;
   font-size: 4rem;
-  background: linear-gradient(to left, rgb(100, 100, 100), rgb(200,200,200));
+  background: linear-gradient(to left, #274097 16%,#642676 33%,#E80410 49%,#F7DC03 66%,#006719 87%)0% center / 200% auto;
+  animation: rainbow 4s infinite linear;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   display: inline;
+  animation-play-state: paused;
+}
+
+@keyframes rainbow {
+  to{background-position-x: 200%;}
 }
 
 .btn{
@@ -86,10 +95,59 @@
 }
 
 
+.parameters{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
+input[type=range]{
+  -webkit-appearance: none;
+   width: 200px;
+  margin:30px;
+  padding:30px auto;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: goldenrod;
+  margin-top: -4px;
+}
 
 
+input[id=red]::-webkit-slider-thumb {
+  background: #E80410;
+}
+
+input[id=green]::-webkit-slider-thumb {
+  background: #006719;
+}
+
+input[id=blue]::-webkit-slider-thumb {
+  background: #274097;
+}
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
 
 
 
