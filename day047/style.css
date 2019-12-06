@@ -49,64 +49,65 @@
 /*write game code from here*/
 .game{
   height:100vh;
-  background: #06AFC7;
-}
-
-.comment{
-  height: 15vh;
-  border: 3px double #23374D;
-  text-align: center;
-  font-size: 12px;
-  background: white;
-}
-
-
-form[name=wishBox]{
-  height:30vh;
-  width: 100vw;
-  background:#FDD033;
-  position: fixed;
-  bottom:0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items:center;
 }
 
-input{
-  width: 200px;
-  animation:flash 1s infinite both;
+progress {
+  -webkit-appearance: none;
 }
 
-@keyframes flash{
-  from{ border: 2px solid #FE5FAE;}
-  to{border:2px solid #E5E5E5;}
+::-webkit-progress-bar {
+  background-color: #231816;
+  border-radius: 50px;
+}
+::-webkit-progress-value {
+  background-color: #274097;
+  border-radius: 50px;
 }
 
 button{
-  padding: 10px;
-  margin: 20px;
-  width: 200px;
+  width: 140px;
   height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background:#FE5FAE;
-  font-size: 28px;
+  background-color:#46185f;
   color: white;
+  border-radius: 4px;
 }
 
-button:hover{
-
+.btnClicked{
+ animation:clicked 1s linear both;
 }
 
+@keyframes clicked {
+  0%{transform: rotateX(0);}
+  50%{transform: rotateX(180deg);}
+  100%{transform: rotateX(360deg);}
+}
 
+.fail{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: #E5E5E5;
+  display: none;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:#FE5FAE;
+  /*size*/
+  font-size: 18px;
+}
 
-
-
-
-
-
+.end{
+  display: flex;
+}
 
 
 

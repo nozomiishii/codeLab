@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- title -->
-  <title>11_15_riverOfWishes</title>
+  <title>12_2_stressful download system</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <!-- twitter -->
@@ -12,29 +12,32 @@
   <!-- title -->
   <meta name="twitter:title" content="kusayari" />
   <!-- day -->
-  <meta name="twitter:description" content="15th NOV / Day 26 - goWatchMovie -"/>
+  <meta name="twitter:description" content="2nd DEC / Day 43 - rabbit and turtle -"/>
   <!-- url -->
-  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day026/day026.png"/>
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day043/day043.png"/>
   <meta name="twitter:card" content="summary"/>
 </head>
 <body>
 
-  <div class="op" style='display:none;'>
-    <h1>riverOfWishes</h1>
+  <div class="op" style="display: none;">
+    <h1>title</h1>
     <h4 id='start'>START!!</h4>
   </div>
   <!-- write html code here -->
   <div class="game">
     <div class="comment">
-      <h1>write your wishes. if it float 5s on the river, it would be true</h1>
+      <h1>stressful download system</h1>
     </div>
-    <div class="river">
+    <div class="bar">
+      <p>0%</p>
+      <progress min="0" max="100" value="0"></progress>
     </div>
-    <form name=wishBox>
-      <label><input id="wish" type="text" placeholder="write your wish here"></label>
-      <button>wish!!</button>
-    </form>
+    <button>download</button>
   </div>
+  <div class="fail">
+    <h1>🧖‍♂️:"fail!!"</h1>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
