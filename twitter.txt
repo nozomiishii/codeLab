@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day47 -stressful download system-
+day48 -mamireru-
 
-https://nozomiishii.github.io/codeLab/day047/
+https://nozomiishii.github.io/codeLab/day048/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 

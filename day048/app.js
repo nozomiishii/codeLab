@@ -26,5 +26,8 @@ btn.addEventListener('click', function(){
   } else{
     clearInterval(interval);
     interval = false;
+    btnH1.innerHTML = '🥺:"まだいけるなあ"';
+    btn.innerHTML = 'まみれる';
+    btn.classList.remove('btnClicked');
   }
 })

@@ -18,15 +18,18 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background: linear-gradient(to left,
+      #d77fa1 25%,#e6b2c6 25%, #e6b2c6 50%, #fef6fb 50%,#fef6fb 80%, #d6e5fa 80%);
   display: flex;
   align-items:center;
   justify-content: center;
   flex-direction: column;
   /*color*/
   color:white;
+  text-shadow: #E4AE48 1px 1px 0px, #E4AE48 -1px 1px 0px,
+             #E4AE48 1px -1px 0px, #E4AE48 -1px -1px 0px;
   /*size*/
-  font-size: 72px;
+  font-size: 18px;
 }
 .op>*{
   margin: 24px auto;
@@ -49,13 +52,15 @@
 /*write game code from here*/
 .game{
   height:100vh;
+  color: white;
 }
 .sweetsBackground{
   height:100vh;
   width: 100vw;
   position: absolute;
   top:0;
-  border: 5px solid red;
+  border: 5px solid #e6b2c6;
+  background: #d77fa1;
   z-index: -1;
 }
 
@@ -69,8 +74,8 @@
 }
 
 .btn{
-  background:#ff935c;
-  border: 5px groove #c72c41;
+  background:#ff7315;
+  border: 5px groove #b21f66;
   padding: 10px;
   margin: 10px;
   width: 100px;
@@ -80,6 +85,7 @@
   display: flex;
   align-items:center;
   justify-content: center;
+  color: white;
 }
 
 @keyframes bounce{
