@@ -56,6 +56,7 @@
   position: absolute;
   top:0;
   border: 5px solid red;
+  z-index: -1;
 }
 
 .hungryDude{
@@ -76,6 +77,9 @@
   height: 100px;
   border-radius: 100px;
   animation: bounce 1s infinite both linear;
+  display: flex;
+  align-items:center;
+  justify-content: center;
 }
 
 @keyframes bounce{
@@ -97,14 +101,14 @@
 .btnClicked{
   background:#9b45e4;
   border: 5px solid #cf56a1;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   color: white;
   animation:none;
 }
 
 .btnClicked:hover{
-  animation: none;
+  animation: bounce 1s infinite both linear
 }
 
 

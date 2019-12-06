@@ -9,16 +9,22 @@ start.addEventListener('click',function(){
 });
 
 // write game code from here
-const sweets = ['🧁','🍭','🍬','🍫','🍰','🍦','🍮','🍩','🎂'];
-const random = Math.floor(Math.random() * sweets.length);
-
-console.log(sweets[random]);
-
 const btn = document.querySelector('.btn');
 const btnH1 = document.querySelector('.hungryDude h1');
-
+const sweetsH1 = document.querySelector('.sweetsBackground h1');
+let interval;
 btn.addEventListener('click', function(){
-  btn.innerHTML = 'みたされたなあ〜';
+  btn.innerHTML = 'まみれきった';
   btn.classList.add('btnClicked');
-  btnH1.innerHTML = '🤤';
+  btnH1.innerHTML = '🤤:"みたされてるなあ〜"';
+  if(!interval){
+    interval = setInterval(function(){
+      const sweets = ['🧁','🍭','🍬','🍫','🍰','🍦','🍮','🍩','🎂'];
+      const random = Math.floor(Math.random() * sweets.length);
+      sweetsH1.innerHTML += sweets[random];
+    },100)
+  } else{
+    clearInterval(interval);
+    interval = false;
+  }
 })
