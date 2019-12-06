@@ -15,5 +15,10 @@ const random = Math.floor(Math.random() * sweets.length);
 console.log(sweets[random]);
 
 const btn = document.querySelector('.btn');
+const btnH1 = document.querySelector('.hungryDude h1');
 
-
+btn.addEventListener('click', function(){
+  btn.innerHTML = 'みたされたなあ〜';
+  btn.classList.add('btnClicked');
+  btnH1.innerHTML = '🤤';
+})

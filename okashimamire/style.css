@@ -94,8 +94,18 @@
   100%{transform: rotateZ(360deg);}
 }
 
+.btnClicked{
+  background:#9b45e4;
+  border: 5px solid #cf56a1;
+  width: 120px;
+  height: 120px;
+  color: white;
+  animation:none;
+}
 
-
+.btnClicked:hover{
+  animation: none;
+}
 
 
 
