@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .op{
+    font-size:26px !important;
+  }
+}
+.op{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.op>*{
+  margin: 24px auto;
+}
+.op h4:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(1vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
+.game{
+  height:100vh;
+}
+.sweetsBackground{
+  height:100vh;
+  width: 100vw;
+  position: absolute;
+  top:0;
+  border: 5px solid red;
+}
+
+.hungryDude{
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn{
+  background:#ff935c;
+  border: 5px groove #c72c41;
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  animation: bounce 1s infinite both linear;
+}
+
+@keyframes bounce{
+  0%{transform: scale(1);}
+  50%{transform: scale(1.1);}
+  100%{transform: scale(1);}
+}
+
+.btn:hover{
+  animation: rotate 2s 3 both linear;
+}
+
+@keyframes rotate{
+  0%{transform: rotateZ(0);}
+  50%{transform: rotateZ(180deg);}
+  100%{transform: rotateZ(360deg);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
