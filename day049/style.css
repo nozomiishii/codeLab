@@ -50,18 +50,19 @@
 .game{
   position: absolute;
   top: 0;
-  height:100vh;
+  height:80vh;
   width:100vw;
   display: flex;
   justify-content: center;
   align-items:center;
   overflow: hidden;
+
 }
 
 canvas{
   position: absolute;
   top: 0;
-  height:100vh;
+  height:80vh;
   width:100vw;
   overflow: hidden;
 }
