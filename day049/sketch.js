@@ -4,7 +4,7 @@ window.addEventListener('touchmove.noScroll', function(e) {
 });
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight * 0.8);
 }
 
 function draw() {
@@ -16,6 +16,6 @@ function draw() {
 }
 
 function mousePressed(){
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight * 0.8);
 }
 
