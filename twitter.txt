@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day49 -paint-
+day50 -mebaeru-
 
-https://nozomiishii.github.io/codeLab/day049/
+https://nozomiishii.github.io/codeLab/day050/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
 

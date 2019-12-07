@@ -9,13 +9,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  fill(200,200);
-  rect(mouseX, mouseY, 20, 20);
-  fill(255)
-  rect(0, 0, 20, 20);
-}
-
-function mousePressed(){
-  createCanvas(windowWidth, windowHeight * 0.8);
+  fill(1);
+  ellipse(mouseX, mouseY, 10, 15);
 }
 
