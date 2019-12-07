@@ -56,7 +56,7 @@
   justify-content: center;
   align-items:center;
   overflow: hidden;
-
+  border: 1px solid #231816;
 }
 
 canvas{
@@ -65,6 +65,7 @@ canvas{
   height:80vh;
   width:100vw;
   overflow: hidden;
+  border: 2px solid #232323;
 }
 
 
