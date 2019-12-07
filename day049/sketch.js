@@ -1,4 +1,8 @@
 console.log('ready to sketch');
+window.addEventListener('touchmove.noScroll', function(e) {
+    e.preventDefault();
+});
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
