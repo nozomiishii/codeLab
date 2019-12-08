@@ -51,7 +51,7 @@ body{
 }
 
 .game{
-  background:linear-gradient(to right, #c7ecee,#22a6b3,#c7ecee);
+  background:url(gold.png);
   position: fixed;
   top: 0;
   height:100vh;
@@ -70,11 +70,11 @@ body{
 }
 
 .game p{
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 40px;
   color: #F884A0;
-  text-shadow: #f1f0cf 1px 1px 0px, #f1f0cf -1px 1px 0px,
-             #f1f0cf 1px -1px 0px, #f1f0cf -1px -1px 0px;
+  text-shadow: #231816 1px 1px 0px, #231816 -1px 1px 0px,
+             #231816 1px -1px 0px, #231816 -1px -1px 0px;
 }
 canvas{
   position: fixed;
