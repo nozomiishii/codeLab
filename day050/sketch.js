@@ -12,6 +12,6 @@ function draw() {
 
 function mouseDragged(){
   noStroke();
-  fill(1);
-  rect(mouseX, mouseY, 20, 20, 10);
+  fill(1, 200);
+  rect(mouseX, mouseY, 20, 20, 3);
 }

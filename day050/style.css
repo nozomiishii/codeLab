@@ -73,8 +73,8 @@ body{
   margin-top: 40px;
   font-size: 40px;
   color: #F884A0;
-  text-shadow: #231816 1px 1px 0px, #231816 -1px 1px 0px,
-             #231816 1px -1px 0px, #231816 -1px -1px 0px;
+  text-shadow: #ffffff 1px 1px 0px, #ffffff -1px 1px 0px,
+             #ffffff 1px -1px 0px, #ffffff -1px -1px 0px;
 }
 canvas{
   position: fixed;
