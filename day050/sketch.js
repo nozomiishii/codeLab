@@ -8,11 +8,10 @@ function setup() {
 }
 
 function draw() {
-
 }
 
 function mouseDragged(){
   noStroke();
   fill(1);
-  ellipse(mouseX, mouseY, 20, 20);
+  rect(mouseX, mouseY, 20, 20, 10);
 }
