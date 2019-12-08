@@ -48,10 +48,10 @@
 
 /*write game code from here*/
 body{
-  background:#b6e6bd;
 }
 
 .game{
+  background:linear-gradient(to right, #c7ecee,#22a6b3,#c7ecee);
   position: absolute;
   top: 0;
   height:80vh;
@@ -70,9 +70,9 @@ body{
 .game p{
   margin-top: 50px;
   font-size: 40px;
-  color: #f1f0cf;
-  text-shadow: #4baea0 1px 1px 0px, #4baea0 -1px 1px 0px,
-             #4baea0 1px -1px 0px, #4baea0 -1px -1px 0px;
+  color: #F884A0;
+  text-shadow: #f1f0cf 1px 1px 0px, #f1f0cf -1px 1px 0px,
+             #f1f0cf 1px -1px 0px, #f1f0cf -1px -1px 0px;
 }
 canvas{
   position: fixed;
