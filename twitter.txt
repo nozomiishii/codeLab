@@ -3,5 +3,5 @@ day50 -nobiyuku-
 
 https://nozomiishii.github.io/codeLab/day050/
 
-#くさやり #kusayari #100DaysOfCode #code #programming #html #css #javascript #webdev #codenewbie #developers #プログラミング初心者 #webデザイン
+#くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #webデザイン
 
