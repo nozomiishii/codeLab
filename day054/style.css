@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .op{
+    font-size:26px !important;
+  }
+}
+.op{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background: linear-gradient(to right,
+      #d77fa1 25%,#e6b2c6 25%, #e6b2c6 50%, #fef6fb 50%,#fef6fb 75%, #d6e5fa 75%);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  text-shadow: #E4AE48 1px 1px 0px, #E4AE48 -1px 1px 0px,
+             #E4AE48 1px -1px 0px, #E4AE48 -1px -1px 0px;
+  /*size*/
+  font-size: 62px;
+}
+.op>*{
+  margin: 24px auto;
+}
+.op h4:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(1vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
+.hungryDude{
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-shadow: #E4AE48 1px 1px 0px, #E4AE48 -1px 1px 0px,
+             #E4AE48 1px -1px 0px, #E4AE48 -1px -1px 0px;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  animation: mamireru 4s linear infinite both;
+
+}
+
+@keyframes mamireru {
+  0%{ background: linear-gradient(to top,
+      #d77fa1 25%,#e6b2c6 25%, #e6b2c6 50%, #fef6fb 50%,#fef6fb 75%, #d6e5fa 75%);}
+  33%{ background: linear-gradient(to top,
+      #e6b2c6 25%,#fef6fb 25%, #fef6fb 50%, #d6e5fa 50%,#d6e5fa 75%, #d77fa1 75%);}
+  66%{ background: linear-gradient(to top,
+      #fef6fb 25%,#d6e5fa 25%, #d6e5fa 50%, #d77fa1 50%,#d77fa1 75%, #e6b2c6 75%);}
+  100%{ background: linear-gradient(to top,
+      #d6e5fa 25%,#d77fa1 25%, #d77fa1 50%, #e6b2c6 50%,#e6b2c6 75%, #fef6fb 75%);}
+}
+
+canvas{
+  position: absolute;
+  top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
