@@ -1,9 +1,11 @@
 console.log('ready to sketch');
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
   background(220);
+  textAlign(CENTER, CENTER);
+  text('ready!', windowWidth/2, windowHeight/2);
 }
 
