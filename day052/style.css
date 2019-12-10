@@ -134,7 +134,7 @@
 .trip3{
   position: absolute;
   top:0;
-  z-index: -5;
+  z-index: -3;
   opacity: 1;
   height:100vh;
   width: 100vw;
@@ -143,7 +143,7 @@
 canvas{
   position: absolute;
   top:0;
-  z-index: -6;
+  z-index: -4;
   opacity: 1;
   height:100vh;
   width: 100vw;

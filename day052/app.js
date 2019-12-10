@@ -6,8 +6,8 @@ const one = document.querySelector('.one');
 const trip1 = document.querySelector('.trip1');
 
 one.addEventListener('click',function(){
-  game.classList.add('took');
   trip1.classList.add('high');
+  game.classList.add('took');
 });
 
 // ep2
@@ -15,8 +15,8 @@ const two = document.querySelector('.two');
 const trip2 = document.querySelector('.trip2');
 
 two.addEventListener('click',function(){
-  game.classList.add('took');
   trip2.classList.add('high');
+  game.classList.add('took');
 });
 
 const three = document.querySelector('.three');
