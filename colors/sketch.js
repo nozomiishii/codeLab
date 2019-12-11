@@ -70,7 +70,8 @@ function mousePressed(){
   beams.push(beam);
 }
 
-function draw() {
+console.log(beam);
+function draw(){
   player = {
     image: '👨🏻‍🚀',
     x: mouseX,
@@ -88,6 +89,34 @@ function draw() {
   }
   for(beam of beams){
     beam.shoot();
+    let d = dist(ball.x, ball.y, beam.x, beam.y );
+    if(d < 50){
+
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
