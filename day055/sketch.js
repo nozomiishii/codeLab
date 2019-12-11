@@ -40,7 +40,7 @@ function mouseDragged(){
     mouseX,
     mouseY,
     random(46),
-    random(-2, 0),
+    random(-2,0),
     random(-2,1),
     random(255),
     random(255),
@@ -50,8 +50,9 @@ function mouseDragged(){
   circles.push(circle);
 }
 
+// const backgroundColor = Math.floor(Math.random() * 255);
 function draw() {
-  background(220);
+  background(38, 38, 38);
   for(circle of circles){
     circle.show();
     circle.move();
