@@ -13,7 +13,8 @@ class Ball{
     this.speedY = speedY;
   }
   show(){
-    fill(6);
+    stroke(random(255),random(255),random(255));
+    fill(this.colorR, this.colorG, this.colorB);
     ellipse(this.x, this.y, this.r * 2);
   }
   move(){
@@ -33,6 +34,8 @@ class Beam {
     this.speed = speed;
   }
   shoot(){
+    stroke(6);
+    fill(random(255));
     ellipse(this.x, this.y, 5, 20);
     this.y += this.speed;
   }
@@ -81,7 +84,7 @@ function draw(){
       text(this.image, this.x, this.y);
     }
   }
-  background(220);
+  background(238);
   player.show();
   for(ball of balls){
     ball.show();
@@ -91,7 +94,10 @@ function draw(){
     beam.shoot();
     let d = dist(ball.x, ball.y, beam.x, beam.y );
     if(d < 50){
-
+      ball.colorR = random(255);
+      ball.colorG = random(255);
+      ball.colorB = random(255);
+      ball.r++
     }
   }
 }

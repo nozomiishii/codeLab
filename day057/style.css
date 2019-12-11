@@ -18,23 +18,25 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: white;
   display: flex;
   align-items:center;
   justify-content: center;
   flex-direction: column;
-  /*color*/
-  color:white;
   /*size*/
   font-size: 72px;
+  color: white;
+  text-shadow: black 2px 2px 0px, black -2px 2px 0px,
+             black 2px -2px 0px, black -2px -2px 0px;
 }
+
 .op>*{
   margin: 24px auto;
 }
 .op h4:hover{
+
   transform: scale(1.2);
   transition: 0.5s;
-  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
 .start{
   animation: starting 1s both;

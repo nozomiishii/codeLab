@@ -1,7 +1,7 @@
 KUSAYARI / くさやり
-day56 -nobanashi2-
+day57 -colorBeam-
 
-https://nozomiishii.github.io/codeLab/day056/
+https://nozomiishii.github.io/codeLab/day057/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #webデザイン
 
