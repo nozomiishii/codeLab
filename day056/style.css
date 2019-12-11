@@ -18,13 +18,13 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: #eafbea;
+  background-color: #293a80;
   display: flex;
   align-items:center;
   justify-content: center;
   flex-direction: column;
   /*color*/
-  color:#293a80;
+  color:#eafbea;
   /*size*/
   font-size: 62px;
 }
