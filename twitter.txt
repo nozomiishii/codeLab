@@ -1,5 +1,5 @@
 KUSAYARI / くさやり
-day57 -colorBeam-
+day58 -colorBeam2-
 
 https://nozomiishii.github.io/codeLab/day057/
 
