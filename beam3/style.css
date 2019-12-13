@@ -4,6 +4,7 @@
   padding:0;
   text-decoration: none;
   list-style: none;
+  user-select: none;
 }
 @media all and (max-width: 1000px){
   .op, .end{
