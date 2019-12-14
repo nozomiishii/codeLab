@@ -11,6 +11,7 @@ let totalScoreColorR = 238;
 let totalScoreColorG = 238;
 let totalScoreColorB = 238;
 let dead = false;
+let creatingBalls;
 
 
 const end = document.querySelector('.end');
@@ -33,7 +34,7 @@ function setup() {
     floor(random(9)) //times
     );
   balls.push(ball);
-  setInterval(function(){
+  creatingBalls = setInterval(function(){
     ball = new Ball(
     random(width),
     random(height ),
@@ -103,12 +104,17 @@ function draw(){
           totalScore++
         }
       }
-      if(ball.times > 70){
+      if(ball.times > 60){
+
         balls.splice(index, 1);
-        if(backgroundColor <= 0 || backgroundColor >= 255){
-          backgroundColorRate = backgroundColorRate * -1;
-        }
+
+        // chenge the background color when beam hit balls
+        setTimeout(function(){
+          if(backgroundColor <= 0 || backgroundColor >= 255){
+            backgroundColorRate = backgroundColorRate * -1;
+          }
           backgroundColor -= backgroundColorRate;
+        }, 1000);
       }
     }
   }
@@ -119,7 +125,7 @@ function draw(){
     if(d < ball.r){
       end.classList.add('ended');
       displayScore.innerHTML = `Your Score: ${totalScore}`;
-      return dead;
+      return dead = true;
     }
   }
 }

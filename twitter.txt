@@ -1,7 +1,9 @@
 KUSAYARI / くさやり
-day58 -colorBeam2-
+day59 -colorBeam3-
 
-https://nozomiishii.github.io/codeLab/day057/
+みんな大好き、プレイヤーちゃんと死にます。
+
+https://nozomiishii.github.io/codeLab/day059/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #webデザイン
 

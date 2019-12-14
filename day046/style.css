@@ -69,14 +69,7 @@
   display: inline;
   animation-play-state: paused;
 }
-/*@keyframes rainbow{
-  0%{background: linear-gradient(to left, #274097 16%,#642676 33%,#E80410 49%,#F7DC03 66%,#36CC23 87%);}
-  25%{background: linear-gradient(to left,  #642676 16%,#E80410 33%, #F7DC03 49%,#36CC23 66%, #274097 87%);}
-  50%{background: linear-gradient(to left, #E80410 16%,#F7DC03 33%,#36CC23 49%,#274097 66%,#642676 87%);}
-  80%{background: linear-gradient(to left, #F7DC03 16%,#36CC23 33%,#274097 49%,#642676 66%,#E80410 87%);}
-  100%{background: linear-gradient(to left, #36CC23 16%,#274097 33%,#642676 49%,#E80410 66%,#F7DC03 87%);}
-}
-*/
+
 @keyframes rainbow {
   to{background-position-x: 200%;}
 }
