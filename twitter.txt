@@ -5,3 +5,12 @@ https://nozomiishii.github.io/codeLab/day057/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #webデザイン
 
+
+Day55 -yobareru-
+動きに色が鼓動する。よばれる。
+
+-遊び方-
+画面をドラッグ、スマホならタッチします。色に囲まれます。それだけです。
+https://nozomiishii.github.io/codeLab/day055/
+
+#code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
