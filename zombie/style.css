@@ -52,26 +52,25 @@
 }
 
 button{
-  background: #ff8ba7;
   padding: 30px;
-  font-size: 48px;
+  font-size: 30px;
   position: absolute;
   bottom:0;
   left:50%;
   transform: translate(-50%, -50%);
-  border-radius: 100px;
 }
 
 
 button::before{
   content: '';
-  background: #f6da63;
   display: block;
   position: absolute;
   top:0;
-  left:0;
-  width: 10px;
-  height: 10px;
+  left: 50%;
+  bottom: 0;
+  width: 5px;
+  height: 100%;
+  border-top: 5px solid #f6da63;
   animation: rotate 3s linear infinite both;
 }
 

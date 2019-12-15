@@ -22,8 +22,8 @@ function setup() {
       randomZombieIcon
       );
     zombies.push(zombie);
-  },4000);
-  btn = createButton('🍓');
+  },100);
+  // btn = createButton('🍓');
 
 }
 
@@ -49,11 +49,14 @@ function draw() {
     for([index, zombie] of zombies.entries()){
       let d = dist(beam.x, beam.y, zombie.x, zombie.y);
       if(d < 24){
-        zombie.life--
-      }
-      if(zombie.life <= 0){
         zombies.splice(index, 1);
       }
+      // if(d < 24){
+      //   zombie.life--
+      // }
+      // if(zombie.life <= 0){
+      //   zombies.splice(index, 1);
+      // }
     }
   }
 
