@@ -55,6 +55,7 @@ input{
   -webkit-appearance: none;
   appearance: none;
   background: black;
+  font-size: 16px;
   border-radius: 50px;
   width: 198px;
   color: white;

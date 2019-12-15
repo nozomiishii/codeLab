@@ -11,6 +11,10 @@ function setup() {
   textbox.input(tweet);
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function tweet(){
   word = new Word(
   textbox.value(),

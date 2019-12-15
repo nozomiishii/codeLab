@@ -1,12 +1,16 @@
 const player = {
   icon: '👰'
 };
+let dead = false;
 let beams = [];
 let beam;
 
 const zombieIcons = ["🧟‍♀️","🧟","🧟‍♂️"];
 let zombies = [];
 let zombie;
+
+let btn;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   setInterval(function(){
@@ -15,14 +19,20 @@ function setup() {
       zombieIcons[randomZombieIcon],
       random(width),
       0,
-      random(1,5)
+      randomZombieIcon
       );
     zombies.push(zombie);
   },4000);
+  btn = createButton('🍓');
+
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(255, 140, 0);
+  background(128);
   // player
   textSize(48);
   text(player.icon, mouseX, mouseY);
@@ -34,13 +44,32 @@ function draw() {
   for(zombie of zombies){
     zombie.shoot();
   }
-  // collision detection
+  // collision detection between beams and zombies
   for(beam of beams){
     for([index, zombie] of zombies.entries()){
       let d = dist(beam.x, beam.y, zombie.x, zombie.y);
-      if(d <  20){
+      if(d < 24){
+        zombie.life--
+      }
+      if(zombie.life <= 0){
         zombies.splice(index, 1);
       }
+    }
+  }
+
+  // collision detection between zombies and player
+
+  for(zombie of zombies){
+    let d = dist(zombie.x, zombie.y, mouseX, mouseY);
+    if(d < 24){
+      player.icon = '🧟‍♀️';
+      return dead = true;
+    }
+    if(dead){
+      textAlign(CENTER, CENTER);
+      textSize(48);
+      fill(255);
+      text('GAME OVER', windowWidth/2, windowHeight/2);
     }
   }
 
