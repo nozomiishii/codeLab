@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+}
+@media all and (max-width: 1000px){
+  .op, .end{
+    font-size:26px !important;
+  }
+}
+.op, .end{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background: linear-gradient(to left, #274097 12%,#642676 33%,#E80410 49%,#F7DC03 66%,#006719 82%, #274097 99%)0% center / 200% auto;
+  animation: rainbow 10s infinite linear;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*size*/
+  font-size: 72px;
+  color: #E5E5E5;
+  text-shadow: white 1px 1px 0px, white -1px 1px 0px,
+             white 1px -1px 0px, white -1px -1px 0px;
+}
+
+@keyframes rainbow {
+  to{background-position-x: 200%;}
+}
+
+.end{
+  display: none;
+}
+.ended{
+  display: flex;
+}
+
+.op>*{
+  margin: 24px auto;
+}
+.op h4:hover{
+
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(1vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
+.game{
+  height:100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
