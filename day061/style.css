@@ -18,7 +18,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: #85817A;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -44,7 +44,6 @@
   20%{transform: translateY(1vh); display: flex;}
   100%{transform: translateY(-100vh);display: none;}
 }
-
 
 /*write game code from here*/
 .game{
@@ -80,12 +79,29 @@ button::before{
   100%{transform: rotateZ(360deg);}
 }
 
+.op h1{
+  position: relative;
+}
 
+.op h1::before{
+  content: "🧟‍♀️";
+  display: inline-block;
+  animation: move 6s infinite alternate;
+}
+@keyframes move{
+  from{ transform: translateX(0);}
+  to{transform: translateX(50vw);}
+}
+.op h1::after{
+  display: inline-block;
+  content: "👰";
+  animation: runaway 6s infinite alternate;
+}
 
-
-
-
-
+@keyframes runaway{
+  from{ opacity: 1}
+  to{opacity: 0}
+}
 
 
 

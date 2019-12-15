@@ -9,23 +9,11 @@ const zombieIcons = ["🧟‍♀️","🧟","🧟‍♂️"];
 let zombies = [];
 let zombie;
 
-let btn;
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  setInterval(function(){
-    let randomZombieIcon = Math.floor(Math.random() * zombieIcons.length);
-    zombie = new Zombie(
-      zombieIcons[randomZombieIcon],
-      random(width),
-      0,
-      randomZombieIcon
-      );
-    zombies.push(zombie);
-  },100);
   // btn = createButton('🍓');
-
 }
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
@@ -42,7 +30,7 @@ function draw() {
   }
   // zombies comes out
   for(zombie of zombies){
-    zombie.shoot();
+    zombie.move();
   }
   // collision detection between beams and zombies
   for(beam of beams){
@@ -80,6 +68,6 @@ function draw() {
 
 function mousePressed(){
   // princess is attacking
-  beam = new Beam('🌷', mouseX, mouseY);
+  beam = new Beam('🌷', mouseX, mouseY, random(-1, 1));
   beams.push(beam);
 }
