@@ -49,56 +49,14 @@
 /*write game code from here*/
 .game{
   height:100vh;
-  background: #06AFC7;
-}
-
-.comment{
-  height: 15vh;
-  border: 3px double #23374D;
-  text-align: center;
-  font-size: 12px;
-  background: white;
 }
 
 
-form[name=wishBox]{
-  height:30vh;
-  width: 100vw;
-  background:#FDD033;
-  position: fixed;
-  bottom:0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-input{
-  width: 200px;
-  animation:flash 1s infinite both;
-}
 
-@keyframes flash{
-  from{ border: 2px solid #FE5FAE;}
-  to{border:2px solid #E5E5E5;}
-}
 
-button{
-  padding: 10px;
-  margin: 20px;
-  width: 200px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background:#FE5FAE;
-  font-size: 28px;
-  color: white;
-}
 
-button:hover{
 
-}
 
 
 

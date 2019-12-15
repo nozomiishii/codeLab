@@ -1,5 +1,5 @@
 //check
-console.log('js is here');
+console.log('app.js is here');
 //game starts
 const start = document.getElementById('start');
 const op = document.querySelector('.op');
