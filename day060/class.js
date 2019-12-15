@@ -10,7 +10,7 @@ class Word {
     this.fontSize = fontSize;
   }
   show(){
-    stroke(248);
+    stroke(236);
     fill(6);
     textSize(this.fontSize);
     text(this.text, this.x, this.y);
@@ -24,10 +24,6 @@ class Word {
       || this.y - this.fontSize　< 0){
       this.shakeY = -this.shakeY
     }
-
-
-    // this.x += random(-this.shakeX, this.shakeX);
-    // this.y += random(-this.shakeY, this.shakeY);
     this.x += this.shakeX;
     this.y += this.shakeY;
   }

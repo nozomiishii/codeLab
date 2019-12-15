@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+}
+@media all and (max-width: 1000px){
+  .op{
+    font-size:26px !important;
+  }
+}
+.op{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.op>*{
+  margin: 24px auto;
+}
+.op h4:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(1vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
+.game{
+  height:100vh;
+}
+
+input{
+  -webkit-appearance: none;
+  appearance: none;
+  background: black;
+  border-radius: 50px;
+  width: 198px;
+  color: white;
+  animation: koe 1s infinite alternate linear;
+}
+
+@keyframes koe{
+  from{border: 5px groove #E5E5E5;}
+  to{border: 5px ridge #E5E5E5;}
+}
+
+input:focus{
+  border: 3px solid white;
+  box-shadow: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+.op h1{
+  position: relative;
+  padding: 10px;
+}
+.op h1::before{
+  content:'';
+  display: block;
+  background: white;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  transform: skewX(5deg);
+  animation: kodo 2s infinite linear both alternate;
+}
+
+.op h1::after{
+  content:'';
+  display: block;
+  background: white;
+  position: absolute;
+  bottom:0;
+  left:0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  transform: skewX(-5deg);
+  animation: kodo 2s infinite linear both alternate-reverse;
+}
+
+@keyframes kodo{
+  0%{left: -50%; opacity: 0;}
+  50%{left: 50%; opacity: 1;}
+  100%{left: 150%; opacity: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
