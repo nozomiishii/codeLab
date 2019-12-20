@@ -5,11 +5,11 @@
   text-decoration: none;
   list-style: none;
 }
-/*@media all and (max-width: 1000px){
+@media all and (max-width: 1000px){
   .op{
     font-size:26px !important;
   }
-}*/
+}
 .op{
   position: fixed;
   top: 0;
@@ -51,10 +51,9 @@
   height:100vh;
 }
 
-.lookRight{
-  /*transform: rotateY(180deg);*/
-  font-size: 50px;
-}
+
+
+
 
 
 
