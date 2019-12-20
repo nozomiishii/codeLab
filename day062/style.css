@@ -6,6 +6,7 @@
   list-style: none;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 @media all and (max-width: 1000px){
   .op{
