@@ -4,6 +4,7 @@
   padding:0;
   text-decoration: none;
   list-style: none;
+  user-select: none;
 }
 @media all and (max-width: 1000px){
   .op{
@@ -18,7 +19,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: #353b48;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -51,10 +52,15 @@
   height:100vh;
 }
 
+.timer{
+  font-size: 24px;
+  color: white;
+}
 
-
-
-
+.playerIcon{
+  font-size: 48px;
+  /*border: 1px solid white;*/
+}
 
 
 

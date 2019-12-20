@@ -1,16 +1,37 @@
 console.log("class.js");
 const width = window.innerWidth;
 const height = window.innerHeight;
+let playerIcon;
+// const player = {
+//   image: '🦉',
+//   x: width * 0.2,
+//   y: 0,
+//   show(){
+//     textAlign(CENTER);
+//     textSize(60);
+//     createP(this.image);
+//     // text(this.image, this.x, this.y);
+//     text(this.image, mouseX, mouseY);
+//     player.y++;
+//   }
+// }
 
-const player = {
-  image: '🦉',
-  x: width * 0.2,
-  y: 0,
+class Player {
+  constructor(image, x, y){
+    this.image = image;
+    this.x = x;
+    this.y = y;
+  }
   show(){
-    textAlign(CENTER);
-    textSize(60);
-    text(this.image, this.x, this.y);
-    player.y++;
+    if(playerIcon){
+      playerIcon.remove();
+    }
+    if(!dead){
+      playerIcon = createP(this.image);
+      playerIcon.position(this.x, this.y);
+      playerIcon.class('playerIcon');
+      this.y++;
+    }
   }
 }
 
@@ -21,9 +42,9 @@ class Wood {
     this.h= h;
   }
   show(){
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < 3; i++){
       noStroke();
-      ellipse(this.x, this.y + i * 10, this.h);
+      ellipse(this.x, this.y + i * 30, this.h);
     }
     this.x--;
   }
