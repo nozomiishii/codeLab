@@ -7,20 +7,24 @@ const player = {
   x: width * 0.2,
   y: 0,
   show(){
+    textAlign(CENTER);
+    textSize(60);
     text(this.image, this.x, this.y);
     player.y++;
   }
 }
 
 class Wood {
-  constructor(x){
+  constructor(x, y, h){
     this.x = x;
-    // this.y = y;
-    // this.h= h;
+    this.y = y;
+    this.h= h;
   }
   show(){
-    rect(this.x, 0, 50, 200);
-    rect(this.x, height, 50, -200);
+    for(let i = 0; i < 6; i++){
+      noStroke();
+      ellipse(this.x, this.y + i * 10, this.h);
+    }
     this.x--;
   }
 }
