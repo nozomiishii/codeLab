@@ -9,11 +9,11 @@ https://nozomiishii.github.io/codeLab/day059/
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #webデザイン
 
 
-Day61 -zombie2-
+Day62 -samayoh-
 
-day15の復刻。蘇り。黄泉がえり。
+あがって、さがって、壁にぶつからないよう。さまよう。
 
-https://nozomiishii.github.io/codeLab/day061/
+https://nozomiishii.github.io/codeLab/day062/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
