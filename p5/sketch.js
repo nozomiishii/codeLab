@@ -1,10 +1,11 @@
 console.log('ready to sketch');
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
-
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
 }
 
 

@@ -9,11 +9,13 @@ https://nozomiishii.github.io/codeLab/day059/
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #webデザイン
 
 
-Day62 -samayoh-
 
-あがって、さがって、壁にぶつからないよう。さまよう。
+KUSAYARI / くさやり
+Day63 -karamaru-
 
-https://nozomiishii.github.io/codeLab/day062/
+。からまる。
+
+https://nozomiishii.github.io/codeLab/day063/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
