@@ -58,9 +58,14 @@
   color:#EAEAE9;
   text-shadow: #FE5FAE 1px 1px 0px, #06AFC7 -1px 1px 0px,
              #06AFC7 1px -1px 0px, #FE5FAE -1px -1px 0px;
-
+  animation: karamaru 2s infinite both linear alternate;
 }
 
+@keyframes karamaru{
+  0%{transform: rotateZ(-5deg) translate(-50%, -50%);}
+  50%{transform: rotateZ(0) translate(-50%, -50%);}
+  100%{transform: rotateZ(5deg) translate(-50%, -50%);}
+}
 
 
 
