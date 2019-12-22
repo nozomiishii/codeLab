@@ -7,10 +7,6 @@ let humans = [];
 let powers = [];
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  start.addEventListener('click',function(){
-    op.classList.add('start');
-    setInterval(createHuman, 1000);
-  });
 }
 
 function createHuman(){
