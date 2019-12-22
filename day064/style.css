@@ -6,11 +6,11 @@
   list-style: none;
   user-select: none;
 }
-/*@media all and (max-width: 1000px){
+@media all and (max-width: 1000px){
   .op{
     font-size:26px !important;
   }
-}*/
+}
 .op{
   position: fixed;
   top: 0;
@@ -19,7 +19,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background: linear-gradient(to bottom,#262626, #9198e5,#262626);;
   display: flex;
   align-items:center;
   justify-content: center;

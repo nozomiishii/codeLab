@@ -7,11 +7,16 @@ let humans = [];
 let powers = [];
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  setInterval(createHuman, 2000);
+  start.addEventListener('click',function(){
+    op.classList.add('start');
+    setInterval(createHuman, 1000);
+  });
 }
 
 function createHuman(){
-  humans.push(new Human());
+  if(humans.length < 20){
+  　humans.push(new Human());
+  }
 }
 
 let bullets = [];
@@ -43,12 +48,12 @@ function draw() {
       }
     }
   }
-  if(powermeter.value > 100){
-    console.log('!');
-    // progress.class('full');
-  }else{
-    powermeter.value = powers.length * 10 + 10;
-  }
+  // if(powermeter.value > 100){
+  //   console.log('!');
+  //   // progress.class('full');
+  // }else{
+  //   powermeter.value = powers.length * 10 + 1;
+  // }
 }
 
 function mouseClicked(){

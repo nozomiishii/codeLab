@@ -11,11 +11,12 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day63 -karamaru-
+Day64 -earth-
 
-すすんだつもり。できたつもり。からまる。
+ちきゅうの守り方。
+how to save the earth.
 
-https://nozomiishii.github.io/codeLab/day063/
+https://nozomiishii.github.io/codeLab/day064/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 

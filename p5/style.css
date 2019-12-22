@@ -6,11 +6,11 @@
   list-style: none;
   user-select: none;
 }
-/*@media all and (max-width: 1000px){
+@media all and (max-width: 1000px){
   .op{
     font-size:26px !important;
   }
-}*/
+}
 .op{
   position: fixed;
   top: 0;
