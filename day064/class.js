@@ -11,6 +11,9 @@ const player = {
   speed: 0,
   show(){
     textSize(48);
+    if(height < 820){
+      player.y = height * 0.7;
+    }
     text(player.icon, mouseX, player.y);
     this.y += random(-1,1);
   }

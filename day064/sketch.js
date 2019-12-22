@@ -56,6 +56,6 @@ function draw() {
   // }
 }
 
-function mouseClicked(){
+function mousePressed(){
   bullets.push(new Bullet());
 }
