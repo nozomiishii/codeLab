@@ -1,7 +1,10 @@
 console.log("class.js");
 
 const height = window.innerHeight;
-let p;
+const width = window.innerWidth;
+const powermeter = document.querySelector('#powermeter');
+const progress = document.querySelector("progress");
+
 const player = {
 　icon: '👾',
   y: height * 0.9,
@@ -24,5 +27,19 @@ class Bullet {
     textSize(this.size);
     text(this.image,this.x, this.y, this.size, this.size);
     this.y -= 3;
+  }
+}
+
+class Human {
+  constructor(){
+    this.image = "🦸🏻‍♂️";
+    this.x = random(width);
+    this.y = 0;
+    this.size = 46;
+  }
+  show(){
+    textSize(this.size);
+    text(this.image,this.x, this.y, this.size, this.size);
+    this.y ++;
   }
 }

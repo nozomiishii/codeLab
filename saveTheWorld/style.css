@@ -52,13 +52,31 @@
   height:100vh;
 }
 
-.lookRight{
-  /*transform: rotateY(180deg);*/
-  font-size: 50px;
+.bar{
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100vw;
 }
 
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+}
 
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 50px;
+}
 
+progress::-webkit-progress-value {
+  background: #f6b93b;
+  border-radius: 50px;
+}
+
+.full{
+  background: #eb2f06 !important;
+}
 
 
 
