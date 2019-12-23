@@ -11,10 +11,10 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day64 -earth-
+Day65 - EARTH -
 
-ちきゅうの守り方。
-how to save the earth.
+にんげんの弱点。
+Go for the jugular.
 
 https://nozomiishii.github.io/codeLab/day064/
 

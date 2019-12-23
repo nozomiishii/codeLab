@@ -5,7 +5,7 @@ const width = window.innerWidth;
 const powermeter = document.querySelector('.powermeter');
 
 const honeyTrap = {
-  icon: '🦸🏻‍♀️',
+  icon:  "🧖🏻‍♀️",
   x: width - 50,
   y: height * 0.8,
   show(){
@@ -17,13 +17,10 @@ const honeyTrap = {
 
 const player = {
 　icon: '👾',
-  y: height * 0.9,
+  y: height * 0.7,
   speed: 0,
   show(){
     textSize(48);
-    if(height < 820){
-      player.y = height * 0.7;
-    }
     text(player.icon, mouseX, player.y);
     this.y += random(-1,1);
   }

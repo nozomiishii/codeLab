@@ -21,7 +21,13 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: linear-gradient(to bottom,#262626, #9198e5,#262626);;
+  /*background: rgba(169, 169, 169, 0.6);*/
+  /*background: rgba(164, 4, 242, 0.6);*/
+  background: linear-gradient(69deg,
+    rgb(13, 89, 1, 0.9), rgb(13, 89, 1, 0.9) 33%,
+    rgb(179, 0, 12, 0.9) 33%, rgb(179, 0, 12, 0.9) 66%,
+    rgb(13, 89, 1, 0.9) 66%
+    );;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -82,8 +88,12 @@
   border-radius: 50px;
 }
 
-
-
+h1::after{
+  content:"💴🧖🏻‍♀️💴";
+  font-size: 69px;
+  display:block;
+  text-align: center;
+}
 
 
 

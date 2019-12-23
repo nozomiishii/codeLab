@@ -6,11 +6,11 @@ function windowResized() {
 let humans = [];
 let powers = [];
 let charged = false;
-let backgroundColor = 59;
+let backgroundColor = 255;
+let sexy = "🧖🏻‍♀️";
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  setInterval(createHuman, 1000);
 }
 
 function createHuman(){
@@ -42,7 +42,7 @@ function draw() {
   for(bullet of bullets){
     for([index, human] of humans.entries()){
       let d = dist(human.x, human.y, bullet.x ,bullet.y);
-      if(d < human.size /2 + bullet.size/2 && bullet.image == "🦸🏻‍♀️"){
+      if(d < human.size /2 + bullet.size/2 && bullet.image == sexy){
         human.image = "🏩";
         human.speed = 0;
       } else if(d < human.size /2 + bullet.size/2){
@@ -69,7 +69,7 @@ function draw() {
 function mousePressed(){
   let d = dist(mouseX, mouseY, honeyTrap.x, honeyTrap.y);
   if(d < 50){
-    bullets.push(new Bullet("🦸🏻‍♀️", 60, random(width)));
+    bullets.push(new Bullet(sexy, 60, random(width)));
   } else if(charged){
     backgroundColor = 238;
     bullets.push(new Bullet("💸", 100, mouseX));

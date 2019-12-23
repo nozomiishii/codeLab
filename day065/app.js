@@ -6,7 +6,10 @@ const op = document.querySelector('.op');
 
 start.addEventListener('click',function(){
   op.classList.add('start');
-  // setInterval(createHuman, 1000);
+  setInterval(createHuman, 1000);
+  setTimeout(function(){
+    backgroundColor = 59;
+  }, 200);
 });
 
 // write game code from here
