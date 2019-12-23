@@ -11,12 +11,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day65 - EARTH -
+Day66 - withHim -
 
-にんげんの弱点。
-Go for the jugular.
+すさんだ心から一転、メルヘンに。
 
-https://nozomiishii.github.io/codeLab/day064/
+https://nozomiishii.github.io/codeLab/day066/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
