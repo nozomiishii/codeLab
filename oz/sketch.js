@@ -3,6 +3,8 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+let oz;
+
 let trees = [];
 let numOfTrees = 30;
 
@@ -18,6 +20,24 @@ function acrossFriends(){
 }
 
 function setup() {
+  oz = {
+    icon: '🧙🏻‍♀️',
+    history: [],
+    show(){
+      textSize(44);
+      text(oz.icon, mouseX, mouseY);
+      let v = createVector(mouseX, mouseY);
+      oz.history.push(v);
+    },
+    move(){
+      for(let i = 0; i < oz.history.length; i++){
+        let position = oz.history[i];
+        fill(255);
+        text(oz.icon, position.x, position.y)
+        ellipse(position.x, position.y, 10, 10);
+      }
+    }
+  }
   createCanvas(windowWidth, windowHeight);
   for(let i = 0; i < numOfTrees; i++){
     trees.push(new Tree());
@@ -30,6 +50,7 @@ function draw() {
   background(6, 21, 30);
   // oz show
   oz.show();
+  oz.move();
 
   // trees show
   for(tree of trees){

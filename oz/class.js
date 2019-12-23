@@ -2,14 +2,6 @@ console.log("class.js");
 const width = window.innerWidth;
 const height = window.innerHeight;
 
-const oz = {
-  icon: '🧙🏻‍♀️',
-  show(){
-    textSize(44);
-    text(oz.icon, mouseX, mouseY);
-  }
-}
-
 class Tree {
   constructor(){
     this.icon ='🌲';
