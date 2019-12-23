@@ -2,8 +2,18 @@ console.log("class.js");
 
 const height = window.innerHeight;
 const width = window.innerWidth;
-const powermeter = document.querySelector('#powermeter');
-const progress = document.querySelector("progress");
+const powermeter = document.querySelector('.powermeter');
+
+const honeyTrap = {
+  icon: '🦸🏻‍♀️',
+  x: width - 50,
+  y: height * 0.8,
+  show(){
+    textSize(48);
+    text(honeyTrap.icon, honeyTrap.x, honeyTrap.y);
+    this.y += random(-1,1);
+  }
+}
 
 const player = {
 　icon: '👾',
@@ -20,11 +30,11 @@ const player = {
 }
 
 class Bullet {
-  constructor(){
-    this.image = "💴";
-    this.x = mouseX;
+  constructor(image, size, x){
+    this.image = image;
+    this.x = x;
     this.y = player.y;
-    this.size = 44;
+    this.size = size;
   }
   shoot(){
     textSize(this.size);
@@ -39,10 +49,11 @@ class Human {
     this.x = random(width);
     this.y = 0;
     this.size = 46;
+    this.speed = 1;
   }
   show(){
     textSize(this.size);
     text(this.image,this.x, this.y, this.size, this.size);
-    this.y ++;
+    this.y += this.speed;
   }
 }

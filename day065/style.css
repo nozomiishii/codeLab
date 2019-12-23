@@ -56,38 +56,31 @@
 
 .bar{
   position: absolute;
-  bottom: 0;
+  bottom: 20%;
   padding: 20px;
-  width: 100vw;
+  width: 80vw;
+  color: white;
 }
 
-progress {
+.powermeter {
   -webkit-appearance: none;
   width: 100%;
 }
 
-progress::-webkit-progress-bar {
+.powermeter::-webkit-progress-bar {
   background-color: white;
   border-radius: 50px;
 }
 
-progress::-webkit-progress-value {
-  background: #f6b93b;
+.powermeter::-webkit-progress-value {
+  background: #eb2f06;
   border-radius: 50px;
 }
 
-.full{
-  background: #eb2f06 !important;
+.full::-webkit-progress-value{
+  background: #f6b93b;
+  border-radius: 50px;
 }
-
-
-
-
-
-
-
-
-
 
 
 
