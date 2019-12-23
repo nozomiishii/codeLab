@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+@media all and (max-width: 1000px){
+  .op{
+    font-size:26px !important;
+  }
+}
+.op{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  background: linear-gradient(to bottom,#262626, #9198e5,#262626);;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /*color*/
+  color:white;
+  /*size*/
+  font-size: 72px;
+}
+.op>*{
+  margin: 24px auto;
+}
+.op h4:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.start{
+  animation: starting 1s both;
+}
+@keyframes starting{
+  0%{transform: translateY(0); display: flex;}
+  20%{transform: translateY(1vh); display: flex;}
+  100%{transform: translateY(-100vh);display: none;}
+}
+
+
+/*write game code from here*/
+.game{
+  height:100vh;
+}
+
+.bar{
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100vw;
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+  background: #f6b93b;
+  border-radius: 50px;
+}
+
+.full{
+  background: #eb2f06 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
