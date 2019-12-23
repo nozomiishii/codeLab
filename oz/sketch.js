@@ -10,7 +10,7 @@ let numOfTrees = 30;
 
 let friends = [];
 const animals = ['🐕','🐖','🦕','🐑','🦜','🦆','🐜','🦒','🦝','🐓'];
-
+// let friend;
 
 function acrossFriends(){
   if(friends.length < 10){
@@ -28,13 +28,16 @@ function setup() {
       text(oz.icon, mouseX, mouseY);
       let v = createVector(mouseX, mouseY);
       oz.history.push(v);
+      if(oz.history.length > 20){
+        oz.history.splice(0, 1);
+      }
     },
     move(){
       for(let i = 0; i < oz.history.length; i++){
+        friend = "🦜";
         let position = oz.history[i];
         fill(255);
-        text(oz.icon, position.x, position.y)
-        ellipse(position.x, position.y, 10, 10);
+        text(friend, position.x, position.y);
       }
     }
   }
@@ -49,8 +52,8 @@ function setup() {
 function draw() {
   background(6, 21, 30);
   // oz show
-  oz.show();
   oz.move();
+  oz.show();
 
   // trees show
   for(tree of trees){
