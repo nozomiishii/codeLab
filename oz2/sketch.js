@@ -13,6 +13,8 @@ let friends = [];
 const animals = ['🐕','🐖','🦕','🐑','🦜','🦆','🐜','🦒','🦝','🐓'];
 // let friend;
 let space = 44;
+
+let teamMembers = [];
 function acrossFriends(){
   if(friends.length < 10){
     let randomIcon = animals[Math.floor(Math.random() * animals.length)];
@@ -23,7 +25,7 @@ function acrossFriends(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   for(let i = 0; i < numOfTrees; i++){
-    trees.push(new Tree());
+    trees.push(new Tree(46));
   }
   setInterval(acrossFriends, 1000);
 }
@@ -31,13 +33,9 @@ function setup() {
 
 function draw() {
   background(6, 21, 30);
-  // oz = new Oz(mouseX, mouseY);
-  // oz.show();
-  for(let i = 0; i > players.length; i++){
-    if(i = players[players.length]){
-      players[players.length].show();
-    }
-  }
+  oz = new Oz(mouseX, mouseY);
+  oz.show();
+  oz.move();
 
   // trees show
   for(tree of trees){
@@ -50,30 +48,19 @@ function draw() {
 
   // judgement
   let space = 44;
-  // for([index, friend] of friends.entries()){
-  //   let d = dist(friend.x, friend.y, mouseX, mouseY);
-  //   if(d < 42){
-  //     // friends.splice(index, 1);
-  //     return friend.x = mouseX + 10;
-  //   }
-  //   if(d < 42){
-  //     // friends.splice(index, 1);
-  //     return friend.y = mouseY + 10;
-  //   }
-  // }
+
   for(let i = 0; i < friends.length; i++){
     let d = dist(friends[i].x, friends[i].y, mouseX, mouseY);
     if(d < 42){
+      teamMembers.push(friends[i].icon);
       friends.splice(i, 1);
-      // friends[i].x = oz.x + 10;
-      // friends[i].y = oz.y + 10;
     }
   }
 }
 
-function mouseDragged(){
-  players.push(new Oz(mouseX, mouseY));
-}
+// function mouseDragged(){
+//   players.push(new Oz(mouseX, mouseY));
+// }
 
 
 
