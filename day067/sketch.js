@@ -42,14 +42,14 @@ function draw() {
   textAlign(CENTER, CENTER);
   fill(238);
   textSize(22);
-  text("let's ask today's weather to him", width / 2, 100);
+  text("Let's ask today's weather to him", width / 2, height * 0.2);
   textSize(48);
   giraffe = text(animal.giraffe, giraffeX, giraffeY);
   giraffeX += random(-1,1);
   giraffeY += random(-1,1);
 
   if(show){
-    // text(weatherData.weather[0].main, 100, 100);
+    text(weatherData.weather[0].main, width / 2, height * 0.8);
     // text(weatherData.weather[0].main, 100, 100);
   }
 }

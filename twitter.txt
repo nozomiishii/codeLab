@@ -11,11 +11,12 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day66 - withHim -
+Day67 - giraffes_forcast -
 
-すさんだ心から一転、メルヘンに。
+はじめてのjsonとAPI
+なんと画面をタップすると今の東京の天気がみれるだけだ。
 
-https://nozomiishii.github.io/codeLab/day066/
+https://nozomiishii.github.io/codeLab/day067/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
