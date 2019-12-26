@@ -1,21 +1,30 @@
 console.log('ready to sketch');
+let weatherData;
 
-const api_key = "bd296703bc29461ffafa94fd3b01fcd3";
-const api = "http://api.openweathermap.org/data/2.5/weather";
+let temperature;
 
-let url = api + `?q=Tokyo&APPID=${api_key}&units=metric`;
+const cities = document.getElementById('cities');
+
+
+const api = "https://api.openweathermap.org/data/2.5/weather?q=";
+
+const api_key = "&APPID=bd296703bc29461ffafa94fd3b01fcd3";
+const units = "&units=metric";
+
 
 let animal;
 
 const width = window.innerWidth;
 const height = window.innerHeight;
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 function preload(){
   animal = loadJSON('animal.json');
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  city = cities.value;
+  url = api + city + api_key + units;
+  loadJSON(url, gotData);
 }
 
 function gotData(data){
@@ -23,9 +32,17 @@ function gotData(data){
   console.log(weatherData);
 }
 
+function weatherAsk(){
+  city = cities.value;
+  url = api + city + api_key + units;
+  loadJSON(url, gotData);
+  show = true;
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  loadJSON(url, gotData);
+  let btn = select('#submit');
+  btn.mousePressed(weatherAsk);
 }
 
 let giraffe;
@@ -33,9 +50,6 @@ let giraffeX = width / 2;
 let giraffeY = height / 2;
 let show = false;
 
-let weatherData;
-let weather;
-let temperature;
 
 function draw() {
   background(50, 140, 20);
@@ -52,9 +66,5 @@ function draw() {
     text(weatherData.weather[0].main, width / 2, height * 0.8);
     // text(weatherData.weather[0].main, 100, 100);
   }
-}
-
-function mousePressed(){
-  show = true;
 }
 

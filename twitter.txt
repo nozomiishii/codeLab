@@ -15,6 +15,7 @@ Day67 - giraffes_forcast -
 
 はじめてのjsonとAPI
 なんと画面をタップすると今の東京の天気がみれるだけだ。
+(めっちゃ時間かかったのに)
 
 https://nozomiishii.github.io/codeLab/day067/
 
