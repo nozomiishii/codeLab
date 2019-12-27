@@ -50,19 +50,33 @@
 
 
 /*write game code from here*/
+body{
+  background:rgb(0,0,0);
+}
+
 .game{
   height:100vh;
 }
 
 .box{
+  position: absolute;
+  top: 50%;
   width: 100vw;
   height: 10vh;
-  border: 3px dashed blue;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
-
+input{
+  font-size: 18px;
+}
+.btn{
+  color: white;
+  background: seagreen;
+  padding: 10px;
+  margin: 10px;
+}
 img{
   width: 30vw;
   height: 30vw;

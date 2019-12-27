@@ -5,7 +5,8 @@ const apiKey = '&api_key=2yzS5m3m1CWprh70TzZdDVjCqXRS3Qrz';
 let query = "&q=rainbow"
 const wordInput = document.getElementById('wordInput');
 const btn = document.querySelector('.btn');
-
+const imgs = document.querySelectorAll('img');
+let load = false;
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
@@ -20,18 +21,33 @@ function searchGiphies(){
     loadJSON(url, gotData);
   }
 }
+
+let x;
+let y;
+let images = [];
+let time = 120
 function gotData(giphy){
   for(let i = 0; i < 12; i++){
-    createImg(giphy.data[i].images.original.url);
-  }
+    x = random(width);
+    y = random(height);
+    image = createImg(giphy.data[i].images.original.url);
+    images.push(image);
+  } 
+  setInterval(() => {
+
+    for(let i = 0; i < images.length; i++){
+    x = random(width);
+    y = random(height);
+    images[i].style("transform", `translate(${x}%, ${y}%)`);
+    }
+  }, time);
 }
-    
+ 
+
 function setup() {
   noCanvas();
   wordInput.addEventListener('change', searchGiphies);
-  
 }
-
 
 function draw() {
   background(255, 140, 0);
