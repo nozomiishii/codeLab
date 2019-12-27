@@ -18,6 +18,7 @@ function searchGiphies(){
   if(query){
     url = api + query + apiKey;
     console.log(url);
+    let images = [];
     loadJSON(url, gotData);
   }
 }
@@ -25,20 +26,19 @@ function searchGiphies(){
 let x;
 let y;
 let images = [];
-let time = 120
+let time = 500
 function gotData(giphy){
-  for(let i = 0; i < 12; i++){
+  for(let i = 0; i < 2; i++){
     x = random(width);
     y = random(height);
     image = createImg(giphy.data[i].images.original.url);
     images.push(image);
   } 
   setInterval(() => {
-
     for(let i = 0; i < images.length; i++){
-    x = random(width);
-    y = random(height);
-    images[i].style("transform", `translate(${x}%, ${y}%)`);
+      x = random(width);
+      y = random(height);
+      images[i].style("transform", `translate(${x}%, ${y}%)`);
     }
   }, time);
 }
