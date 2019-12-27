@@ -11,11 +11,12 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day68 - giraffes_forcast2 -
+Day69 - image -
 
-自分が行った国と好きな国の天気がみれるようになりました。
+open weather mapにつづき、giphy api。
+ぱっと見、クオリティー落ちてるかんじだけど、普段の1.5倍くらい時間かかってるんだぜ。
 
-https://nozomiishii.github.io/codeLab/day068/
+https://nozomiishii.github.io/codeLab/day069/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
