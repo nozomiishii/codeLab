@@ -1,7 +1,7 @@
 console.log('ready to sketch');
 
 const api_key = "bd296703bc29461ffafa94fd3b01fcd3";
-const api = "http://api.openweathermap.org/data/2.5/weather";
+const api = "https://api.openweathermap.org/data/2.5/weather";
 
 let url = api + `?q=Tokyo&APPID=${api_key}&units=metric`;
 
