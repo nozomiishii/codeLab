@@ -52,6 +52,7 @@
 /*write game code from here*/
 .box{
   position:absolute;
+  font-size: 18px;
   top: 50%;
   left: 0%;
   width: 100vw;
@@ -63,6 +64,7 @@
 
 .box select{
   -webkit-appearance: none;
+  font-size: 18px;
 	appearance: none;
   background: white;
   padding: 10px;
@@ -71,6 +73,7 @@
 
 .btn{
   background: #274097;
+  font-size: 18px;
   color: white;
   padding: 10px;
   margin: 10px;
