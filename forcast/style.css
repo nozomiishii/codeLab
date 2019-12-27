@@ -76,6 +76,16 @@
   margin: 10px;
 }
 
+.forcast{
+  width: 100vw;
+  position: absolute;
+  top: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 68px;
+  color: #f9ca24;
+}
 
 
 

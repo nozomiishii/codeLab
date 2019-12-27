@@ -4,7 +4,7 @@ let weatherData;
 let temperature;
 
 const cities = document.getElementById('cities');
-let city = "tokyo";
+// let city = "tokyo";
 
 const api = "https://api.openweathermap.org/data/2.5/weather?q=";
 
@@ -23,36 +23,33 @@ function windowResized() {
 
 function preload(){
   animal = loadJSON('animal.json');
-  city = cities.value;
-  url = api + city + api_key + units;
-  loadJSON(url, gotData);
+  // city = cities.value;
+  // url = api + city + api_key + units;
+  // loadJSON(url, gotData);
 
 }
 
+
 function gotData(data){
+  removeElements();
   weatherData = data;
   icon = weatherData.weather[0].icon;
-  image = loadImage(`https://openweathermap.org/img/wn/${icon}@2x.png`);
-  console.log(image);
+  p = createP(weatherData.weather[0].main, width / 2, height * 0.8);
+  image = createImg(`https://openweathermap.org/img/wn/${icon}@2x.png`);
+  forcast = p.child(image);
+  forcast.class('forcast');
 }
 
 function weatherAsk(){
   city = cities.value;
   url = api + city + api_key + units;
   loadJSON(url, gotData);
-
-
-
-  show = true;
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   let btn = select('#submit');
-  btn.mousePressed(weatherAsk);
-  
-
-
+  btn.mousePressed(weatherAsk); 
 }
 
 let giraffe;
@@ -71,19 +68,5 @@ function draw() {
   giraffe = text(animal.giraffe, giraffeX, giraffeY);
   giraffeX += random(-1,1);
   giraffeY += random(-1,1);
-
-  if(show){
-    
-    text(weatherData.weather[0].main, width / 2, height * 0.8);
-    // p = createP('',width / 2, height * 0.9);
-    text(image, width / 2, height * 0.9);
-
-    
-    // p.style('width', "100px");
-    // p.style('height', "100px");
-    // p.style("background", `url(http://openweathermap.org/img/wn/${icon}@2x.png)`);
-    // text(weatherData.weather[0].icon, width / 2, height * 0.8);
-    // text(weatherData.weather[0].main, 100, 100);
-  }
 }
 
