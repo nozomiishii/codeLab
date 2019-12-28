@@ -1,4 +1,5 @@
 console.log('ready to sketch');
+
 let balls = [];
 let ball;
 let player;
@@ -18,22 +19,36 @@ const end = document.querySelector('.end');
 const displayScore = document.querySelector('.end p');
 
 // let exploded = false;
+const api = 'https://api.giphy.com/v1/gifs/search?';
+const apiKey = '&api_key=2yzS5m3m1CWprh70TzZdDVjCqXRS3Qrz';
+let query = "&q=rainbow"
+
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+function searchGiphies(){
+  url = api + query + apiKey;
+  loadJSON(url, gotData);
+}
+
+let giphes = [];
+let imgCount = 0;
+function gotData(imgData){
+  setInterval(function(){
+    while(imgCount < imgData.data.length){
+      giphy = imgData.data[imgCount].images.original.url;
+      giphes.push(giphy);
+      imgCount++;
+      console.log(giphes);
+    }
+  }, 100);
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  ball = new Ball(
-    random(width),
-    random(height ),
-    random(20,46),
-    random(255), //colorR
-    random(255), //colorG
-    random(255), //colorB
-    random(255), //alpha
-    random(-1,1), //speedX
-    random(-1,1), //speedY
-    floor(random(9)) //times
-    );
-  balls.push(ball);
   creatingBalls = setInterval(function(){
     ball = new Ball(
     random(width),
@@ -49,6 +64,7 @@ function setup() {
     );
   balls.push(ball);
   }, 5000);
+  searchGiphies();
 }
 
 
@@ -77,10 +93,10 @@ function draw(){
     }
   }
   // Score board
-  text(`Score:${totalScore}`, 20, 50);
-  for(let i = 0; i < playerLife; i++){
-    text('📡', 20 + i * 30, height - 50);
-  }
+  // text(`Score:${totalScore}`, 20, 50);
+  // for(let i = 0; i < playerLife; i++){
+  //   text('📡', 20 + i * 30, height - 50);
+  // }
 
   // controll player
   player.show();
