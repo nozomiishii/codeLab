@@ -12,8 +12,9 @@ window.addEventListener(
 // write game code from here
 const btn = document.getElementById("btn");
 const output = document.getElementById("output");
+const newYearCard = document.querySelector(".newYearCard");
 
-btn.addEventListener("click", getText);
+newYearCard.addEventListener("click", getText);
 function getText() {
   fetch("text.txt")
     .then(response => response.text())
