@@ -21,7 +21,7 @@ const displayScore = document.querySelector('.end p');
 // let exploded = false;
 const api = 'https://api.giphy.com/v1/gifs/search?';
 const apiKey = '&api_key=2yzS5m3m1CWprh70TzZdDVjCqXRS3Qrz';
-let query = "&q=rainbow"
+let query = "&q=monster"
 
 
 
@@ -45,6 +45,7 @@ function gotData(imgData){
       console.log(giphes);
     }
   }, 100);
+  
 }
 
 function setup() {
