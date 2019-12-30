@@ -1,21 +1,16 @@
 console.log("hello")
 
-
 let img;
 
 function preload() {
-  img = loadImage('day070.png');
+  img = loadImage('kusayari.png');
   console.log(img);
-
 }
 
-
 function setup() {
-  noCanvas()
-  // createCanvas(1000, 1000);
-  image(img, 40, 40)
+  noCanvas();
 }
 
 function draw() {
-  background(200);
+  image(img, 400, 499);
 }
