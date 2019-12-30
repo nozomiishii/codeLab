@@ -1,8 +1,9 @@
 console.log("hello")
 
-let img;
+var img;
+
 function preload() {
-  img = loadImage('sample.png');
+  img = loadImage('kusayari.png');
 
 }
 
