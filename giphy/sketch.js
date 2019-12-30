@@ -1,16 +1,20 @@
 console.log("hello")
 
 let img;
-
 function preload() {
-  img = loadImage('kusayari.png');
-  console.log(img);
+  img = loadImage('sample.png');
+
 }
 
 function setup() {
-  noCanvas();
+
+  createCanvas(windowWidth, windowHeight);
+
 }
 
+
+// イメージをキャンバスに描画する
 function draw() {
-  image(img, 400, 499);
+  background(6);
+  image(img, 0, 0);
 }
