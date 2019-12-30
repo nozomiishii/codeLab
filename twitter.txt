@@ -11,10 +11,9 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day70 - thanks2019 -
+Day71 - 10hours -
 
-ホントは明日とかにあげたらいいんだろうけど、なんといってもキリがいいもんで。
-fetch導入からちょっとクオリティー落ち始めているけど、ここからさらに上がる一方なんです。ほんとなんです。
+１０時間もかかった。ただ画像をただいれるだけなのに。涙した。
 
 https://nozomiishii.github.io/codeLab/day070/
 
