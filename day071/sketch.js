@@ -16,7 +16,7 @@ let imgs = [];
 function draw() {
 	background(255);
 	textAlign(CENTER);
-	textSize(69);
+	textSize(59);
 	text('できた、、😭', windowWidth / 2, windowHeight / 2);
 	for (let i = 0; i < imgs.length; i++) {
 		image(img, imgs[i].x, imgs[i].y, imgs[i].w, imgs[i].h);
