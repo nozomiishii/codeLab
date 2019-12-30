@@ -15,7 +15,7 @@ Day71 - 10hours -
 
 １０時間もかかった。ただ画像をただいれるだけなのに。涙した。
 
-https://nozomiishii.github.io/codeLab/day070/
+https://nozomiishii.github.io/codeLab/day071/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
