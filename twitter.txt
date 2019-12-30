@@ -13,10 +13,10 @@ https://nozomiishii.github.io/codeLab/day059/
 KUSAYARI / くさやり
 Day70 - thanks2019 -
 
-open weather mapにつづき、giphy api。
-ぱっと見、クオリティー落ちてるかんじだけど、普段の1.5倍くらい時間かかってるんだぜ。
+ホントは明日とかにあげたらいいんだろうけど、なんといってもキリがいいもんで。
+fetch導入からちょっとクオリティー落ち始めているけど、ここからさらに上がる一方なんです。ほんとなんです。
 
-https://nozomiishii.github.io/codeLab/day069/
+https://nozomiishii.github.io/codeLab/day070/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
