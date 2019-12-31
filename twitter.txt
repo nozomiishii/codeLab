@@ -11,11 +11,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day71 - 10hours -
+Day72 - monster -
 
-１０時間もかかった。ただ画像をただいれるだけなのに。涙した。
+あの月には、怪物がいるってさ。
 
-https://nozomiishii.github.io/codeLab/day071/
+https://nozomiishii.github.io/codeLab/day072/
 
 #くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
 
