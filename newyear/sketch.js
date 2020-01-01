@@ -13,18 +13,45 @@ function preload() {
 
 }
 
+let counter = 10;
+const number = document.querySelector('.number');
+const btn = document.querySelector('.btn');
+// countDown() {
+//   setInterval(() => {
+//     if (counter < 0) {
+//       number.innerHTML = "Happy New Year";
+//     } else {
+//       counter--;
+//       number.innerHTML = counter;
+//     }
+//   }, 1000);
+// }
+
+// getData(){
+//   fetch(url)
+//   .then(response => response.json())
+//   .then(json => {
+//     img = loadImage(json.data[0].images.original.url);
+//     return imgs.push(img);
+//   })
+// }
 
 let imgs = [];
 
 function setup() {
   url = api + apiKay + query;
-  // fetch(url)
-  //   .then(response => response.json())
-  //   .then(json => {
-  //     img = loadImage(json.data[0].images.original.url);
-  //     return imgs.push(img);
-  //   })
-  //   .catch(err => console.error(err));
+  setInterval(() => {
+    counter--;
+    if (counter < 0) {
+      btn.style.display = "none";
+      number.innerHTML = "Happy New Year";
+    } else {
+      number.innerHTML = counter;
+    }
+  }, 1000);
+  // countDown();
+  // .then(getData())
+  // .catch(err => console.error(err));
   createCanvas(windowWidth, windowHeight);
 }
 
