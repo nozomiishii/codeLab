@@ -1,23 +1,24 @@
 KUSAYARI / くさやり
-day59 -colorBeam3-
+day59 - colorBeam3 -
 
-みんな大好き、プレイヤーちゃんと死にます。
--遊び方-
-文字を打ち込む。それだけ。
-https://nozomiishii.github.io/codeLab/day059/
+  みんな大好き、 プレイヤーちゃんと死にます。 -
+  遊び方 -
+  文字を打ち込む。 それだけ。
+https: //nozomiishii.github.io/codeLab/day059/
 
-#くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #webデザイン
+  #くさやり# kusayari #100DaysOfCode # code# programming# p5js# javascript# webdev# codenewbie# developers# プログラミング初心者# プログラミング学習# webデザイン
 
 
 
 KUSAYARI / くさやり
 Day73 - newYear -
 
+  昨日と今日と今日と明日なんてなにも変化ないけど、
+カウントダウンっていいですよね。
 
+https: //nozomiishii.github.io/codeLab/day073/
 
-https://nozomiishii.github.io/codeLab/day073/
-
-#くさやり #kusayari #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習
+  #くさやり# kusayari #100DaysOfCode # code# programming# p5js# javascript# webdev# codenewbie# developers# プログラミング初心者# プログラミング学習
 
 
 
