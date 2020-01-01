@@ -13,7 +13,7 @@ function preload() {
 
 }
 
-let counter = 5;
+let counter = 10;
 const number = document.querySelector('.number');
 const btn = document.querySelector('.btn');
 
@@ -45,18 +45,16 @@ function getData() {
     })
 }
 
+
 let imgs = [];
 
 function setup() {
   url = api + apiKay + query;
-
-
-  countDown()
-    .then(() => getData())
-    .catch(err => console.log(err));
-
-  // .then(getData())
-  // .catch(err => console.error(err));
+  btn.addEventListener('click', function () {
+    countDown()
+      .then(() => getData())
+      .catch(err => console.log(err));
+  });
   createCanvas(windowWidth, windowHeight);
 }
 
