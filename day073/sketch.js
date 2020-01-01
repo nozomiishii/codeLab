@@ -51,9 +51,12 @@ let imgs = [];
 function setup() {
   url = api + apiKay + query;
   btn.addEventListener('click', function () {
-    countDown()
-      .then(() => getData())
-      .catch(err => console.log(err));
+    if (!btn.classList.contains('clicked')) {
+      btn.classList.add('clicked');
+      countDown()
+        .then(() => getData())
+        .catch(err => console.log(err));
+    }
   });
   createCanvas(windowWidth, windowHeight);
 }
