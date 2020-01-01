@@ -36,6 +36,7 @@ function draw() {
   background(255, 140, 0);
 
   if (img) {
+    imageMode(CENTER);
     image(img, windowWidth * 0.5, windowHeight * 0.3, monsterX, monsterY);
   }
 
