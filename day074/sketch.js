@@ -18,15 +18,21 @@ function getDesire(json) {
   }, 1000);
 }
 
+const start = document.getElementById('start');
+const op = document.querySelector('.op');
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
-  // get images of desire from api 
-  url = api + query + apiKay;
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => getDesire(json))
-    .catch(err => console.log(err));
+  //game starts
+  start.addEventListener('click', function () {
+    op.classList.add('start');
+    // get images of desire from api 
+    url = api + query + apiKay;
+    fetch(url)
+      .then(response => response.json())
+      .then((json) => getDesire(json))
+      .catch(err => console.log(err));
+  });
 }
 
 let darkness = 6;

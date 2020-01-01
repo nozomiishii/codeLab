@@ -25,7 +25,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background: linear-gradient(to left, #7e0cf5, #7e0cf5 50%, #cd4dcc 50%);
   display: flex;
   align-items: center;
   justify-content: center;
