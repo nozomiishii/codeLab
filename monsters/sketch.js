@@ -35,12 +35,12 @@ function createMonsters() {
 // setting
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  createMonsters();
+  // createMonsters();
 }
 
 // draw canvas 
 function draw() {
-  background(255, 140, 0);
+  background(6);
 
   // monsters come out
   if (monsters) {
