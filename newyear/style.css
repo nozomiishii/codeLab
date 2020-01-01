@@ -1,4 +1,4 @@
-/* title */
+/* newYear */
 
 * {
   box-sizing: border-box;
@@ -67,8 +67,71 @@
   }
 }
 
-
 /*write game code from here*/
-.game {
+.countDownTimer {
   height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.number {
+  font-size: 72px;
+  margin: 20px;
+  color: white;
+  position: relative;
+}
+
+.btn {
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  border-radius: 20px;
+}
+
+.number::before {
+  content: "";
+  background: #ffd369;
+  display: block;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+}
+
+.number::after {
+  content: "";
+  background: #ffd369;
+  display: block;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  right: 0;
+}
+
+.number::before {
+  animation: move 1s infinite alternate linear;
+}
+
+.number::after {
+  animation: move 1s infinite alternate-reverse linear;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.btn:hover {
+  background: #ffd369;
+  color: white;
 }
