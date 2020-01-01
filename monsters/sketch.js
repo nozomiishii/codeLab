@@ -9,35 +9,47 @@ function windowResized() {
 }
 
 
-function preload() {
 
+// creating monsters from giphy api 
+let monsters = [];
+
+function createSingleMonster(json) {
+  setInterval(() => {
+    // get images from api 
+    randomMonster = Math.floor(Math.random() * json.data.length);
+    img = loadImage(json.data[randomMonster].images.original.url);
+    return monsters.push(new Monster(img));
+  }, 100);
 }
 
-let img;
-
-function setup() {
+function createMonsters() {
   url = api + query + apiKay;
   fetch(url)
     .then(response => response.json())
     .then(json => {
-      // randomMonster = Math.floor(Math.random() * json.data.length);
-      // img = json.data[0].images.original.url;
-      img = loadImage(json.data[0].images.original.url);
+      createSingleMonster(json);
     })
     .catch(err => console.error(err));
-  createCanvas(windowWidth, windowHeight);
-
 }
 
-let monsterX = 100;
-let monsterY = 100;
+// setting
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  createMonsters();
+}
 
+// draw canvas 
 function draw() {
   background(255, 140, 0);
 
-  if (img) {
+  // monsters come out
+  if (monsters) {
     imageMode(CENTER);
-    image(img, windowWidth * 0.5, windowHeight * 0.3, monsterX, monsterY);
+    for (let i = 0; i < monsters.length; i++) {
+      monsters[i].show();
+    }
   }
+
+
 
 }
