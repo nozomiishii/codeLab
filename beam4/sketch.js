@@ -64,6 +64,8 @@ function draw() {
       monster.show();
       monster.move();
     }
+  } else {
+    backgroundColor = 6;
   }
 
   // beams to balls
