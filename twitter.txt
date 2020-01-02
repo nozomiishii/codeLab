@@ -4,18 +4,18 @@ day59 - colorBeam3 -
 みんな大好き、 プレイヤーちゃんと死にます。 -
 遊び方 -
 文字を打ち込む。 それだけ。
-https: //nozomiishii.github.io/codeLab/day059/
+https://nozomiishii.github.io/codeLab/day059/
 
 #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい  
 
 
 KUSAYARI / くさやり
-Day74 - desires -
+Day75 - desires2 -
 
-煩悩と戦う。
+煩悩ともっと戦う。
 "注意": おっぱいの画像がでてきます。苦手な方はご遠慮ください。
 
-https: //nozomiishii.github.io/codeLab/day074/
+https://nozomiishii.github.io/codeLab/day075/
 
 #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい  
 
