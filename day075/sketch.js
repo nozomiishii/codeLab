@@ -34,12 +34,12 @@ function desire() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   //game starts
-  // start.addEventListener('click', function () {
-  // op.classList.add('start');
+  start.addEventListener('click', function () {
+    op.classList.add('start');
 
-  // get images of desire from api 
-  desire();
-  // });
+    // get images of desire from api 
+    desire();
+  });
 }
 
 
@@ -47,10 +47,11 @@ function setup() {
 // let hero;
 // let heroY = window.innerHeight / 2 + 100;
 // let heroSize = 68;
-let darkness = 6;
+let darkness = 238;
 
 function draw() {
-  background(darkness);
+  background(234, 145, 152);
+  // background(darkness);
   hero.show();
 
   // desires show 

@@ -20,6 +20,7 @@ class Desire {
     this.y += this.speedY
   }
   approached() {
+    // square hitbox
     let dx = Math.abs(this.x - mouseX);
     let dy = Math.abs(this.y - mouseY);
     if (dx < this.sizeX) {
