@@ -1,6 +1,6 @@
 console.log('ready to sketch');
 
-let backgroundColor = 236;
+let backgroundColor = 6;
 let backgroundColorRate = 50;
 let totalScore = 0;
 let totalScoreColorR = 238;
@@ -31,7 +31,7 @@ function createMonsters() {
         img = loadImage(json.data[random].images.original.url);
         monsters.push(new Monster(img));
         // console.log(monsters);
-      }, 100);
+      }, 500);
     })
     .catch(err => console.log(err));
 }
@@ -47,11 +47,23 @@ function draw() {
   stroke(6);
   fill(totalScoreColorR, totalScoreColorG, totalScoreColorB);
 
+
+
+  fill(238);
+  let ellipseX = windowWidth / 2;
+  let ellipseY = windowHeight * 0.3;
+  ellipse(ellipseX, ellipseY, 100);
+
   // controll player
   player.show();
-  for (monster of monsters) {
-    monster.show();
-    monster.move();
+
+  let d = dist(ellipseX, ellipseY, mouseX, mouseY);
+  if (d < 50) {
+    backgroundColor = 198;
+    for (monster of monsters) {
+      monster.show();
+      monster.move();
+    }
   }
 
   // beams to balls
