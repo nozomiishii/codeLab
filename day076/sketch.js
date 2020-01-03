@@ -69,26 +69,26 @@ function draw() {
   }
 
   // beams to balls
-  for (beam of beams) {
-    beam.shoot();
-    for (let i = 0; i < monsters.length; i++) {
-      monsters[i].hitBox(beam.x, beam.y);
-    }
+  // for (beam of beams) {
+  //   beam.shoot();
+  //   for (let i = 0; i < monsters.length; i++) {
+  //     monsters[i].hitBox(beam.x, beam.y);
+  //   }
 
-    // monsters to player
-    // for (monster of monsters) {
-    //   let d = dist(monster.x, monster.y, mouseX, mouseY)
-    //   if (d < monster.r) {
-    //     playerLife--
-    //     console.log(playerLife);
-    //   }
-    //   if (playerLife < 0) {
-    //     end.classList.add('ended');
-    //     displayScore.innerHTML = `Your Score: ${totalScore}`;
-    //     return dead = true;
-    //   }
-  }
+  // monsters to player
+  // for (monster of monsters) {
+  //   let d = dist(monster.x, monster.y, mouseX, mouseY)
+  //   if (d < monster.r) {
+  //     playerLife--
+  //     console.log(playerLife);
+  //   }
+  //   if (playerLife < 0) {
+  //     end.classList.add('ended');
+  //     displayScore.innerHTML = `Your Score: ${totalScore}`;
+  //     return dead = true;
+  //   }
 }
+// }
 
 function mousePressed() {
   beam = new Beam(

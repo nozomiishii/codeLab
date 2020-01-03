@@ -71,12 +71,6 @@ class Beam {
     this.y = y;
     this.speed = speed;
   }
-  shoot() {
-    stroke(6);
-    fill(random(255));
-    ellipse(this.x, this.y, 5, 20);
-    this.y += this.speed;
-  }
 }
 
 const player = {
