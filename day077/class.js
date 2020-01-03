@@ -26,14 +26,27 @@ class Monster {
     this.y = this.y + this.speedY;
   }
   hitBox(againstX, againstY) {
+
+    // monster against beams 
     let dx = Math.abs(this.x - againstX);
     let dy = Math.abs(this.y - againstY);
+    if (dx < this.size && dy < this.size) {
+      if (this.size < 30) {
+        // didn't work this following code 
+        // monsters.splice(this, 1);
+        // this following code is for temporarily code to debug 
+        this.x = 0;
+        this.y = 0;
+      } else {
+        this.size--;
+        this.speedX += random(-1, 1);
+        this.speedY += random(-1, 1);
+            //   // chenge the background color when beam hit monsters
+            if (!dead) {
+              totalScore++
 
-    if (dx < this.x) {
-      this.x = -this.x;
-    }
-    if (dy < this.y) {
-      this.y = -this.y;
+        }
+      }
     }
     // let d = dist(this.x, this.y, againstX, againstY);
     // if (d < 50) {
@@ -45,31 +58,28 @@ class Monster {
     //   // totalScoreColorR = random(255);
     //   // totalScoreColorG = random(255);
     //   // totalScoreColorB = random(255);
-    //   // if (!dead) {
-    //   //   totalScore++
-    //   // }
+ 
     // }
-    if (monsters.size < 0) {
-      // explode when monsters are attacked over 60 times
-      monsters.splice(i, 1);
+    // if (monsters.size < 0) {
+    //   // explode when monsters are attacked over 60 times
+    //   monsters.splice(i, 1);
 
-      // chenge the background color when beam hit monsters
-      setTimeout(function () {
-        if (backgroundColor <= 0 || backgroundColor >= 255) {
-          backgroundColorRate = backgroundColorRate * -1;
-        }
-        backgroundColor -= backgroundColorRate;
-      }, 1000);
-    }
+
   }
 }
 
 const beams = [];
 class Beam {
-  constructor(x, y, speed) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.speed = speed;
+    this.speed = -3;
+  }
+  shoot() {
+    stroke(6);
+    fill(random(255));
+    ellipse(this.x, this.y, 5, 20);
+    this.y += this.speed;
   }
 }
 

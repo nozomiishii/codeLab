@@ -24,7 +24,8 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: rgba(6, 6, 6, 0.9);
+  background: #E5E5E5;
+  animation: rainbow 4s infinite linear;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,8 +33,8 @@
   /*size*/
   font-size: 72px;
   color: #E5E5E5;
-  text-shadow: white 1px 1px 0px, white -1px 1px 0px,
-    white 1px -1px 0px, white -1px -1px 0px;
+  text-shadow: #274097 1px 1px 0px, #E80410 -1px 1px 0px,
+    #F7DC03 1px -1px 0px, #006719 -1px -1px 0px;
 }
 
 @keyframes rainbow {
