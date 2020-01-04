@@ -10,15 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day75 - desires2 -
+Day76 - monsters -
 
-煩悩ともっと戦う。
-"注意": おっぱいの画像がでてきます。苦手な方はご遠慮ください。
+https://nozomiishii.github.io/codeLab/day076/
 
-https://nozomiishii.github.io/codeLab/day075/
-
-#code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい  
-
+#kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
 
 day100
