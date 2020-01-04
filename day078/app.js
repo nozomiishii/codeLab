@@ -28,8 +28,10 @@ const form = document.querySelector('#input-word');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  db.collection('words').add({
-    word: `❤️❤️${form.word.value}❤️❤️`
-  });
-  form.word.value = "";
+  if (form.word.value) {
+    db.collection('words').add({
+      word: `❤️❤️${form.word.value}❤️❤️`
+    });
+    form.word.value = "";
+  }
 })
