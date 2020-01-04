@@ -96,3 +96,14 @@
     transform: translateY(5px);
   }
 }
+
+.input-box {
+  position: absolute;
+  bottom: 20vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form[id="creatingAnimal"]>* {
+  padding: 10px;
+}
