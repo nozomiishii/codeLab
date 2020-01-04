@@ -102,8 +102,23 @@
   bottom: 20vh;
   left: 50%;
   transform: translate(-50%, -50%);
+
+}
+
+form[id="creatingAnimal"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form[id="creatingAnimal"]>* {
+  display: block;
   padding: 10px;
+  margin: 10px;
+}
+
+.btn {
+  background-color: #3282b8;
+  border-radius: 50px;
+  color: #f8b400;
 }
