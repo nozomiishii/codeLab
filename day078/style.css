@@ -25,7 +25,7 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: #ffb6b9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,8 +69,10 @@
 
 
 /*write game code from here*/
-.game {
-  height: 100vh;
+body {
+  background: #ffb6b9;
+  color: white;
+
 }
 
 /* input */
@@ -83,9 +85,7 @@
 
 form[id="input-word"]>* {
   padding: 10px;
+  border: 1px solid #fe9801;
 }
 
 /* output */
-/* .outputBox{
-
-} */

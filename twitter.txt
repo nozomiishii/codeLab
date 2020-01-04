@@ -10,7 +10,13 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day76 - monsters -
+Day76 - undeletable -
+
+ついにデータベースと繋がりました。画面リフレッシュしてもデータが消えない。
+すばらしい、、、
+だれでも落書きできます。
+しねって書かれてもいいように全部ハート付きで投稿されます。
+平和。
 
 https://nozomiishii.github.io/codeLab/day076/
 
