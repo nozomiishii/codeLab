@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1_1_newYear</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="1st JAN / Day 73 - newYear -" />
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day073/day073.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="../libraries/p5.js"></script>
+  <script src="../libraries/p5.dom.js"></script>
+  <!-- <script src="../libraries/p5.sound.js"></script> -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+  <!-- write html code here -->
+  <div class="outputData">
+    <ul id="animalList" class="animal-list">
+    </ul>
+  </div>
+
+
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA3Ao0s8phF17Qo5ICdmqqMRpuST5XvY6g",
+      authDomain: "kusayari-5a728.firebaseapp.com",
+      databaseURL: "https://kusayari-5a728.firebaseio.com",
+      projectId: "kusayari-5a728",
+      storageBucket: "kusayari-5a728.appspot.com",
+      messagingSenderId: "595930820754",
+      appId: "1:595930820754:web:e610fe4065b1fa5be7364b",
+      measurementId: "G-0E6NPC5YVR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="sketch.js"></script>
+  <script src="class.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

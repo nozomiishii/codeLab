@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1_1_newYear</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="1st JAN / Day 73 - newYear -" />
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day073/day073.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+  <script src="../libraries/p5.js"></script>
+  <script src="../libraries/p5.dom.js"></script>
+  <!-- <script src="../libraries/p5.sound.js"></script> -->
+</head>
+
+<body>
+  <!-- write html code here -->
+  <div id="outputBox">
+  </div>
+  <div class="inputBox">
+    <form id="input-word">
+      <input type="text" placeholder='write some thing'>
+      <button id="btn">write</button>
+    </form>
+  </div>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCOj0AyyaMKDNCfiTOevr6fru4b4Fh3RrU",
+      authDomain: "words-8dde0.firebaseapp.com",
+      databaseURL: "https://words-8dde0.firebaseio.com",
+      projectId: "words-8dde0",
+      storageBucket: "words-8dde0.appspot.com",
+      messagingSenderId: "337244402563",
+      appId: "1:337244402563:web:2139832b23d7b00f4e3cb6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    console.log(db);
+  </script>
+  <!-- <script src="sketch.js"></script> -->
+  <script src="class.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
