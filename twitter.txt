@@ -10,7 +10,7 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day76 - undeletable -
+Day78 - undeletable -
 
 ついにデータベースと繋がりました。画面リフレッシュしてもデータが消えない。
 すばらしい、、、
