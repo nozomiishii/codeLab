@@ -8,7 +8,7 @@ function windowResized() {
 const form = document.querySelector('#creatingAnimal');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (form.name.value) {
+  if (form.name.value && form.icon.value) {
     db.collection('animals').add({
       name: form.name.value,
       icon: form.icon.value

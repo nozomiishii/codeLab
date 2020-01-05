@@ -16,3 +16,25 @@ window.addEventListener('touchmove', function (event) {
 });
 
 // creating new apps 
+
+new Vue({
+  el: '#creatingAnimal',
+  data: {
+    icons: [{
+        icon: "🐘"
+      },
+      {
+        icon: "🦒"
+      },
+      {
+        icon: "🦓"
+      },
+      {
+        icon: "🦚"
+      },
+      {
+        icon: "🦧"
+      }
+    ]
+  }
+})

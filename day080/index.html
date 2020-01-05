@@ -27,6 +27,9 @@
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+  <!-- vue.js  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
@@ -35,14 +38,17 @@
     <h1>🐘zou🐘</h1>
     <h4 id='start'>START!!</h4>
   </div>
-  <div class="input-box">
+  <div class="input-box" id='input-box'>
     <form id="creatingAnimal">
-      <div class="celectIcon">
-        <input type="radio" name="icon" value="🐘">🐘
+      <div v-for="icon in icons" class="celectIcon">
+        <label><input type="radio" name="icon" :value="{{icon.icon}}">{{icon.icon}}</label>
+
+        <!-- <input type="radio" name="icon" value="🐘">🐘
+
         <input type="radio" name="icon" value="🦒">🦒
         <input type="radio" name="icon" value="🦓">🦓
         <input type="radio" name="icon" value="🦚">🦚
-        <input type="radio" name="icon" value="🦧">🦧
+        <input type="radio" name="icon" value="🦧">🦧 -->
       </div>
       <!-- <div class="nameIt"> -->
       <input type="text" placeholder="Write Your name" name="name">
