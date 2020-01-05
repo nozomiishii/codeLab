@@ -33,21 +33,24 @@
 
 <body>
   <!-- write html code here -->
-  <div class="op" style='display: none;'>
-    <h1>🐘zou🐘</h1>
-    <h4 id='start'></h4>START!!</h4>
-  </div>
+  <!-- <div class="op">
+    <h1>safari</h1>
+    <p>🐘🦒🦓🦚🦧</p>
+    <h4 class='start' style="font-size: 50px;"></h4>START!!</h4>
+  </div> -->
 
-  <div class="input-box">
-    <form id="creatingAnimal" autocomplete="off" @submit.prevent="submitData">
-      <div class="selectAnimal">
-        <label v-for="icon in icons"><input type="radio" name="icon" :value="icon.icon">{{icon.icon}}</label>
-      </div>
-      <div class="nameIt">
-        <input type="text" placeholder="Write Your name" name="name">
-        <button id="submitFriend" class='btn'>be a friend</button>
-      </div>
-    </form>
+  <div id="app">
+    <div class="input-box">
+      <form id="creatingAnimal" autocomplete="off" @submit.prevent="submitData">
+        <div class="selectAnimal">
+          <label v-for="icon in icons"><input type="radio" name="icon" :value="icon.icon">{{icon.icon}}</label>
+        </div>
+        <div class="nameIt">
+          <input type="text" placeholder="Write Your name" name="name">
+          <button id="submitFriend" class='btn'>be a friend</button>
+        </div>
+      </form>
+    </div>
   </div>
 
 

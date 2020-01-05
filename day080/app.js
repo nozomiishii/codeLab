@@ -4,9 +4,9 @@ console.log('app.js is here');
 const start = document.getElementById('start');
 const op = document.querySelector('.op');
 
-start.addEventListener('click', function () {
-  op.classList.add('start');
-});
+// start.addEventListener('click', function () {
+//   op.classList.add('start');
+// });
 
 // write game code from here
 window.addEventListener('touchmove', function (event) {
@@ -18,7 +18,7 @@ window.addEventListener('touchmove', function (event) {
 // creating new apps 
 
 new Vue({
-  el: '#creatingAnimal',
+  el: '#app',
   data: {
     icons: [{
         icon: "🐘"
@@ -38,6 +38,10 @@ new Vue({
     ]
   },
   methods: {
+    start() {
+      console.log(1)
+      op.classList.add('start');
+    },
     submitData(e) {
       console.log(e.target.icon.value)
       if (e.target.name && e.target.icon) {
