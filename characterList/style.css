@@ -69,6 +69,19 @@
 
 
 /*write game code from here*/
-.game {
-  height: 100vh;
+body {
+  background: #6c7b95;
+}
+
+.characterList {
+  display: flex;
+}
+
+.character {
+  display: flex;
+  border: 2px double #889E82;
+}
+
+.status span {
+  color: #464159;
 }

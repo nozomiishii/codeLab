@@ -27,12 +27,19 @@
 </head>
 
 <body>
-  <div class="op" style="display: none;">
-    <h1>title</h1>
-    <h4 id='start'>START!!</h4>
+  <div id="characterList" class="characterList">
+    <div v-for="character in characters" class="character">
+      <h1>{{ character.icon }}</h1>
+      <div class="status">
+        <h6><span>Name:</span> {{ character.name }}</h6>
+        <p><span>Attack:</span> {{ character.attack }}</p>
+        <p><span>Defense:</span> {{ character.defense }}</p>
+        <p><span>HP:</span> {{ character.hp }}</p>
+      </div>
+    </div>
   </div>
   <!-- write html code here -->
-  <script src="sketch.js"></script>
+  <!-- <script src="sketch.js"></script> -->
   <script src="class.js"></script>
   <script src="app.js"></script>
 </body>
