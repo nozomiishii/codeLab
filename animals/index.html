@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1_7_zou</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- add information -->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <!-- title -->
+  <meta name="twitter:title" content="kusayari" />
+  <!-- day -->
+  <meta name="twitter:description" content="7th JAN / Day 79 - zou -" />
+  <!-- url -->
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day079/day079.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="../libraries/p5.js"></script>
+  <script src="../libraries/p5.dom.js"></script>
+  <!-- <script src="../libraries/p5.sound.js"></script> -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- vue.js  -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+  <!-- write html code here -->
+  <div class="op" style='display: none;'>
+    <h1>🐘zou🐘</h1>
+    <h4 id='start'></h4>START!!</h4>
+  </div>
+
+  <div class="input-box">
+    <form id="creatingAnimal" autocomplete="off">
+      <div class="selectAnimal">
+        <!-- <label v-for="icon in icons" ><input type="radio" name="icon" :value="icon.icon">{{icon.icon}}</label> -->
+
+        <input type="radio" name="icon" value="🐘">🐘
+        <input type="radio" name="icon" value="🦒">🦒
+        <input type="radio" name="icon" value="🦓">🦓
+        <input type="radio" name="icon" value="🦚">🦚
+        <input type="radio" name="icon" value="🦧">🦧
+      </div>
+      <div class="nameIt">
+        <input type="text" placeholder="Write Your name" name="name">
+        <button id="submitFriend" class='btn'>be a friend</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCYEI-QhuztMHnTW_cBnVVIrS_Chhj_CLM",
+      authDomain: "day080-a6134.firebaseapp.com",
+      databaseURL: "https://day080-a6134.firebaseio.com",
+      projectId: "day080-a6134",
+      storageBucket: "day080-a6134.appspot.com",
+      messagingSenderId: "160449074907",
+      appId: "1:160449074907:web:8985659c48171156061efe"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+
+  <script src="sketch.js"></script>
+  <script src="class.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
