@@ -10,11 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day79 - zou -
+Day80 - safari -
 
-ゾウの群れにはいってみないかい？
+楽園。そしてまだニンゲンはいない。
 
-https://nozomiishii.github.io/codeLab/day079/
+https://nozomiishii.github.io/codeLab/day080/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
