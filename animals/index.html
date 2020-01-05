@@ -25,7 +25,7 @@
   <!-- <script src="../libraries/p5.sound.js"></script> -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <!-- vue.js  -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
@@ -39,15 +39,9 @@
   </div>
 
   <div class="input-box">
-    <form id="creatingAnimal" autocomplete="off">
+    <form id="creatingAnimal" autocomplete="off" @submit.prevent="submitData">
       <div class="selectAnimal">
-        <!-- <label v-for="icon in icons" ><input type="radio" name="icon" :value="icon.icon">{{icon.icon}}</label> -->
-
-        <input type="radio" name="icon" value="🐘">🐘
-        <input type="radio" name="icon" value="🦒">🦒
-        <input type="radio" name="icon" value="🦓">🦓
-        <input type="radio" name="icon" value="🦚">🦚
-        <input type="radio" name="icon" value="🦧">🦧
+        <label v-for="icon in icons"><input type="radio" name="icon" :value="icon.icon">{{icon.icon}}</label>
       </div>
       <div class="nameIt">
         <input type="text" placeholder="Write Your name" name="name">
