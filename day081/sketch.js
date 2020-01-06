@@ -21,8 +21,11 @@ function setup() {
   createAnimal();
 }
 
+let green = 158;
+let blue = 130;
+
 function draw() {
-  background(136, 158, 130);
+  background(136, green, blue);
   textAlign(CENTER);
   if (animals.length > 0) {
     for (let i = 0; i < animals.length; i++) {

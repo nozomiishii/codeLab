@@ -36,6 +36,10 @@ const ningen = {
         console.log(animals[i]);
         console.log(db.collection('animals').doc())
         // db.collection('animals').doc().delete();
+        green -= 20
+        if (green < 0) {
+          blue = 0;
+        }
       }
     }
   }

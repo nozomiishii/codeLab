@@ -10,11 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day80 - safari -
+Day81 - ningen -
 
-楽園。そしてまだニンゲンはいない。
+ニンゲンがきた。楽園は消えた。
 
-https://nozomiishii.github.io/codeLab/day080/
+https://nozomiishii.github.io/codeLab/day081/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
