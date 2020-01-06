@@ -30,4 +30,6 @@ function draw() {
       animals[i].move();
     }
   }
+  ningen.show();
+  ningen.safari();
 }
