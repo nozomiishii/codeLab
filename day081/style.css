@@ -133,3 +133,12 @@ form[id="creatingAnimal"] {
   border-radius: 50px;
   color: #f8b400;
 }
+
+.earth {
+  position: relative;
+}
+
+.ningen {
+  position: absolute;
+  top: 0;
+}

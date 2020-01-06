@@ -33,6 +33,9 @@ const ningen = {
       let dy = Math.abs(animals[i].y - mouseY);
       if (dx < ningen.size && dy < ningen.size) {
         animals.splice(i, 1);
+        console.log(animals[i]);
+        console.log(db.collection('animals').doc())
+        // db.collection('animals').doc().delete();
       }
     }
   }
