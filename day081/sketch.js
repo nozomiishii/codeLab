@@ -33,6 +33,10 @@ function draw() {
       animals[i].move();
     }
   }
+  if (mouseX) {
+    ningen.x = mouseX;
+    ningen.y = mouseY;
+  }
   ningen.show();
   ningen.safari();
 }

@@ -1,4 +1,6 @@
 console.log("class.js");
+const ww = window.innerWidth;
+const wh = window.innerHeight;
 
 const animals = [];
 class Animal {
@@ -22,10 +24,12 @@ class Animal {
 
 const ningen = {
   icon: "🧍🏻‍♂️",
-  size: 56,
+  size: 84,
+  x: ww * 0.8,
+  y: wh * 0.8,
   show() {
-    textSize(ningen.size)
-    text(ningen.icon, mouseX, mouseY)
+    textSize(ningen.size);
+    text(ningen.icon, ningen.x, ningen.y);
   },
   safari() {
     for (let i = 0; i < animals.length; i++) {
