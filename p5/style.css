@@ -11,6 +11,11 @@
   -webkit-touch-callout: none;
 }
 
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
 @media all and (max-width: 1000px) {
   .op {
     font-size: 26px !important;
