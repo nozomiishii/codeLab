@@ -10,11 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day81 - ningen -
+Day82 - justice -
 
-ニンゲンがきた。楽園は消えた。
+正義とは。
 
-https://nozomiishii.github.io/codeLab/day081/
+https://nozomiishii.github.io/codeLab/day082/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 

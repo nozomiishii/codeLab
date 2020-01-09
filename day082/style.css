@@ -29,7 +29,7 @@ textarea {
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: #fc5c65;
   display: flex;
   align-items: center;
   justify-content: center;

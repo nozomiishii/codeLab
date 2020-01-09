@@ -1,6 +1,10 @@
 //check
 console.log('app.js is here');
 
+
+// start.addEventListener('click', function () {
+//   op.classList.add('start');
+// });
 // write game code from here
 window.addEventListener('touchmove', function (event) {
   event.preventDefault();
@@ -32,6 +36,11 @@ new Vue({
     money() {
       this.hero.like += 10
       this.hero.power -= 10
+    },
+    open() {
+      console.log(1)
+      op.classList.add('start');
     }
+
   }
 })
