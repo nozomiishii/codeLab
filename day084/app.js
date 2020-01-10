@@ -66,7 +66,7 @@ form.addEventListener('submit', (event) => {
     form.message.value = "";
   }
   let randomMessage = Math.floor(Math.random() * messages.length);
-  reply.innerHTML = messages[randomMessage];
+  reply.innerHTML = `👽: ${messages[randomMessage]}`;
   setTimeout(() => {
     reply.innerHTML = ""
   }, 1000)

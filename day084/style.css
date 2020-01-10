@@ -12,7 +12,7 @@
 
 input,
 textarea {
-  font-size: 18px;
+  font-size: 20px;
   -webkit-user-select: auto;
 }
 
@@ -76,4 +76,23 @@ textarea {
 /*write game code from here*/
 body {
   background: #288FA8;
+}
+
+.inputbox,
+.reply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 48px;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: #10ac84;
+  color: white;
 }

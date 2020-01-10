@@ -10,11 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day82 - ufo -
+Day84 - UFO -
 
-UFOが現れるらしい。まだなにもできない。
+UFOと交信できるなんてほんとうかい？
 
-https://nozomiishii.github.io/codeLab/day082/
+https://nozomiishii.github.io/codeLab/day084/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
