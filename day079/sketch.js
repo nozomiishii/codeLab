@@ -1,3 +1,8 @@
+window.addEventListener('touchmove', function (event) {
+  event.preventDefault();
+}, {
+  passive: false
+});
 console.log('ready to sketch');
 
 function windowResized() {

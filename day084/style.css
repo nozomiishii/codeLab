@@ -5,9 +5,9 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  user-select: none;
+  /* user-select: none;
   -webkit-user-select: none;
-  -webkit-touch-callout: none;
+  -webkit-touch-callout: none; */
 }
 
 input,
@@ -30,7 +30,7 @@ textarea {
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: #288FA8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +74,22 @@ textarea {
 
 
 /*write game code from here*/
-.game {
-  height: 100vh;
+body {
+  background: #288FA8;
+}
+
+.communicate-form {
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: #10ac84;
+  color: white;
 }
