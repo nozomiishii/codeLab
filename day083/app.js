@@ -2,11 +2,14 @@
 console.log('app.js is here');
 
 // write game code from here
-// window.addEventListener('touchmove', function (event) {
-//   event.preventDefault();
-// }, {
-//   passive: false
-// });
+window.addEventListener('touchmove', function (event) {
+  event.preventDefault();
+}, {
+  passive: false
+});
+
+
+
 
 
 const myIcon = L.icon({
@@ -27,12 +30,12 @@ const marker = L.marker([0, 0], {
 let randomLat;
 let randomLng;
 async function getdata() {
-  const response = await fetch(api_url);
-  const data = await response.json();
-  const {
-    latitude,
-    longitude
-  } = data;
+  // const response = await fetch(api_url);
+  // const data = await response.json();
+  // const {
+  //   latitude,
+  //   longitude
+  // } = data;
 
 
   randomLat = Math.random() * 90;
@@ -48,4 +51,4 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
-setInterval(getdata, 1000);
+setInterval(getdata, 2000);
