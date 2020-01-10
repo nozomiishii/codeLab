@@ -1,6 +1,11 @@
 //check
 console.log('app.js is here');
 
+document.addEventListener('touchstart', () => {
+  console.log("passive")
+}, {
+  passive: true
+});
 // write game code from here
 // window.addEventListener('touchmove', function (event) {
 //   event.preventDefault();

@@ -77,19 +77,3 @@ textarea {
 body {
   background: #288FA8;
 }
-
-.communicate-form {
-  display: flex;
-  width: 100vw;
-  height: 20vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid white;
-  background-color: #10ac84;
-  color: white;
-}

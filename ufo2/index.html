@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>1_11_ufo</title>
+  <title>1_11_ufo2</title>
 
   <link rel="stylesheet" href="style.css" />
 
@@ -22,8 +22,8 @@
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
 
   <!-- p5.js  -->
-  <!-- <script src="../libraries/p5.js"></script>
-  <script src="../libraries/p5.dom.js"></script> -->
+  <script src="../libraries/p5.js"></script>
+  <script src="../libraries/p5.dom.js"></script>
   <!-- <script src="../libraries/p5.sound.js"></script> -->
 
   <!-- leaflet.js  -->
@@ -35,19 +35,33 @@
     crossorigin=""></script>
   <style>
     #mapid {
-      height: 70vh;
+      height: 500px;
       background: #288FA8;
+      display: block;
+    }
+
+    .inputbox {
+      height: 30vh;
+    }
+
+    .mapbox {
+      height: 70vh;
     }
   </style>
 </head>
 
 <body>
-  <div id="mapid"></div>
-  <div class="input-box">
-    <!-- <from id='communicate-form'>
-      <input type="text" placeholder="交信" autocomplete="off" name="name">
-      <button class="btn" id="communicateBtn">Communicate</button>
-    </from> -->
+  <div class="app">
+    <div class="inputbox">
+      <form id="message-form">
+        <input type="text" autocomplete="off" name='message' placeholder="message">
+        <button id='btn' class="btn">send</button>
+      </form>
+    </div>
+    <div class="reply"></div>
+    <div class="mapbox">
+      <div id="mapid"></div>
+    </div>
   </div>
 
   <script>

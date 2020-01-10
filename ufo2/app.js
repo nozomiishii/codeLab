@@ -1,16 +1,6 @@
 //check
 console.log('app.js is here');
 
-document.addEventListener('touchstart', function () {}, {
-  passive: true
-});
-// window.addEventListener('touchmove', function (event) {
-//   event.preventDefault();
-// }, {
-//   passive: false
-// });
-
-
 const myIcon = L.icon({
   iconUrl: 'ufo.png',
   iconSize: [38, 38],
@@ -27,8 +17,6 @@ for (let i = 0; i < 10; i++) {
   }).addTo(mymap);
   markers.push(marker);
 }
-
-
 
 let randomLat;
 let randomLng;
@@ -51,8 +39,35 @@ L.tileLayer(
 setInterval(getdata, 2000);
 
 
-// const form = document.getElementById('communicateBtn');
+db.collection('messages').onSnapshot(snapshot => {
+  let changes = snapshot.docChanges();
+  changes.forEach(change => {
+    renderMessages(change.doc);
+  });
+});
 
-// form.addEventListener('submit', () => {
-//   console.log(11);
-// })
+const messages = [];
+
+function renderMessages(doc) {
+  message = doc.data().message
+  messages.push(message);
+}
+
+
+const form = document.querySelector('#message-form');
+const reply = document.querySelector('.reply');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (form.message.value) {
+    db.collection('messages').add({
+      message: form.message.value
+    });
+    form.message.value = "";
+  }
+  let randomMessage = Math.floor(Math.random() * messages.length);
+  reply.innerHTML = messages[randomMessage];
+  setTimeout(() => {
+    reply.innerHTML = ""
+  }, 1000)
+})
