@@ -89,3 +89,14 @@ body {
 .hide {
   visibility: hidden;
 }
+
+.btn-box {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px;
+}

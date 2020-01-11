@@ -19,23 +19,37 @@ function geolocation(lat, lng) {
     .openPopup();
 }
 
-if ("geolocation" in navigator) {
-  /* geolocation is available */
-  console.log('yay')
-  navigator.geolocation.getCurrentPosition(position => {
-    lat = position.coords.latitude;
-    lng = position.coords.longitude;
+function accessGeolocation() {
+  if ("geolocation" in navigator) {
+    /* geolocation is available */
+    console.log('yay')
+    navigator.geolocation.getCurrentPosition(position => {
+      lat = position.coords.latitude;
+      lng = position.coords.longitude;
 
-    geolocation(lat, lng);
-  });
-} else {
-  /* geolocation IS NOT available */
+      geolocation(lat, lng);
+    });
+    return permission = true;
+  } else {
+    /* geolocation IS NOT available */
 
+  }
 }
 const start = document.getElementById('start');
 const op = document.querySelector('.op');
 const hide = document.querySelector('.hide');
+const btn = document.querySelector('#btn');
 
+let permission = false;
+btn.addEventListener('click', () => {
+  if (!permission) {
+    accessGeolocation();
+  } else {
+    console.log('thanks');
+  }
+});
+
+accessGeolocation();
 start.addEventListener('click', function () {
   op.classList.add('start');
   hide.classList.remove('hide');
