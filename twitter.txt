@@ -10,11 +10,14 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day84 - UFO -
+Day85 - where -
 
-UFOと交信できるなんてほんとうかい？
+geolocationたのしい。
+まだボタンを押したら位置情報の許可を都度とるみたいのはできないのです。
+おねがいです。
+位置情報は許可してください。
 
-https://nozomiishii.github.io/codeLab/day084/
+https://nozomiishii.github.io/codeLab/day085/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
