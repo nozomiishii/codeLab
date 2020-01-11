@@ -32,7 +32,7 @@ function accessGeolocation() {
     return permission = true;
   } else {
     /* geolocation IS NOT available */
-
+    console.error('not available');
   }
 }
 const start = document.getElementById('start');
