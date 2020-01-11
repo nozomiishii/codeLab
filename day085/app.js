@@ -30,12 +30,7 @@ if ("geolocation" in navigator) {
   });
 } else {
   /* geolocation IS NOT available */
-  navigator.geolocation.getCurrentPosition(position => {
-    lat = position.coords.latitude;
-    lng = position.coords.longitude;
 
-    geolocation(lat, lng);
-  });
 }
 const start = document.getElementById('start');
 const op = document.querySelector('.op');

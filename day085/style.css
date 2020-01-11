@@ -30,7 +30,7 @@ textarea {
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: #6fb98f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,11 +75,15 @@ textarea {
 
 /*write game code from here*/
 
+body {
+  background-color: #6fb98f;
+}
 
 #map {
-  height: 100vh;
-  width: 100vw;
+  height: 60vh;
+  width: 90vw;
   margin: 10px auto;
+  background: #6fb98f;
 }
 
 .hide {
