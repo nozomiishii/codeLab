@@ -29,7 +29,6 @@ function accessGeolocation() {
 
       geolocation(lat, lng);
     });
-    return permission = true;
   } else {
     /* geolocation IS NOT available */
     console.error('not available');
@@ -41,13 +40,13 @@ const hide = document.querySelector('.hide');
 const btn = document.querySelector('#btn');
 
 let permission = false;
-btn.addEventListener('click', () => {
-  if (!permission) {
-    accessGeolocation();
-  } else {
-    console.log('thanks');
-  }
-});
+// btn.addEventListener('click', () => {
+//   if (!permission) {
+//     accessGeolocation();
+//   } else {
+//     console.log('thanks');
+//   }
+// });
 
 accessGeolocation();
 start.addEventListener('click', function () {
