@@ -26,7 +26,7 @@ function setup() {
   w = windowWidth;
   h = windowHeight * 0.6;
 
-  const shotBtn = document.getElementById('shotBtn');
+  // const shotBtn = document.getElementById('shotBtn');
   canvas = createCanvas(w, h);
 
   capture = createCapture({
@@ -45,16 +45,16 @@ function setup() {
 
 
 
-  shotBtn.addEventListener('click', () => {
-    console.log('click');
-    capture.loadPixels();
-    const image64 = capture.canvas.toDataURL();
-    console.log(image64);
-    const image = document.createElement('img');
-    image.src = image64;
-    image.alt = 'photo'
-    document.body.append(image);
-  });
+  // shotBtn.addEventListener('click', () => {
+  //   console.log('click');
+  //   capture.loadPixels();
+  //   const image64 = capture.canvas.toDataURL();
+  //   console.log(image64);
+  //   const image = document.createElement('img');
+  //   image.src = image64;
+  //   image.alt = 'photo'
+  //   document.body.append(image);
+  // });
 }
 
 
