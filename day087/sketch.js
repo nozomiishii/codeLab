@@ -9,6 +9,11 @@ btn.addEventListener('click', () => {
       },
       audio: false
     })
-    .then(stream => video.srcObject = stream)
+    .then(stream => {
+      video.srcObject = stream
+      video.onloadedmetadata = function (e) {
+        video.play();
+      };
+    })
     .catch(err => alert(`${err.name} ${err.message}`));
 }, false);
