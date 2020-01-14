@@ -10,11 +10,10 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day86 - photo -
+Day87 - photo2 -
 
-どう頑張っても、iOSでcreateCapture()できなかったので
-パソコンからのみ楽しんでもらえます。
-なぜだ。アップル！　なぜだ。 ジョブス！！
+p5のcreateCapture()できなかったので
+navigatorで無理やり作った。videoタグなのに切り取り写真しか表示されないけども。
 
 https://nozomiishii.github.io/codeLab/day086/
 
