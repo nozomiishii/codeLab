@@ -4,6 +4,11 @@ const video = document.getElementById('v');
 btn.addEventListener('click', () => {
   navigator.mediaDevices.getUserMedia({
       video: {
+        frameRate: {
+          ideal: 10,
+          max: 15
+        },
+        facingMode: "user",
         width: window.innerWidth,
         height: window.innerHeight * 0.6
       },
