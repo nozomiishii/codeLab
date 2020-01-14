@@ -16,6 +16,7 @@ function setup() {
   video.size(windowWidth, windowHeight * 0.6);
   video.elt.setAttribute('playsinline', '');
 
+
   shotBtn.addEventListener('click', () => {
     console.log('click');
     video.loadPixels();
