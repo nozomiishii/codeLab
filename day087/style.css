@@ -1,7 +1,6 @@
 /* title */
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
@@ -102,4 +101,10 @@ body {
 
 .btn:active {
   background: #ffa259;
+}
+
+video {
+  object-fit: cover;
+  width: 95vw;
+  height: 90vh;
 }
