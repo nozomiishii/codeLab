@@ -13,6 +13,7 @@ function windowResized() {
 }
 
 let capture;
+let canvas;
 let w;
 let h;
 
@@ -24,7 +25,9 @@ let h;
 function setup() {
 
   const shotBtn = document.getElementById('shotBtn');
-  // createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(w, h);
+  canvas.style("display", "block");
+
   w = windowWidth;
   h = windowHeight * 0.6;
   capture = createCapture({
@@ -39,7 +42,6 @@ function setup() {
   capture.elt.setAttribute('playsinline', '');
   capture.hide();
   capture.size(w, h);
-  canvas = createCanvas(w, h);
 
 
 
