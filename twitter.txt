@@ -12,8 +12,9 @@ https://nozomiishii.github.io/codeLab/day059/
 KUSAYARI / くさやり
 Day86 - photo -
 
-カメラにもアクセスできるようになりました。
-
+どう頑張っても、iOSでcreateCapture()できなかったので
+パソコンからのみ楽しんでもらえます。
+なぜだ。アップル！　なぜだ。 ジョブス！！
 
 https://nozomiishii.github.io/codeLab/day086/
 
