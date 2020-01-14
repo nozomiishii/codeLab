@@ -3,6 +3,7 @@ let capture;
 function setup() {
   createCanvas(480, 480);
   capture = createCapture(VIDEO);
+  capture.elt.setAttribute('playsinline', '');
   capture.hide();
 }
 
