@@ -1,5 +1,12 @@
 console.log('ready to sketch');
 
+const constraints = {
+  audio: false,
+  video: {
+    width: window.innerWidth,
+    height: window.innerHeight * 0.6
+  }
+};
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
@@ -10,6 +17,9 @@ let w;
 let h;
 
 
+navigator.mediaDevices.getUserMedia(constraints).then(
+  console.log('work')
+)
 
 function setup() {
 
