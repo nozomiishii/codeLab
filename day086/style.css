@@ -30,7 +30,7 @@ textarea {
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: #2E2A2E;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +74,36 @@ textarea {
 
 
 /*write game code from here*/
-.game {
-  height: 100vh;
+body {
+  background: #2E2A2E;
+}
+
+.control-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60%;
+  width: 100vw;
+  font-size: 48px;
+}
+
+.btn {
+  padding: 10px;
+  margin: 10px;
+  font-size: 48px;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.btn:focus {
+  outline: none;
+  border: 1px solid #ffa259;
+  border-radius: 100%;
+}
+
+.btn:active {
+  background: #ffa259;
 }
