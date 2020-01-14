@@ -23,10 +23,9 @@ let h;
 // )
 
 function setup() {
-  w = windowWidth;
-  h = windowHeight * 0.6;
+  w = 350;
+  h = 400;
 
-  const shotBtn = document.getElementById('shotBtn');
   canvas = createCanvas(w, h);
 
   capture = createCapture({
@@ -38,12 +37,12 @@ function setup() {
   }, function () {
     console.log('capture ready.')
   });
-  capture.elt.setAttribute('playsinline', '');
   capture.hide();
   capture.size(w, h);
 
 
 
+  const shotBtn = document.getElementById('shotBtn');
 
   shotBtn.addEventListener('click', () => {
     console.log('click');

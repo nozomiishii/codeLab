@@ -1,13 +1,19 @@
-let capture;
+var constraints = {
+  audio: true,
+  video: {
+    width: 1280,
+    height: 720
+  }
+};
 
-function setup() {
-  createCanvas(480, 480);
-  capture = createCapture(VIDEO);
-  capture.elt.setAttribute('playsinline', '');
-  capture.hide();
-}
-
-function draw() {
-  image(capture, 0, 0, width, width * capture.height / capture.width);
-  filter(INVERT);
-}
+navigator.mediaDevices.getUserMedia(constraints)
+  .then(function (mediaStream) {
+    var video = document.querySelector('video');
+    video.srcObject = mediaStream;
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  });
