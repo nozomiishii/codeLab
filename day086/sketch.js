@@ -11,10 +11,10 @@ function setup() {
   // createCanvas(windowWidth, windowHeight);
   noCanvas();
   //game starts
-  // const video = createCapture(VIDEO);
-  // video.size(160, 120);
+
   const video = createCapture(VIDEO);
   video.size(windowWidth, windowHeight * 0.6);
+  video.elt.setAttribute('playsinline', '');
 
   shotBtn.addEventListener('click', () => {
     console.log('click');

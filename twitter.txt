@@ -10,14 +10,12 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day85 - where -
+Day86 - photo -
 
-geolocationたのしい。
-まだボタンを押したら位置情報の許可を都度とるみたいのはできないのです。
-おねがいです。
-位置情報は許可してください。
+カメラにもアクセスできるようになりました。
 
-https://nozomiishii.github.io/codeLab/day085/
+
+https://nozomiishii.github.io/codeLab/day086/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
