@@ -23,13 +23,14 @@ let h;
 // )
 
 function setup() {
+  w = windowWidth;
+  h = windowHeight * 0.6;
 
   const shotBtn = document.getElementById('shotBtn');
   canvas = createCanvas(w, h);
   canvas.style("display", "block");
 
-  w = windowWidth;
-  h = windowHeight * 0.6;
+
   capture = createCapture({
     audio: false,
     video: {
