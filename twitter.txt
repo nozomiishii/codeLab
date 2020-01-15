@@ -10,12 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day87 - photo2 -
+Day88 - video -
 
-p5のcreateCapture()できなかったので
-navigatorで無理やり作った。videoタグなのに切り取り写真しか表示されないけども。
+やっとの思いでiOSのカメラにたどり着いた。
 
-https://nozomiishii.github.io/codeLab/day086/
+https://nozomiishii.github.io/codeLab/day088/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
