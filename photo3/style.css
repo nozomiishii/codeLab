@@ -21,3 +21,13 @@ textarea {
     font-size: 26px !important;
   }
 }
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+#video {
+  display: block;
+  width: 100%;
+}

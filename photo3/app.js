@@ -1,50 +1,19 @@
-//check
-console.log('app.js is here');
-
-// write game code from here
-let player = document.getElementById('player');
-let snapshotCanvas = document.getElementById('snapshot');
-let width = snapshotCanvas.width;
-let height = snapshotCanvas.height;
-
-let startScan = function (callback) {
-  const canvasContext = snapshotCanvas.getContext("2d");
-  // 500ms間隔でスナップショットを取得し、QRコードの読み取りを行う
-  let intervalHandler = setInterval(() => {
-    canvasContext.drawImage(player, 0, 0, width, height);
-    const imageData = canvasContext.getImageData(0, 0, width, height);
-    const scanResult = jsQR(imageData.data, imageData.width, imageData.height);
-
-    if (scanResult) {
-      clearInterval(intervalHandler);
-      console.log(scanResult);
-
-      if (callback) {
-        callback(scanResult);
-      }
-    }
-  }, 500)
+const medias = {
+  autio: false,
+  video: true
 };
 
-let handleSuccess = function (stream) {
-  // カメラストリームをプレイヤーのデータに設定
-  player.srcObject = stream;
+const video = document.getElementById('video');
+const promise = navigator.mediaDevices.getUserMedia(medias);
 
-  startScan((scanResult) => {
-    // このページの呼び出し元に読み取り結果を返す
-  });
+promise
+  .then(successCallback)
+  .then(errorCallback);
+
+function successCallback(stream) {
+  video.srcObject = stream;
 };
 
-// このメソッドを呼び出すことでユーザーにブラウザがカメラを使用することを許可するかの確認ダイアログが表示され、
-// 許可されれば handleSuccess が呼ばれる
-navigator.mediaDevices.getUserMedia({
-    video: {
-      facingMode: "environment",
-      width: width,
-      height: height
-    },
-    audio: false
-  }).then(handleSuccess)
-  .catch(err => {
-    console.log(JSON.stringify(err));
-  });
+function errorCallback(err) {
+  alert(err);
+}
