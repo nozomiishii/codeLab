@@ -21,11 +21,12 @@ const constraints = {
     facingMode: (front ? "user" : "environment")
   }
 };
-document.getElementById('swichCameraBtn').onclick = function () {
+const swichCameraBtn = document.getElementById('swichCameraBtn');
+swichCameraBtn.addEventListener('click', () => {
   console.log(11);
   front = !front;
-  document.body.style.background = '#fff'
-};
+  document.body.style.background = '#C4D95A'
+});
 
 
 displayCapture().catch(err => console.error(err));
