@@ -4,10 +4,13 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-
 const constraints = {
   audio: false,
-  video: true
+  video: {
+    facingMode: {
+      exact: "environment"
+    }
+  }
 };
 
 
@@ -29,9 +32,11 @@ swichCameraBtn.addEventListener('click', () => {
         exact: "environment"
       }
     };
+    console.log(frontCamera);
     return frontCamera = false;
   } else {
     constraints.video = true;
+    console.log(frontCamera);
     return frontCamera = true;
   }
 });
