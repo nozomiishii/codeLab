@@ -14,7 +14,6 @@ const constraints = {
 };
 
 
-
 const capture = document.getElementById('capture');
 async function displayCapture() {
   const media = await navigator.mediaDevices.getUserMedia(constraints);
