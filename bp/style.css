@@ -16,18 +16,10 @@ textarea {
   -webkit-user-select: auto;
 }
 
-@media all and (max-width: 1000px) {
-  .op {
-    font-size: 26px !important;
-  }
-}
 
 .op {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  width: 100vw;
   height: 100vh;
   z-index: 100;
   background: black;
@@ -76,4 +68,12 @@ textarea {
 /*write game code from here*/
 .game {
   height: 100vh;
+}
+
+
+/* media queries */
+@media all and (max-width: 1000px) {
+  .op {
+    font-size: 26px;
+  }
 }
