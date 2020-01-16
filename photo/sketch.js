@@ -41,12 +41,8 @@ let cameraFacing = false;
 // switch camera 
 swichCameraBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  document.body.style.background = '#BD3023'
-
   const capture = document.getElementById('capture');
   const mode = cameraFacing ? "environment" : "user";
-
-
 
   // カメラ切り替え
   navigator.mediaDevices.getUserMedia({
@@ -55,6 +51,7 @@ swichCameraBtn.addEventListener("click", function (e) {
       }
     })
     .then(stream => capture.srcObject = stream)
+    .then(() => swichCameraBtn.innerHTML = "🔁")
     .catch(err => alert(`${err.name} ${err.message}`));
 
   cameraFacing = !cameraFacing;
