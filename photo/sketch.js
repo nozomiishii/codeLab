@@ -25,7 +25,8 @@ const swichCameraBtn = document.getElementById('swichCameraBtn');
 swichCameraBtn.addEventListener('click', () => {
   console.log(11);
   front = !front;
-  document.body.style.background = '#C4D95A'
+  document.body.style.background = '#CF33C9'
+  displayCapture().catch(err => console.error(err));
 });
 
 
