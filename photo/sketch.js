@@ -19,22 +19,22 @@ async function displayCapture() {
   console.log(media);
 }
 
-// const swichCameraBtn = document.getElementById('swichCameraBtn');
-// let frontCamera = true;
-// swichCameraBtn.addEventListener('click', () => {
-//   console.log(11);
-//   if (frontCamera) {
-//     constraints.video = {
-//       facingMode: {
-//         exact: "environment"
-//       }
-//     };
-//     return frontCamera = false;
-//   } else {
-//     constraints.video = true;
-//     return frontCamera = true;
-//   }
-// });
+const swichCameraBtn = document.getElementById('swichCameraBtn');
+let frontCamera = true;
+swichCameraBtn.addEventListener('click', () => {
+  console.log(11);
+  if (frontCamera) {
+    constraints.video = {
+      facingMode: {
+        exact: "environment"
+      }
+    };
+    return frontCamera = false;
+  } else {
+    constraints.video = true;
+    return frontCamera = true;
+  }
+});
 
 
 
