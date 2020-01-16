@@ -70,6 +70,9 @@ textarea {
   height: 100vh;
 }
 
+body {
+  background: #2E2A2E;
+}
 
 /* media queries */
 @media all and (max-width: 1000px) {
