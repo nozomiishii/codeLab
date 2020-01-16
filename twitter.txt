@@ -10,11 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day88 - video -
+Day89 - camera -
 
-やっとの思いでiOSのカメラにたどり着いた。
+順調に背面カメラへの切り替えもできるようになりました。
 
-https://nozomiishii.github.io/codeLab/day088/
+https://nozomiishii.github.io/codeLab/day089/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
