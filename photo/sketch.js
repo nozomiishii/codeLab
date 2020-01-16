@@ -24,6 +24,7 @@ const constraints = {
 document.getElementById('swichCameraBtn').onclick = function () {
   console.log(11);
   front = !front;
+  document.body.style.background = '#fff'
 };
 
 
