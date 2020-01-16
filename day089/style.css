@@ -22,7 +22,15 @@ textarea {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: linear-gradient(to left,
+      #EFF3F4, #EFF3F4 14%,
+      #C4D95A 14%, #C4D95A 28%,
+      #45D8EA 28%, #45D8EA 42%,
+      #32CB4A 42%, #32CB4A 56%,
+      #CF33C9 56%, #CF33C9 68%,
+      #BD3023 68%, #BD3023 82%,
+      #3C34D9 82%, #3C34D9 94%,
+      #46270B 94%);
   display: flex;
   align-items: center;
   justify-content: center;

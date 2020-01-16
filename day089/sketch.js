@@ -4,6 +4,12 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+const start = document.getElementById('start');
+const op = document.querySelector('.op');
+start.addEventListener('click', function () {
+  op.classList.add('start');
+});
+
 
 
 // const capture = document.getElementById('capture');
