@@ -4,14 +4,6 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-const constraints = {
-  audio: false,
-  video: {
-    facingMode: {
-      exact: "environment"
-    }
-  }
-};
 
 
 const capture = document.getElementById('capture');
@@ -21,25 +13,18 @@ async function displayCapture() {
   console.log(media);
 }
 
-const swichCameraBtn = document.getElementById('swichCameraBtn');
-let frontCamera = true;
-swichCameraBtn.addEventListener('click', () => {
-  console.log(11);
-  if (frontCamera) {
-    constraints.video = {
-      facingMode: {
-        exact: "environment"
-      }
-    };
-    console.log(frontCamera);
-    return frontCamera = false;
-  } else {
-    constraints.video = true;
-    console.log(frontCamera);
-    return frontCamera = true;
-  }
-});
 
+let front = false;
+const constraints = {
+  audio: false,
+  video: {
+    facingMode: (front ? "user" : "environment")
+  }
+};
+document.getElementById('swichCameraBtn').onclick = function () {
+  console.log(11);
+  front = !front;
+};
 
 
 displayCapture().catch(err => console.error(err));
