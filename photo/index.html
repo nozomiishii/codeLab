@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>1_7_zou</title>
+  <title>1_17_photo</title>
 
   <link rel="stylesheet" href="style.css" />
 
@@ -17,26 +17,45 @@
   <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day073/day073.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- chart.js -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script> -->
 
   <!-- p5.js  -->
   <script src="../libraries/p5.js"></script>
   <script src="../libraries/p5.dom.js"></script>
   <!-- <script src="../libraries/p5.sound.js"></script> -->
 
-  <!-- vue.js  -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-  <!-- production version-->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  <style>
+    #capture {
+      display: block;
+      width: 100%;
+    }
+
+    .controller {
+      height: 20vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn {
+      border: none;
+      padding: 0;
+      text-align: center;
+      font-size: 48px;
+    }
+  </style>
+
 </head>
 
 <body>
-  <div class="op">
+  <!-- <div class="op">
     <h1>title</h1>
     <h4 id='start'>START!!</h4>
-  </div>
+  </div> -->
   <!-- write html code here -->
+  <video id='capture' autoplay muted playsinline></video>
+  <div class="controller">
+    <button id="swichCameraBtn" class="btn">🔁</button>
+  </div>
   <script src="sketch.js"></script>
   <script src="class.js"></script>
   <script src="app.js"></script>

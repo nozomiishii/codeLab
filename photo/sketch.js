@@ -1,40 +1,52 @@
 console.log('ready to sketch');
 
-
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-let img;
 
-function preload() {
-  img = loadImage('kusayari.png');
+const constraints = {
+  audio: false,
+  video: true
+};
+
+
+
+const capture = document.getElementById('capture');
+async function displayCapture() {
+  const media = await navigator.mediaDevices.getUserMedia(constraints);
+  capture.srcObject = media;
+  console.log(media);
 }
 
-const start = document.getElementById('start');
-const op = document.querySelector('.op');
+const swichCameraBtn = document.getElementById('swichCameraBtn');
+let frontCamera = true;
+swichCameraBtn.addEventListener('click', () => {
+  console.log(11);
+  if (frontCamera) {
+    constraints.video = {
+      facingMode: {
+        exact: "environment"
+      }
+    };
+    return frontCamera = false;
+  } else {
+    constraints.video = true;
+    return frontCamera = true;
+  }
+});
+
+function preload() {
+  displayCapture().catch(err => console.error(err));
+}
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  noCanvas();
+  // createCanvas(windowWidth, windowHeight);
   //game starts
-
-
-  start.addEventListener('click', function () {
-    op.classList.add('start');
-  });
-
 }
 
 
 function draw() {
   background(255, 140, 0);
-  imageMode(CENTER);
-  image(img, windowWidth * 0.5, windowHeight * 0.3, 300, 300);
-
-  textAlign(CENTER, CENTER);
-  textSize(48);
-  fill(238);
-  text('ready!', windowWidth * 0.5, windowHeight * 0.7);
-  ellipseMode(CENTER);
-  ellipse(windowWidth * 0.5, windowHeight * 0.7 + 90, random(40), random(40));
 }
