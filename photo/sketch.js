@@ -38,11 +38,12 @@ async function displayCapture() {
 
 
 
+displayCapture().catch(err => console.error(err));
+
 function setup() {
   noCanvas();
   // createCanvas(windowWidth, windowHeight);
   //game starts
-  displayCapture().catch(err => console.error(err));
 }
 
 
