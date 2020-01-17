@@ -17,9 +17,9 @@
   <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day073/day073.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- p5.js  -->
+  <!-- p5.js 
   <script src="../libraries/p5.js"></script>
-  <script src="../libraries/p5.dom.js"></script>
+  <script src="../libraries/p5.dom.js"></script> -->
 
   <style>
     body {
@@ -37,7 +37,7 @@
       border-radius: 20px;
       height: 74vh;
       width: 100vw;
-      object-fit: cover;
+
     }
 
     .controller {
@@ -45,7 +45,6 @@
       top: 60vh;
       height: 20vh;
       width: 100vw;
-      border: 1px solid red;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
     }
@@ -73,7 +72,11 @@
     <h1>title</h1>
     <h4 id='start'>START!!</h4>
   </div> -->
-
+  <div class="screan">
+    <div class="screan-container">
+      <canvas id="canvas" class="capture"></canvas>
+    </div>
+  </div>
   <video id="capture" class="capture" autoplay muted playsinline></video>
 
   <div class="controller">
