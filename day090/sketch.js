@@ -57,7 +57,7 @@ takePhotoBtn.addEventListener('click', (e) => {
   e.preventDefault();
   // imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   dataURL = canvas.toDataURL();
-  console.log(dataURL);
+  // console.log(dataURL);
   let img = document.createElement('img');
   img.src = dataURL;
   show.appendChild(img);
