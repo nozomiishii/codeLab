@@ -4,7 +4,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-const cameraFacingBtn = document.getElementById('cameraFacingBtn');
+const swichCameraBtn = document.getElementById('swichCameraBtn');
 let cameraFacing = false;
 let capture, mode;
 
@@ -21,13 +21,14 @@ function cameraConnection() {
   cameraFacing = !cameraFacing;
 }
 
-
-cameraFacingBtn.addEventListener('click', (e) => {
+// swich camera between front and rear 
+swichCameraBtn.addEventListener('click', (e) => {
   e.preventDefault();
   cameraConnection();
   console.log(cameraFacing);
 })
 
+// setup 
 let setupCamera = false;
 
 function setup() {

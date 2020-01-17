@@ -35,22 +35,34 @@
     .capture {
       display: block;
       border-radius: 20px;
-      height: 84vh;
+      height: 74vh;
       width: 100vw;
       object-fit: cover;
     }
 
     .controller {
       position: absolute;
-      top: 70vh;
-      right: 0;
+      top: 60vh;
       height: 20vh;
+      width: 100vw;
+      border: 1px solid red;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
     }
 
     .btn {
       border: none;
       background: none;
-      font-size: 58px;
+    }
+
+    .cameraBtn {
+      font-size: 68px;
+      grid-column: 3;
+    }
+
+    .switchBtn {
+      font-size: 38px;
+      grid-column: 5;
     }
   </style>
 
@@ -65,8 +77,10 @@
   <video id="capture" class="capture" autoplay muted playsinline></video>
 
   <div class="controller">
-    <button id="cameraFacingBtn" class="btn">🔁</button>
+    <button id="takePhotoBtn" class="cameraBtn btn">📸</button>
+    <button id="swichCameraBtn" class="switchBtn btn">🔁</button>
   </div>
+
   <!-- write html code here -->
   <script src="sketch.js"></script>
   <script src="class.js"></script>
