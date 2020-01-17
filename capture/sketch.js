@@ -4,22 +4,13 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-let cameraFacing = false;
-const capture = document.getElementById('capture');
-const mode = cameraFacing ? "environment" : "user";
-
-// navigator.mediaDevices.getUserMedia({
-//     video: {
-//       facingMode: mode
-//     }
-//   })
-//   .then(stream => capture.srcObject = stream)
-//   .catch(err => console.error(err));
-
 const cameraFacingBtn = document.getElementById('cameraFacingBtn');
+let cameraFacing = false;
+let capture, mode;
 
-cameraFacingBtn.addEventListener('click', (e) => {
-  e.preventDefault();
+function cameraConnection() {
+  let capture = document.getElementById('capture');
+  let mode = cameraFacing ? "environment" : "user";
   navigator.mediaDevices.getUserMedia({
       video: {
         facingMode: mode
@@ -27,7 +18,12 @@ cameraFacingBtn.addEventListener('click', (e) => {
     })
     .then(stream => capture.srcObject = stream)
     .catch(err => console.error(err));
+}
 
+
+cameraFacingBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  cameraConnection()
   cameraFacing = !cameraFacing;
   console.log(cameraFacing);
 })
@@ -36,6 +32,7 @@ cameraFacingBtn.addEventListener('click', (e) => {
 function setup() {
   noCanvas();
   //game starts
+  cameraConnection()
 }
 
 
