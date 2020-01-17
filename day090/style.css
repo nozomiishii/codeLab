@@ -126,14 +126,19 @@ canvas {
 }
 
 .show {
+  height: 100%;
+  width: 100vw;
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
+
 }
 
 .show>* {
   width: 33%;
   padding: 10px;
 }
+
 
 /* media queries */
 @media all and (max-width: 1000px) {
