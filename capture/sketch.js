@@ -18,13 +18,13 @@ function cameraConnection() {
     })
     .then(stream => capture.srcObject = stream)
     .catch(err => console.error(err));
+  cameraFacing = !cameraFacing;
 }
 
 
 cameraFacingBtn.addEventListener('click', (e) => {
   e.preventDefault();
   cameraConnection();
-  cameraFacing = !cameraFacing;
   console.log(cameraFacing);
 })
 
@@ -35,7 +35,6 @@ function setup() {
   //game starts
   if (!setupCamera) {
     cameraConnection();
-    cameraFacing = !cameraFacing;
     return setupCamera = true;
   }
 }
