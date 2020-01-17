@@ -20,6 +20,14 @@ const cameraFacingBtn = document.getElementById('cameraFacingBtn');
 
 cameraFacingBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  navigator.mediaDevices.getUserMedia({
+      video: {
+        facingMode: mode
+      }
+    })
+    .then(stream => capture.srcObject = stream)
+    .catch(err => console.error(err));
+
   cameraFacing = !cameraFacing;
   console.log(cameraFacing);
 })
