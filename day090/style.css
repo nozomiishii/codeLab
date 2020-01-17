@@ -118,7 +118,7 @@ body {
   grid-column: 5;
 }
 
-video {
+canvas {
   position: absolute;
   visibility: hidden;
 }
