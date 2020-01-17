@@ -111,6 +111,11 @@ body {
   background: none;
 }
 
+.toggelbtn {
+  grid-column: 1;
+  font-size: 38px;
+}
+
 .cameraBtn {
   font-size: 68px;
   grid-column: 3;

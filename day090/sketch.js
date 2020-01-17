@@ -62,3 +62,22 @@ takePhotoBtn.addEventListener('click', (e) => {
   img.src = dataURL;
   show.appendChild(img);
 });
+
+const cameraToggle = document.getElementById('cameraToggle');
+const controller = document.querySelector('.controller');
+let hidden = false;
+cameraToggle.addEventListener('click', () => {
+  if (!hidden) {
+    canvas.style.display = 'none';
+    capture.style.display = 'none';
+    controller.style.top = '0';
+    cameraToggle.textContent = '⬇️';
+    return hidden = true;
+  } else {
+    // canvas.style.display = 'none';
+    // capture.style.display = 'none';
+    controller.style.top = '50vh';
+    cameraToggle.textContent = '⬆️';
+    return hidden = false;
+  }
+})
