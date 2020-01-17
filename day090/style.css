@@ -136,6 +136,7 @@ canvas {
 
 .show>* {
   width: 33%;
+  height: 24vh;
   padding: 10px;
 }
 
