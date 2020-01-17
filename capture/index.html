@@ -23,19 +23,19 @@
 
   <style>
     body {
-      background: #CF33C9;
+      background: #C4D95A;
     }
 
-    .display,
     .controller {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .display {
-      padding: 5px;
-      height: 70vh;
+    .capture {
+      display: block;
+      border-radius: 20px;
+      height: 60vh;
       width: 100vw;
       object-fit: cover;
     }
@@ -47,7 +47,7 @@
     .btn {
       border: none;
       background: none;
-      font-size: 68px;
+      font-size: 58px;
     }
   </style>
 
@@ -58,9 +58,9 @@
     <h1>title</h1>
     <h4 id='start'>START!!</h4>
   </div> -->
-  <div class="display">
-    <video id="capture" autoplay muted playsinline></video>
-  </div>
+
+  <video id="capture" class="capture" autoplay muted playsinline></video>
+
   <div class="controller">
     <button id="cameraFacingBtn" class="btn">🔁</button>
   </div>

@@ -23,7 +23,7 @@ function cameraConnection() {
 
 cameraFacingBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  cameraConnection()
+  cameraConnection();
   cameraFacing = !cameraFacing;
   console.log(cameraFacing);
 })
@@ -34,7 +34,8 @@ function setup() {
   noCanvas();
   //game starts
   if (!setupCamera) {
-    cameraConnection()
+    cameraConnection();
+    cameraFacing = !cameraFacing;
     return setupCamera = true;
   }
 }
