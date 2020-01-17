@@ -8,13 +8,13 @@ let cameraFacing = false;
 const capture = document.getElementById('capture');
 const mode = cameraFacing ? "environment" : "user";
 
-navigator.mediaDevices.getUserMedia({
-    video: {
-      facingMode: mode
-    }
-  })
-  .then(stream => capture.srcObject = stream)
-  .catch(err => console.error(err));
+// navigator.mediaDevices.getUserMedia({
+//     video: {
+//       facingMode: mode
+//     }
+//   })
+//   .then(stream => capture.srcObject = stream)
+//   .catch(err => console.error(err));
 
 const cameraFacingBtn = document.getElementById('cameraFacingBtn');
 
