@@ -78,6 +78,7 @@ textarea {
 /*write game code from here*/
 body {
   background: #262626;
+  height: 600%;
   overflow-y: scroll;
 }
 
@@ -90,7 +91,7 @@ body {
 .capture {
   display: block;
   border-radius: 20px;
-  height: 74vh;
+  height: 64vh;
   width: 100vw;
   margin: 0 auto;
   object-fit: cover;
@@ -98,7 +99,7 @@ body {
 
 .controller {
   position: absolute;
-  top: 60vh;
+  top: 50vh;
   height: 20vh;
   width: 100vw;
   display: grid;
