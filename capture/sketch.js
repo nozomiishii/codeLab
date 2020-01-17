@@ -28,11 +28,15 @@ cameraFacingBtn.addEventListener('click', (e) => {
   console.log(cameraFacing);
 })
 
+let setupCamera = false;
 
 function setup() {
   noCanvas();
   //game starts
-  cameraConnection()
+  if (!setupCamera) {
+    cameraConnection()
+    return setupCamera = true;
+  }
 }
 
 
