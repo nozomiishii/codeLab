@@ -1,0 +1,16 @@
+.textshadow {
+  text-shadow: #274097 1px 1px 0px, #E80410 -1px 1px 0px,
+    #F7DC03 1px -1px 0px, #006719 -1px -1px 0px;
+}
+
+.linear-gradient {
+  background: linear-gradient(to right,
+      #EFF3F4, #EFF3F4 14%,
+      #C4D95A 14%, #C4D95A 28%,
+      #45D8EA 28%, #45D8EA 42%,
+      #32CB4A 42%, #32CB4A 56%,
+      #CF33C9 56%, #CF33C9 68%,
+      #BD3023 68%, #BD3023 82%,
+      #3C34D9 82%, #3C34D9 94%,
+      #46270B 94%);
+}

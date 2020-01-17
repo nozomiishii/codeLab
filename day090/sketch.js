@@ -18,7 +18,6 @@ function cameraConnection() {
     })
     .then(stream => {
       capture.srcObject = stream;
-      console.log(capture.srcObject);
     })
     .then(() => {
       requestAnimationFrame(draw);
@@ -41,15 +40,25 @@ function cameraConnection() {
 swichCameraBtn.addEventListener('click', (e) => {
   e.preventDefault();
   cameraConnection();
-  console.log(cameraFacing);
 })
-
 // setup 
 let setupCamera = false;
-
 
 //game starts
 if (!setupCamera) {
   cameraConnection();
   setupCamera = true;
 }
+
+const takePhotoBtn = document.getElementById('takePhotoBtn');
+const show = document.getElementById('show');
+
+takePhotoBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  // imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  dataURL = canvas.toDataURL();
+  console.log(dataURL);
+  let img = document.createElement('img');
+  img.src = dataURL;
+  show.appendChild(img);
+});

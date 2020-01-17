@@ -13,13 +13,9 @@
   <!-- twitter card-->
   <meta name="twitter:site" content="@nozomiishii_jp" />
   <meta name="twitter:title" content="kusayari" />
-  <meta name="twitter:description" content="7th JAN / Day 79 - zou -" />
-  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day073/day073.png" />
+  <meta name="twitter:description" content="18th JAN / Day 90 - capture -" />
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day090/day090.png" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- p5.js 
-  <script src="../libraries/p5.js"></script>
-  <script src="../libraries/p5.dom.js"></script> -->
 
   <style>
     body {
@@ -63,15 +59,30 @@
       font-size: 38px;
       grid-column: 5;
     }
+
+    video {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .show {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .show>* {
+      width: 33%;
+      padding: 10px;
+    }
   </style>
 
 </head>
 
 <body>
-  <!-- <div class="op">
-    <h1>title</h1>
+  <div class="op">
+    <h1>📸capture📸</h1>
     <h4 id='start'>START!!</h4>
-  </div> -->
+  </div>
   <div class="screan">
     <div class="screan-container">
       <canvas id="canvas" class="capture"></canvas>
@@ -84,9 +95,12 @@
     <button id="swichCameraBtn" class="switchBtn btn">🔁</button>
   </div>
 
+  <div class="show" id="show">
+
+  </div>
+
   <!-- write html code here -->
   <script src="sketch.js"></script>
-  <script src="class.js"></script>
   <script src="app.js"></script>
 </body>
 
