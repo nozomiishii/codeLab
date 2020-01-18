@@ -33,7 +33,9 @@ function setup() {
   const photoShot = document.getElementById('photoShot');
   photoShot.addEventListener("click", () => {
     capture.loadPixels();
-    photos.push(new Photo(capture));
+    const image64 = capture.canvas.toDataURL();
+    img = loadImage(image64);
+    photos.push(new Photo(img));
   });
 }
 

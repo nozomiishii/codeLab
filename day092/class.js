@@ -6,7 +6,7 @@ class Photo {
     this.img = img;
     this.x = random(windowWidth);
     this.y = random(windowHeight);
-    this.size = random(38, 62);
+    this.size = 44;
     this.speedX = random(-1, 1);
     this.speedY = random(-1, 1);
   }
