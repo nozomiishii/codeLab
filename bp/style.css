@@ -31,9 +31,7 @@ textarea {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /*color*/
   color: white;
-  /*size*/
   font-size: 72px;
 }
 
@@ -69,10 +67,7 @@ textarea {
 }
 
 
-/*write game code from here*/
-.game {
-  height: 100vh;
-}
+/*write game code from here*
 
 
 /* media queries */
