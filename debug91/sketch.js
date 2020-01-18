@@ -11,15 +11,10 @@ function windowResized() {
 // });
 
 
-
-
+const ww = 640;
+const wh = 480;
 
 function setup() {
-  ww = windowWidth;
-  wh = windowHeight;
-  createCanvas(ww, wh);
-  background(6);
-  //game starts
   capture = createCapture({
     audio: false,
     video: {
@@ -32,18 +27,19 @@ function setup() {
   capture.elt.setAttribute('playsinline', '');
   capture.hide();
   capture.size(ww, wh);
+  createCanvas(ww, wh);
+  background(6);
 
-  const photoShot = document.getElementById('photoShot');
-  photoShot.addEventListener("click", () => {
-    img = capture.loadPixels();
+  // const photoShot = document.getElementById('photoShot');
+  // photoShot.addEventListener("click", () => {
+  //   img = capture.loadPixels();
 
-    photos.push(new Photo(img));
-  });
+  //   photos.push(new Photo(img));
+  // });
 }
 
 
 function draw() {
-  image(capture, 0, 0);
   if (photos.length > 0) {
     for (let i = 0; i < photos.length; i++) {
       photos[i].show();

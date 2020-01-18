@@ -3,21 +3,14 @@ var w = 640;
 var h = 480;
 
 function setup() {
-  capture = createCapture({
-    audio: false,
-    video: {
-      width: w,
-      height: h
-    }
-  }, function () {
-    console.log('capture ready.')
-  });
-  capture.elt.setAttribute('playsinline', '');
+  createCanvas(390, 240);
+  capture = createCapture(VIDEO);
+  // capture.size(320, 240);
   capture.hide();
-  capture.size(w, h);
-  canvas = createCanvas(w, h);
 }
 
 function draw() {
-  image(capture, 0, 0);
+  background(255);
+  image(capture, 0, 0, 320, 240);
+  filter(INVERT);
 }
