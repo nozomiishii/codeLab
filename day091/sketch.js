@@ -31,13 +31,10 @@ function setup() {
   });
   capture.elt.setAttribute('playsinline', '');
   capture.hide();
-  capture.size(ww, wh);
 
   const photoShot = document.getElementById('photoShot');
   photoShot.addEventListener("click", () => {
-    img = capture.loadPixels();
-
-    photos.push(new Photo(img));
+    photos.push(new Photo(capture));
   });
 }
 
