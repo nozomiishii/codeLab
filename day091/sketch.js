@@ -18,6 +18,7 @@ function setup() {
   ww = windowWidth;
   wh = windowHeight;
   createCanvas(ww, wh);
+  background(6);
   //game starts
   capture = createCapture({
     audio: false,
@@ -28,6 +29,7 @@ function setup() {
   }, function () {
     console.log('capture ready.')
   });
+  capture.elt.setAttribute('playsinline', '');
   capture.hide();
   capture.size(ww, wh);
 
