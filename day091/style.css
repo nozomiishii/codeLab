@@ -26,7 +26,7 @@ textarea {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,6 +35,8 @@ textarea {
   color: white;
   /*size*/
   font-size: 72px;
+  text-shadow: #262626 1px 1px 0px, #2E2A2E -1px 1px 0px,
+    #46270B 1px -1px 0px, #231F22 -1px -1px 0px;
 }
 
 .op>* {

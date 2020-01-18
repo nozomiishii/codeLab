@@ -4,21 +4,18 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-// const start = document.getElementById('start');
-// const op = document.querySelector('.op');
-// start.addEventListener('click', function () {
-//   op.classList.add('start');
-// });
-
-
-
+const start = document.getElementById('start');
+const op = document.querySelector('.op');
+start.addEventListener('click', function () {
+  op.classList.add('start');
+});
 
 
 function setup() {
   ww = windowWidth;
   wh = windowHeight;
   createCanvas(ww, wh);
-  background(6);
+  background(238);
   //game starts
   capture = createCapture({
     audio: false,

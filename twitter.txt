@@ -12,10 +12,7 @@ https://nozomiishii.github.io/codeLab/day059/
 KUSAYARI / くさやり
 Day90 - capture -
 
-自作カメラアプリ。
-車輪はつくるなっていうプログラミングのありがたいお言葉を無視して
-カメラアプリを自作したら最高に大変だった。
-しっかりiOSが嫌いになった。
+After all, human is just ink of earth. you know?
 
 https://nozomiishii.github.io/codeLab/day090/
 
