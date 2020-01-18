@@ -1,4 +1,8 @@
 /* title */
+html {
+  touch-action: manipulation;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

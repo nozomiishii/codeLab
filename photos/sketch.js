@@ -1,34 +1,50 @@
 console.log('ready to sketch');
 
-
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+// const start = document.getElementById('start');
+// const op = document.querySelector('.op');
+// start.addEventListener('click', function () {
+//   op.classList.add('start');
+// });
 
 
-const start = document.getElementById('start');
-const op = document.querySelector('.op');
+
+
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  ww = windowWidth;
+  wh = windowHeight;
+  createCanvas(ww, wh);
   //game starts
-
-
-  start.addEventListener('click', function () {
-    op.classList.add('start');
+  capture = createCapture({
+    audio: false,
+    video: {
+      width: ww,
+      height: wh
+    }
+  }, function () {
+    console.log('capture ready.')
   });
+  capture.hide();
+  capture.size(ww, wh);
 
+  const photoShot = document.getElementById('photoShot');
+  photoShot.addEventListener("click", () => {
+    img = capture.loadPixels();
+
+    photos.push(new Photo(img));
+  });
 }
 
 
 function draw() {
-  background(255, 140, 0);
-
-  textAlign(CENTER, CENTER);
-  textSize(48);
-  fill(238);
-  text('ready!', windowWidth * 0.5, windowHeight * 0.7);
-  ellipseMode(CENTER);
-  ellipse(windowWidth * 0.5, windowHeight * 0.7 + 90, random(40), random(40));
+  if (photos.length > 0) {
+    for (let i = 0; i < photos.length; i++) {
+      photos[i].show();
+      photos[i].move();
+    }
+  }
 }
