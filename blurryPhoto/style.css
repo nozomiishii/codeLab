@@ -1,4 +1,8 @@
 /* title */
+html {
+  touch-action: manipulation;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,27 +16,14 @@
 
 input,
 textarea {
+  font-size: 18px;
   -webkit-user-select: auto;
-  font-size: 18px;
-  border: 2px solid #badc58;
 }
 
-/* button {
-  font-size: 18px;
-} */
-
-@media all and (max-width: 1000px) {
-  .op {
-    font-size: 26px !important;
-  }
-}
 
 .op {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  width: 100vw;
   height: 100vh;
   z-index: 100;
   background: black;
@@ -40,9 +31,7 @@ textarea {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /*color*/
   color: white;
-  /*size*/
   font-size: 72px;
 }
 
@@ -78,16 +67,12 @@ textarea {
 }
 
 
-/*write game code from here*/
-.app {
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-}
+/*write game code from here*
 
-.btn {
-  background: #badc58;
-  color: #f0932b;
-  padding: 10px;
-  margin: 10px;
+
+/* media queries */
+@media all and (max-width: 1000px) {
+  .op {
+    font-size: 26px;
+  }
 }
