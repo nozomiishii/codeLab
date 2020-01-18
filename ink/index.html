@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1_19_INK</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- twitter card-->
+  <meta name="twitter:site" content="@nozomiishii_jp" />
+  <meta name="twitter:title" content="kusayari" />
+  <meta name="twitter:description" content="17th JAN / Day 91 - ink -" />
+  <meta name="twitter:image" content="https://nozomiishii.github.io/codeLab/day091/day091.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- p5.js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+
+  <style>
+    .photoShot {
+      position: absolute;
+      top: 70%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      padding: 0 10px;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="op" style="display: none;">
+    <h1>📝 ink 📝</h1>
+    <h4 id='start'>START!!</h4>
+  </div>
+
+  <div id="photoShot" class="photoShot">📸</div>
+  <!-- write html code here -->
+  <script src="sketch.js"></script>
+  <script src="class.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
