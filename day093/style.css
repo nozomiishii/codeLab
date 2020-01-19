@@ -26,13 +26,15 @@ textarea {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  background: black;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: white;
   font-size: 72px;
+  text-shadow: #274097 10px 10px 0px, #E80410 -10px 10px 0px,
+    #F7DC03 10px -10px 0px, #006719 -10px -10px 0px;
 }
 
 .op>* {

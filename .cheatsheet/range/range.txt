@@ -1,0 +1,8 @@
+input type=range タグをカスタマイズするために | g200kg Music & Software
+https://www.g200kg.com/archives/2017/12/input-typerange.html
+
+How to Style Input Type Range in Chrome, Firefox, and IE |  Brenna O'Brien
+https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html
+
+input type="range"のいろいろなCSSサンプル
+https://qiita.com/nezurika/items/ea3ae9a3e9ec3c158528
