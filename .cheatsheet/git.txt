@@ -1,0 +1,5 @@
+Oh Shit, Git!?!
+https://ohshitgit.com/
+
+Cheatsheet · ohmyzsh/ohmyzsh Wiki
+https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
