@@ -25,7 +25,6 @@
 
     .main {
       color: #2E2A2E;
-      margin-top: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -51,13 +50,20 @@
       background-color: #288FA8;
       border: 1px solid #2E2A2E;
     }
+
+    .event-list,
+    .reading-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   </style>
 </head>
 
 <body>
   <div class="main">
     <h1>👩🏻‍🏫: "Morning, Nozomi!!!"</h1>
-    <h2>coding Train</h2>
+    <h2>The coding train</h2>
     <ul>
       <li>
         <a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZmA-d3D0iFIvgrB5_7kB8H">9: Additional Topics - p5.js
@@ -81,9 +87,21 @@
           Machine Learning in JavaScript - YouTube</a>
       </li>
     </ul>
-    <div class="project">
-
-    </div>
+    <h2>Event list</h2>
+    <ul class="event-list">
+      <li><a href="https://connpass.com/explore/">connpass</a></li>
+      <li><a href="https://techplay.jp/">TECH PLAY</a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <h2>Reading list</h2>
+    <ul class="reading-list">
+      <li><a
+          href="https://01intern.com/job/list.html?areas=13&jobTypes=2&jobTypes=3&businessTypes=1&businessTypes=13&stickingConditions=35">
+          Interns</a>
+      </li>
+      <li><a href="http://phaser.io/">phaser</a></li>
+      <li><a href="http://www.lessmilk.com/">phaser guide</a></li>
+    </ul>
   </div>
 </body>
 
