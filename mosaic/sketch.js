@@ -7,6 +7,7 @@ function windowResized() {
 
 
 let capture;
+
 let vScale = 16;
 
 
@@ -15,6 +16,23 @@ let captureStatus = false;
 function CaptureReady() {
   return captureStatus = true;
 }
+
+
+// function settingCapture() {
+//   let constrains = {
+//     video: {
+//       mandatory: {
+//         maxWidth: width / vScale,
+//         maxHeight: height / vScale
+//       },
+//     }
+//   }
+//   capture = createCapture(constrains, () => {
+//     console.log('capture is ready');
+//     CaptureReady()
+//   });
+// capture.hide();
+// }
 
 function settingCapture() {
   let constrains = {
@@ -33,42 +51,23 @@ function settingCapture() {
 }
 
 
-let uncencered = false;
-
 function setup() {
-  createCanvas(320, 240);
+  createCanvas(320, 320);
   pixelDensity(1);
-  settingCapture();
+  settingCapture()
 
-  const btn = document.querySelector('#btn');
-  btn.addEventListener('click', () => {
+  const range = document.querySelector('#range');
+  range.addEventListener('change', (e) => {
     capture.remove();
-    if (!uncencered) {
-      let constrains = {
-        video: {
-          mandatory: {
-            maxWidth: width,
-            maxHeight: height
-          },
-        }
-      }
-      capture = createCapture(constrains, () => {
-        console.log('capture is ready');
-        CaptureReady()
-      });
-      capture.hide();
-      return uncencered = !uncencered;
-    } else {
-      settingCapture();
-      return uncencered = !uncencered;
-    }
-
+    vScale = e.target.value;
+    console.log(vScale);
+    settingCapture()
   });
 }
 
 
 function draw() {
-  if (captureStatus && !uncencered) {
+  if (captureStatus) {
     background(255);
     capture.loadPixels();
     loadPixels();
@@ -92,9 +91,4 @@ function draw() {
     textAlign(CENTER);
     text('loading...', windowWidth * .5, windowHeight * .5);
   }
-
-  if (uncencered) {
-    image(capture, 0, 0, width, height);
-  }
-
 }
