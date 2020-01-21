@@ -36,7 +36,7 @@ function settingCapture() {
 
 
 function setup() {
-  createCanvas(320, 320);
+  createCanvas(280, 280);
   pixelDensity(1);
   settingCapture()
 
