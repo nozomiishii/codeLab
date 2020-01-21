@@ -18,20 +18,36 @@ function CaptureReady() {
 }
 
 
+// function settingCapture() {
+//   let constrains = {
+//     video: {
+//       mandatory: {
+//         maxWidth: width / vScale,
+//         maxHeight: height / vScale
+//       },
+//     }
+//   }
+//   capture = createCapture(constrains, () => {
+//     console.log('capture is ready');
+//     CaptureReady()
+//   });
+//   capture.hide();
+// }
+
 function settingCapture() {
   let constrains = {
     video: {
       mandatory: {
         maxWidth: width / vScale,
         maxHeight: height / vScale
-      }
+      },
     }
   }
   capture = createCapture(constrains, () => {
     console.log('capture is ready');
     CaptureReady()
   });
-  capture.hide();
+  // capture.hide();
 }
 
 
