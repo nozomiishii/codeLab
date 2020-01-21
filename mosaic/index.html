@@ -23,7 +23,7 @@
   <script src="../libraries/p5.dom.js"></script> -->
   <!-- <script src="../libraries/p5.sound.js"></script> -->
   <style>
-    body {
+    /* body {
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -33,35 +33,35 @@
 
     * {
       margin: 20px;
-    }
+    } */
   </style>
 
 </head>
 
 <body>
-  <!-- <div class="op" id='start'>
-    <h1>title</h1>
+  <div class="op" id='start'>
+    <h1>🕶mosaic🕶</h1>
     <h4>START!!</h4>
-  </div> -->
+  </div>
   <!-- write html code here -->
 
-  <input id="range" type="range" min="8" max="32" value="16" step="4">
+  <!-- <input id="range" type="range" min="8" max="32" value="16" step="4"> -->
 
   <script src="sketch.js"></script>
   <script src="class.js"></script>
 
   <script>
-    // window.addEventListener('touchmove', function (event) {
-    //   event.preventDefault();
-    // }, {
-    //   passive: false
-    // });
-    // const start = document.getElementById('start');
-    // const op = document.querySelector('.op');
+    window.addEventListener('touchmove', function (event) {
+      event.preventDefault();
+    }, {
+      passive: false
+    });
+    const start = document.getElementById('start');
+    const op = document.querySelector('.op');
 
-    // start.addEventListener('click', function () {
-    //   op.classList.add('start');
-    // });
+    start.addEventListener('click', function () {
+      op.classList.add('start');
+    });
   </script>
 </body>
 

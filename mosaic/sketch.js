@@ -38,8 +38,8 @@ function settingCapture() {
   let constrains = {
     video: {
       mandatory: {
-        maxWidth: width / vScale,
-        maxHeight: height / vScale
+        maxWidth: width,
+        maxHeight: height
       },
     }
   }
@@ -52,17 +52,17 @@ function settingCapture() {
 
 
 function setup() {
-  createCanvas(320, 320);
+  createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
   settingCapture()
 
-  const range = document.querySelector('#range');
-  range.addEventListener('change', (e) => {
-    capture.remove();
-    vScale = e.target.value;
-    console.log(vScale);
-    settingCapture()
-  });
+  // const range = document.querySelector('#range');
+  // range.addEventListener('change', (e) => {
+  //   capture.remove();
+  //   vScale = e.target.value;
+  //   console.log(vScale);
+  //   settingCapture()
+  // });
 }
 
 
