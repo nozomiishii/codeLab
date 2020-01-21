@@ -36,7 +36,7 @@ function settingCapture() {
 let uncencered = false;
 
 function setup() {
-  createCanvas(320, 240);
+  createCanvas(160, 120);
   pixelDensity(1);
   settingCapture();
 
