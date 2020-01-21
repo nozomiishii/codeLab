@@ -7,7 +7,7 @@ function windowResized() {
 
 
 let capture;
-let vScale = 16;
+let vScale = 4;
 
 
 let captureStatus = false;
@@ -76,7 +76,7 @@ function draw() {
       for (let x = 0; x < capture.width; x++) {
         // let index = (x + y * capture.width) * 4;
         // reverse index 
-        let index = (capture.width - x + 1 + y * (capture.width)) * 4;
+        let index = (x + y * (capture.width)) * 4;
         let r = capture.pixels[index + 0];
         let b = capture.pixels[index + 1];
         let g = capture.pixels[index + 2];
