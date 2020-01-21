@@ -6,3 +6,6 @@ https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.ht
 
 input type="range"のいろいろなCSSサンプル
 https://qiita.com/nezurika/items/ea3ae9a3e9ec3c158528
+
+レンジ入力欄(スライダー)の現在値を表示する方法 – beizのノート
+https://beiznotes.org/input-range-show-value/

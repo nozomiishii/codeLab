@@ -12,6 +12,12 @@
   <div class="range">
     <input id="range" type="range" min="0" max="100" value="0">
   </div>
+  <script>
+    const range = document.querySelector('#range');
+    range.addEventListener('change', (e) => {
+      console.log(e.target.value)
+    });
+  </script>
 </body>
 
 </html>

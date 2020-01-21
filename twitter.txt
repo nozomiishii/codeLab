@@ -10,9 +10,10 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day93 - noise -
+Day94 - mosaic -
 
-ピクセルにアクセス。
+そう。思い起こせばプログラミングを初めたきっかけは、
+その向こうをみてみたかったからかもしれない。モザイク。
 
 https://nozomiishii.github.io/codeLab/day093/
 
