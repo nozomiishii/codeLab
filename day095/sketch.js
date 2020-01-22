@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(230);
+  background(18, 18, 18);
 
   if (randomHero) {
     image(imgs[randomHero], mouseX, height * .6, mouseY, mouseY);
