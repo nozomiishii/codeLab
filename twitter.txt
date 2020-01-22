@@ -10,12 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day94 - mosaic -
+Day95 - duel -
 
-そう。思い起こせばプログラミングを初めたきっかけは、
-その向こうをみてみたかったからかもしれない。モザイク。
+デュエルって決闘って意味らしいよ。
 
-https://nozomiishii.github.io/codeLab/day093/
+https://nozomiishii.github.io/codeLab/day095/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
