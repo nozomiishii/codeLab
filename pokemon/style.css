@@ -67,7 +67,13 @@ textarea {
 }
 
 
-/*write game code from here*
+#map {
+  height: 90vh;
+  width: 90vw;
+  margin: 10px auto;
+  background: #EFF3F4;
+}
+
 
 
 /* media queries */
