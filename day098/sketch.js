@@ -35,13 +35,13 @@ function createMonsters() {
     .then(response => response.json())
     .then(json => {
       monsterInterval = setInterval(() => {
-        // randomImg = Math.floor(Math.random() * json.data.length);
-        img = loadImage(json.data[0].images.original.url);
+        randomImg = Math.floor(Math.random() * json.data.length);
+        img = loadImage(json.data[randomImg].images.original.url);
         console.log(img);
-        console.log(json.data[0]);
+        console.log(json.data[randomImg]);
         monsters.push(new Monster(img));
         // console.log(monsters);
-      }, 5000);
+      }, 1000);
     })
     .catch(err => console.log(err));
 }
@@ -61,6 +61,7 @@ function setup() {
   capture.hide();
 
   player = new Player(capture);
+
 }
 
 
@@ -101,19 +102,33 @@ function draw() {
       //   console.log(playerLife);
       // }
       // if (playerLife < 0) {
-      end.classList.add('ended');
+      // end.classList.add('ended');
       // let playerIcon = document.querySelector('.end h1');
-      // let playerIcon = document.querySelector('.end video');
-      // playerIcon.srcObject = player.image.srcObject;
+      // let playerIcon = document.querySelector('.end img');
+
       // capture.loadPixels();
       // const image64 = capture.canvas.toDataURL();
-      // img = loadImage(image64);
+      // img = loadImage()
+      // playerIcon.srcObject = img;
 
 
-      displayScore.innerHTML = `Your Score: ${totalScore}`;
+      // displayScore.innerHTML = `Your Score: ${totalScore}`;
+
       clearInterval(monsterInterval);
+      background(238);
       return dead = true;
     }
+  }
+
+  if (dead) {
+    background(238);
+    textAlign(CENTER);
+    textSize(16);
+    text('DEAD', width / 2, height * .4)
+    imageMode(CENTER);
+    player.show(width / 2, height * .5)
+    text(`Score:${totalScore}`, width / 2, height * .6);
+
   }
 }
 

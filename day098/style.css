@@ -75,6 +75,9 @@
 }
 
 
+.playerIcon {
+  z-index: 101;
+}
 
 /* responsive desige  */
 @media all and (max-width: 1000px) {
