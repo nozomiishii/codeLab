@@ -12,9 +12,13 @@ class Monster {
     this.y = Math.random() * wh;
     this.speedX = random(-1, 1);
     this.speedY = random(-1, 1);
+    this.r = random(255);
+    this.g = random(255);
+    this.b = random(255);
     this.size = 60;
   }
   show() {
+    tint(this.r, this.g, this.b);
     image(this.img, this.x, this.y, this.size, this.size);
   }
   move() {
@@ -71,10 +75,9 @@ class Player {
     this.x = ww / 2;
     this.y = wh / 2;
     this.size = 46;
-    this.life = 3;
   }
   show(x, y) {
-
+    noTint();
     image(this.image, x, y - this.size, this.size, this.size);
   }
 }

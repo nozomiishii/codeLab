@@ -13,7 +13,6 @@ let totalScoreColorG = 238;
 let totalScoreColorB = 238;
 let dead = false;
 let creatingBalls;
-let playerLife = 3;
 let capture;
 
 const end = document.querySelector('.end');
@@ -30,21 +29,6 @@ function windowResized() {
 
 let monsterInterval;
 
-function createMonsters() {
-  fetch(monstersApi)
-    .then(response => response.json())
-    // .then(json => {
-    //   monsterInterval = setInterval(() => {
-    //     randomImg = Math.floor(Math.random() * json.data.length);
-    //     img = loadImage(json.data[randomImg].images.original.url);
-    //     console.log(img);
-    //     console.log(json.data[randomImg]);
-    //     monsters.push(new Monster(img));
-    //     // console.log(monsters);
-    //   }, 1000);
-    // })
-    .catch(err => console.log(err));
-}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
