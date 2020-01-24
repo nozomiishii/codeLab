@@ -66,23 +66,17 @@ class Beam {
   }
 }
 
-const player = {
-  image: '👨🏻‍🚀',
-  x: ww / 2,
-  y: wh / 2,
-  life: 3,
-  show() {
-    this.x = mouseX;
-    this.y = mouseY;
-    textSize(46);
-    text(this.image, this.x, this.y);
+let player;
+class Player {
+  constructor(image) {
+    this.image = image;
+    this.x = ww / 2;
+    this.y = wh / 2;
+    this.size = 46;
+    this.life = 3;
   }
-}
+  show(x, y) {
 
-const records = [];
-class Record {
-  constructor(name, score) {
-    this.name = name;
-    this.score = score;
+    image(this.image, x, y - this.size, this.size, this.size);
   }
 }

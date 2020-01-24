@@ -14,6 +14,7 @@ let totalScoreColorB = 238;
 let dead = false;
 let creatingBalls;
 let playerLife = 3;
+let capture;
 
 const end = document.querySelector('.end');
 const displayScore = document.querySelector('.end p');
@@ -22,35 +23,47 @@ const displayScore = document.querySelector('.end p');
 const monstersApi = 'https://api.giphy.com/v1/gifs/search?&q=monster&api_key=2yzS5m3m1CWprh70TzZdDVjCqXRS3Qrz';
 
 
-function preload() {
-  createRecord();
-}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+let monsterInterval;
+
 function createMonsters() {
   fetch(monstersApi)
     .then(response => response.json())
     .then(json => {
-      setInterval(() => {
-        randomImg = Math.floor(Math.random() * json.data.length);
-        img = loadImage(json.data[randomImg].images.original.url);
+      monsterInterval = setInterval(() => {
+        // randomImg = Math.floor(Math.random() * json.data.length);
+        img = loadImage(json.data[0].images.original.url);
+        console.log(img);
+        console.log(json.data[0]);
         monsters.push(new Monster(img));
         // console.log(monsters);
-      }, 500);
+      }, 5000);
     })
     .catch(err => console.log(err));
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  // start.addEventListener('click', function () {
-  //   op.classList.add('start');
   createMonsters();
-  // });
+
+  let constrains = {
+    video: {
+      width: 46,
+      height: 46
+    }
+  }
+  capture = createCapture(constrains, () => console.log('capture ready.'));
+  capture.elt.setAttribute('playsinline', '');
+  capture.hide();
+
+  player = new Player(capture);
 }
+
+
 
 function draw() {
   background(backgroundColor);
@@ -61,7 +74,8 @@ function draw() {
   text(`Score:${totalScore}`, 20, 50);
 
   // controll player
-  player.show();
+
+  player.show(mouseX, mouseY);
 
   for (monster of monsters) {
     monster.show();
@@ -88,8 +102,16 @@ function draw() {
       // }
       // if (playerLife < 0) {
       end.classList.add('ended');
+      // let playerIcon = document.querySelector('.end h1');
+      // let playerIcon = document.querySelector('.end video');
+      // playerIcon.srcObject = player.image.srcObject;
+      // capture.loadPixels();
+      // const image64 = capture.canvas.toDataURL();
+      // img = loadImage(image64);
+
+
       displayScore.innerHTML = `Your Score: ${totalScore}`;
-      console.log(records[0].name);
+      clearInterval(monsterInterval);
       return dead = true;
     }
   }

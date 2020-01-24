@@ -7,20 +7,6 @@
   user-select: none;
 }
 
-input,
-textarea {
-  font-size: 18px;
-  -webkit-user-select: auto;
-}
-
-@media all and (max-width: 1000px) {
-
-  .op,
-  .end {
-    font-size: 26px !important;
-  }
-}
-
 .op,
 .end {
   position: fixed;
@@ -89,7 +75,12 @@ textarea {
 }
 
 
-/*write game code from here*/
-.game {
-  height: 100vh;
+
+/* responsive desige  */
+@media all and (max-width: 1000px) {
+
+  .op,
+  .end {
+    font-size: 26px;
+  }
 }

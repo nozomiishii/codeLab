@@ -24,14 +24,11 @@
   <script src="../libraries/p5.dom.js"></script>
   <!-- <script src="../libraries/p5.sound.js"></script> -->
 
-  <!-- firebase  -->
-  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
 </head>
 
 <body>
 
-  <div class="op">
+  <div class="op" style="display: none;">
     <h1>👨🏻‍🚀colorBeam4👨🏻‍🚀</h1>
     <h4 id='start'>START!!</h4>
   </div>
@@ -41,24 +38,8 @@
   </div>
   <!-- write html code here -->
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyBig1L3Xcexk0qu1Ms7phy7QnB6-SaPGOI",
-      authDomain: "day082.firebaseapp.com",
-      databaseURL: "https://day082.firebaseio.com",
-      projectId: "day082",
-      storageBucket: "day082.appspot.com",
-      messagingSenderId: "59372090959",
-      appId: "1:59372090959:web:3a181ededba0f5c9f89c3a"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-  </script>
   <script src="class.js"></script>
   <script src="sketch.js"></script>
-  <script src="app.js"></script>
 </body>
 
 </html>
