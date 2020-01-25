@@ -1,4 +1,4 @@
-console.log('ready to sketch');
+console.log('sketch.js');
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
