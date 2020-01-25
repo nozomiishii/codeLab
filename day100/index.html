@@ -32,7 +32,13 @@
     <h4 id='start'>START!!</h4>
   </div>
   <!-- write html code here -->
-
+  <script>
+    window.addEventListener('touchmove', function (event) {
+      event.preventDefault();
+    }, {
+      passive: false
+    });
+  </script>
   <script src="class.js"></script>
   <script src="sketch.js"></script>
 </body>
