@@ -31,14 +31,17 @@ class Monster {
     let dx = Math.abs(this.x - againstX);
     let dy = Math.abs(this.y - againstY);
     if (dx < this.size && dy < this.size) {
-      if (this.size < 30) {
+      if (this.size < 2) {
         // didn't work this following code 
-        // monsters.splice(this, 1);
+        console.log(monsters.indexOf(this));
+        let index = monsters.indexOf(this);
+        monsters.splice(index, 1);
+
+        console.log(monsters.length);
         // this following code is for temporarily code to debug 
-        this.x = 0;
-        this.y = 0;
+
       } else {
-        this.size--;
+        this.size = 1;
         this.speedX += random(-1, 1);
         this.speedY += random(-1, 1);
         //   // chenge the background color when beam hit monsters

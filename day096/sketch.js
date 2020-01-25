@@ -37,11 +37,20 @@ function createMonsters() {
       monsterInterval = setInterval(() => {
         randomImg = Math.floor(Math.random() * json.data.length);
         img = loadImage(json.data[randomImg].images.original.url);
+        img.loadPixels();
+        // console.log(typeof img);
+        // if (typeof img == "ImageData") {
+
         // console.log(img);
+        console.log(json);
         // console.log(json.data[randomImg]);
+
         monsters.push(new Monster(img));
+
+
+        // }
         // console.log(monsters);
-      }, 1000);
+      }, 2000);
     })
     .catch(err => console.log(err));
 }
@@ -94,7 +103,6 @@ function draw() {
 
     for (let i = 0; i < beams.length; i++) {
       beams[i].shoot(random(255));
-
       for (let k = 0; k < monsters.length; k++) {
         monsters[k].hitBox(beams[i].x, beams[i].y);
       }
