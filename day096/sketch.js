@@ -44,15 +44,7 @@ function createMonsters() {
       }
       monsterInterval = setInterval(() => {
         randomImg = Math.floor(Math.random() * monsterImgs.length);
-
-        console.log(json);
-        // console.log(json.data[randomImg]);
-
         monsters.push(new Monster(monsterImgs[randomImg]));
-
-
-        // }
-        // console.log(monsters);
       }, 2000);
     })
     .catch(err => console.log(err));
