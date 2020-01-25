@@ -48,7 +48,11 @@ function createMonsters() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  createMonsters();
+
+  start.addEventListener('click', function () {
+    op.classList.add('start');
+    createMonsters();
+  });
 
   let constrains = {
     video: {

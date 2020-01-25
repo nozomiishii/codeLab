@@ -16,7 +16,10 @@
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: #E5E5E5;
+  background: conic-gradient(#58b368, #f65c78 25%,
+      #f65c78 25%, #297ca0 50%,
+      #297ca0 50%, #ffd271 75%,
+      #ffd271 75%, #58b368);
   animation: rainbow 4s infinite linear;
   display: flex;
   align-items: center;

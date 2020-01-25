@@ -47,9 +47,10 @@ function setup() {
 }
 
 function drow() {
-  L.marker([mouseX, mouseX], {
-      icon: icon
-    }).addTo(map)
-    .bindPopup('さあ、冒険だ')
-    .openPopup();
+  // L.marker([mouseX, mouseX], {
+  //     icon: icon
+  //   }).addTo(map)
+  //   .bindPopup('さあ、冒険だ')
+  //   .openPopup();
+  text('🧙‍♀️', mouseX, mouseY);
 }
