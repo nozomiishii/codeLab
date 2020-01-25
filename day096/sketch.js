@@ -46,18 +46,20 @@ function createMonsters() {
     .catch(err => console.log(err));
 }
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
+start.addEventListener('click', function () {
+  op.classList.add('start');
+  createMonsters();
+});
 
-  start.addEventListener('click', function () {
-    op.classList.add('start');
-    createMonsters();
-  });
+
+
+function setup() {
+  createCanvas(ww, wh);
 
   let constrains = {
     video: {
-      width: 46,
-      height: 46
+      width: ww,
+      height: wh
     }
   }
   capture = createCapture(constrains, () => console.log('capture ready.'));
@@ -79,48 +81,34 @@ function draw() {
   text(`Score:${totalScore}`, 20, 50);
 
   // controll player
-
-  player.show(mouseX, mouseY);
-
-  for (monster of monsters) {
-    monster.show();
-    monster.move();
+  if (player) {
+    player.show(mouseX, mouseY);
   }
 
-  // beams to balls
-
-  for (let i = 0; i < beams.length; i++) {
-    beams[i].shoot(random(255));
-
-    for (let k = 0; k < monsters.length; k++) {
-      monsters[k].hitBox(beams[i].x, beams[i].y);
+  if (monsters.length > 0) {
+    for (monster of monsters) {
+      monster.show();
+      monster.move();
     }
-  }
+    // beams to balls
 
-  // monsters to player
-  for (monster of monsters) {
-    let dx = Math.abs(monster.x - mouseX);
-    let dy = Math.abs(monster.y - mouseY);
-    if (dx < monster.size && dy < monster.size) {
-      //   playerLife--
-      //   console.log(playerLife);
-      // }
-      // if (playerLife < 0) {
-      // end.classList.add('ended');
-      // let playerIcon = document.querySelector('.end h1');
-      // let playerIcon = document.querySelector('.end img');
+    for (let i = 0; i < beams.length; i++) {
+      beams[i].shoot(random(255));
 
-      // capture.loadPixels();
-      // const image64 = capture.canvas.toDataURL();
-      // img = loadImage()
-      // playerIcon.srcObject = img;
+      for (let k = 0; k < monsters.length; k++) {
+        monsters[k].hitBox(beams[i].x, beams[i].y);
+      }
+    }
 
-
-      // displayScore.innerHTML = `Your Score: ${totalScore}`;
-
-      clearInterval(monsterInterval);
-      background(238);
-      return dead = true;
+    // monsters to player
+    for (monster of monsters) {
+      let dx = Math.abs(monster.x - mouseX);
+      let dy = Math.abs(monster.y - mouseY);
+      if (dx < monster.size && dy < monster.size) {
+        clearInterval(monsterInterval);
+        background(238);
+        return dead = true;
+      }
     }
   }
 

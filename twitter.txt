@@ -10,11 +10,12 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day95 - duel -
+Day96 - colorBeam5 -
 
-デュエルって決闘って意味らしいよ。
+世界は、
+真っ暗な上に敵ばかりだ。
 
-https://nozomiishii.github.io/codeLab/day095/
+https://nozomiishii.github.io/codeLab/day096/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
