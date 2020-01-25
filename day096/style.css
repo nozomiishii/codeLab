@@ -5,6 +5,8 @@
   text-decoration: none;
   list-style: none;
   user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .op,

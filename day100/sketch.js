@@ -18,9 +18,11 @@ let capture;
 const end = document.querySelector('.end');
 const displayScore = document.querySelector('.end p');
 
-// let exploded = false;
-const monstersApi = 'https://api.giphy.com/v1/gifs/search?&q=monster&api_key=2yzS5m3m1CWprh70TzZdDVjCqXRS3Qrz';
 
+start.addEventListener('click', function () {
+  op.classList.add('start');
+  createMonsters();
+});
 
 
 function windowResized() {
@@ -67,8 +69,6 @@ function setup() {
   capture.hide();
 
   player = new Player(capture);
-
-  createMonsters();
 }
 
 
