@@ -37,8 +37,8 @@ function createMonsters() {
       monsterInterval = setInterval(() => {
         randomImg = Math.floor(Math.random() * json.data.length);
         img = loadImage(json.data[randomImg].images.original.url);
-        console.log(img);
-        console.log(json.data[randomImg]);
+        // console.log(img);
+        // console.log(json.data[randomImg]);
         monsters.push(new Monster(img));
         // console.log(monsters);
       }, 1000);
@@ -116,7 +116,7 @@ function draw() {
     background(238);
     textAlign(CENTER);
     textSize(16);
-    text('DEAD', width / 2, height * .4)
+    text('DEAD', width / 2, height * .3)
     imageMode(CENTER);
     player.show(width / 2, height * .5)
     text(`Score:${totalScore}`, width / 2, height * .6);
