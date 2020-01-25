@@ -30,23 +30,13 @@ function windowResized() {
 let monsterInterval;
 
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  // createMonsters();
-
+function createMonsters() {
   let constrains = {
     video: {
       width: 46,
       height: 46
     }
   }
-  capture = createCapture(constrains, () => console.log('capture ready.'));
-  capture.elt.setAttribute('playsinline', '');
-  capture.hide();
-
-  player = new Player(capture);
-
-
   capture2 = createCapture(constrains, () => console.log('capture ready.'));
   capture2.elt.setAttribute('playsinline', '');
   capture2.hide();
@@ -58,6 +48,27 @@ function setup() {
     monsters.push(new Monster(img));
     // console.log(monsters);
   }, 2000);
+
+}
+
+function setup() {
+  createCanvas(ww, wh);
+
+  let constrains = {
+    video: {
+      width: ww / 2,
+      height: wh / 2
+    }
+  }
+
+
+  capture = createCapture(constrains, () => console.log('capture ready.'));
+  capture.elt.setAttribute('playsinline', '');
+  capture.hide();
+
+  player = new Player(capture);
+
+  createMonsters();
 }
 
 
@@ -71,31 +82,34 @@ function draw() {
   text(`Score:${totalScore}`, 20, 50);
 
   // controll player
-
-  player.show(mouseX, mouseY);
-
-  for (monster of monsters) {
-    monster.show();
-    monster.move();
+  if (player) {
+    player.show(mouseX, mouseY);
   }
 
-  // beams to balls
-
-  for (let i = 0; i < beams.length; i++) {
-    beams[i].shoot(random(255));
-    for (let k = 0; k < monsters.length; k++) {
-      monsters[k].hitBox(beams[i].x, beams[i].y);
+  if (monsters.length > 0) {
+    for (monster of monsters) {
+      monster.show();
+      monster.move();
     }
-  }
 
-  // monsters to player
-  for (monster of monsters) {
-    let dx = Math.abs(monster.x - mouseX);
-    let dy = Math.abs(monster.y - mouseY);
-    if (dx < monster.size && dy < monster.size) {
-      clearInterval(monsterInterval);
-      background(238);
-      return dead = true;
+    // beams to balls
+
+    for (let i = 0; i < beams.length; i++) {
+      beams[i].shoot(random(255));
+      for (let k = 0; k < monsters.length; k++) {
+        monsters[k].hitBox(beams[i].x, beams[i].y);
+      }
+    }
+
+    // monsters to player
+    for (monster of monsters) {
+      let dx = Math.abs(monster.x - mouseX);
+      let dy = Math.abs(monster.y - mouseY);
+      if (dx < monster.size && dy < monster.size) {
+        clearInterval(monsterInterval);
+        background(238);
+        return dead = true;
+      }
     }
   }
 
@@ -103,7 +117,7 @@ function draw() {
     background(238);
     textAlign(CENTER);
     textSize(16);
-    text('DEAD', width / 2, height * .4)
+    text('DEAD', width / 2, height * .3)
     imageMode(CENTER);
     player.show(width / 2, height * .5)
     text(`Score:${totalScore}`, width / 2, height * .6);
