@@ -30,22 +30,25 @@ function windowResized() {
 
 let monsterInterval;
 
+
+let monsterImgs = [];
+
 function createMonsters() {
   fetch(monstersApi)
     .then(response => response.json())
     .then(json => {
-      monsterInterval = setInterval(() => {
-        randomImg = Math.floor(Math.random() * json.data.length);
-        img = loadImage(json.data[randomImg].images.original.url);
+      for (let i = 0; i < 10; i++) {
+        img = loadImage(json.data[i].images.original.url);
         img.loadPixels();
-        // console.log(typeof img);
-        // if (typeof img == "ImageData") {
+        monsterImgs.push(img);
+      }
+      monsterInterval = setInterval(() => {
+        randomImg = Math.floor(Math.random() * monsterImgs.length);
 
-        // console.log(img);
         console.log(json);
         // console.log(json.data[randomImg]);
 
-        monsters.push(new Monster(img));
+        monsters.push(new Monster(monsterImgs[randomImg]));
 
 
         // }
