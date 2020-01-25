@@ -48,7 +48,7 @@ function createMonsters() {
 
 start.addEventListener('click', function () {
   op.classList.add('start');
-  createMonsters();
+  // createMonsters();
 });
 
 
