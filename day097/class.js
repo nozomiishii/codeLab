@@ -36,7 +36,7 @@ class Monster {
         console.log(monsters.indexOf(this));
         let index = monsters.indexOf(this);
         monsters.splice(index, 1);
-
+        this.size = 0;
         console.log(monsters.length);
         // this following code is for temporarily code to debug 
 

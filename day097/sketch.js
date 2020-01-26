@@ -132,7 +132,7 @@ function draw() {
     textSize(16);
     text('DEAD', width / 2, height * .2)
     imageMode(CENTER);
-    player.show(width / 2, height * .3)
+    player.show(width / 2, height * .4)
     text(`Score:${totalScore}`, width / 2, height * .4);
   }
 }
