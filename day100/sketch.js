@@ -48,15 +48,15 @@ function setup() {
   let constraints = {
     video: {
       mandatory: {
-        maxWidth: 320,
-        maxHeight: 240
+        maxWidth: 60,
+        maxHeight: 60
       },
     },
     audio: false
   };
   capture = createCapture(constraints, () => console.log('capture ready.'));
   capture.elt.setAttribute('playsinline', '');
-  capture.hide();
+  // capture.hide();
 
 
   player = new Player(capture);
@@ -109,7 +109,7 @@ function draw() {
     textAlign(CENTER);
     textSize(16);
     text('DEAD', width / 2, height * .3)
-    imageMode(CENTER);
+
     player.show(width / 2, height * .5)
     text(`Score:${totalScore}`, width / 2, height * .6);
 

@@ -80,6 +80,6 @@ class Player {
   }
   show(x, y) {
     noTint();
-    image(this.image, x, y - this.size, this.size, this.size);
+    this.image.position(x, y - this.size);
   }
 }

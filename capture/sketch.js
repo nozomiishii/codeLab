@@ -38,19 +38,19 @@ function takesnap() {
 let captures = [];
 
 
+// let x = random(width);
+// let y = random(height);
+// let speedX = random(-1, 1);
+// let speedY = random(-1, 1);
+
 function draw() {
   background(59)
-  let w = 80;
+  let w = 60;
   let h = 60;
-  let x = 0;
-  let y = 0;
   for (let i = 0; i < captures.length; i++) {
     image(captures[i], x, y, w, h);
-    x += w;
-    if (x > width) {
-      x = 0;
-      y += h;
-    }
+    x += speedX;
+    y += screenY;
   }
 
   capture.position(mouseX, mouseY);
