@@ -52,7 +52,7 @@ textarea {
 
 .end {
   position: absolute;
-  top: 40vh;
+  top: 35vh;
   height: 50vh;
   width: 100vw;
   display: flex;
@@ -155,5 +155,5 @@ textarea {
 .reloadBtn {
   background: #E4AE48;
   padding: 10px;
-  margin: 20px;
+  margin: 40px;
 }
