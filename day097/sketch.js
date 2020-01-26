@@ -36,7 +36,7 @@ function createMonsters() {
   fetch(monstersApi)
     .then(response => response.json())
     .then(async json => {
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 10; i++) {
         img = await loadImage(json.data[i].images.original.url);
         monsterImgs.push(img);
       }
