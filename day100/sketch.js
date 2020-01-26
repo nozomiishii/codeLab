@@ -40,7 +40,7 @@ function createMonsters() {
 
     monsters.push(new Monster(captures[num]));
     num++
-  }, 3000);
+  }, 1000);
 }
 
 function setup() {
@@ -114,7 +114,7 @@ function draw() {
   }
 }
 
-function mouseDragged() {
+function mouseMoved() {
   beam = new Beam(
     mouseX,
     mouseY,

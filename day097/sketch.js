@@ -62,7 +62,7 @@ start.addEventListener('click', function () {
       monsters.push(new Monster(monsterImgs[monsterCount]));
     }
     monsterCount++
-  }, 1500);
+  }, 1000);
 });
 
 
@@ -140,7 +140,7 @@ function draw() {
 
 
 
-function mouseDragged() {
+function mouseMoved() {
   beam = new Beam(
     mouseX,
     mouseY,
