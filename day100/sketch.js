@@ -114,7 +114,7 @@ function draw() {
   }
 }
 
-function mousePressed() {
+function mouseDragged() {
   beam = new Beam(
     mouseX,
     mouseY,
