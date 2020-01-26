@@ -58,6 +58,7 @@ start.addEventListener('click', function () {
     // console.log(monsterCount);
     // ! the null of delay is the reason why animation stops
     if (monsterImgs[monsterCount]['gifProperties']['delay'] > 0) {
+      monsterImgs[monsterCount]["gifProperties"]["playing"] = false;
       monsters.push(new Monster(monsterImgs[monsterCount]));
     }
     monsterCount++
