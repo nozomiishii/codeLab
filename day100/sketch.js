@@ -109,10 +109,8 @@ function draw() {
     textAlign(CENTER);
     textSize(16);
     text('DEAD', width / 2, height * .3)
-
-    player.show(width / 2, height * .5)
+    player.show(width / 2 - 30, height * .5)
     text(`Score:${totalScore}`, width / 2, height * .6);
-
   }
 }
 
