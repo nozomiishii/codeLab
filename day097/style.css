@@ -1,3 +1,7 @@
+html {
+  touch-action: manipulation;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +11,12 @@
   user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+}
+
+input,
+textarea {
+  font-size: 20px;
+  -webkit-user-select: auto;
 }
 
 .op {
@@ -42,9 +52,13 @@
 
 .end {
   position: absolute;
-  top: 50vh;
+  top: 40vh;
   height: 50vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hide {
@@ -96,11 +110,27 @@
 }
 
 .score-list {
+  width: 200px;
+  font-size: 26px;
   background: white;
   text-shadow: none;
-  padding: 10px;
-  color: #2E2A2E;
+  margin: 10px;
+  padding: 10px 20px;
+  color: #F884A0;
+  border-radius: 2px;
 }
+
+
+.list-design {
+  display: flex;
+  justify-content: space-between;
+  color: #85817A;
+}
+
+.list-score {
+  color: #E4AE48;
+}
+
 
 .score-list h1 {
   font-size: 28px;
@@ -113,4 +143,11 @@
   .end {
     font-size: 26px;
   }
+}
+
+.btn {
+  background: #288FA8;
+  color: white;
+  border-radius: 2px;
+  padding: 5px;
 }

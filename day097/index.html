@@ -40,7 +40,12 @@
   <!-- write html code here -->
 
   <div class="end hide">
-    <h1>test</h1>
+    <form id="rank-player">
+      <input type="text" name="name" placeholder="write your name" autocomplete="off">
+      <button class="btn">submit!</button>
+    </form>
+    <ul id="rank-list" class="score-list">
+    </ul>
   </div>
   <script>
     window.addEventListener('touchmove', function (event) {
