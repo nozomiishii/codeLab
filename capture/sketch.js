@@ -5,6 +5,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+let capture;
 
 function setup() {
   let constraints = {
@@ -22,8 +23,11 @@ function setup() {
   background(59);
   createCanvas(windowWidth, windowHeight * 0.5);
   capture = createCapture(constraints, () => console.log('capture'));
-  button = createButton('snap');
-  button.mousePressed(takesnap);
+  // button = createButton('snap');
+  // button.mousePressed(takesnap);
+  setInterval(() => {
+    takesnap()
+  }, 1000);
 }
 
 function takesnap() {
@@ -48,4 +52,6 @@ function draw() {
       y += h;
     }
   }
+
+  capture.position(mouseX, mouseY);
 }

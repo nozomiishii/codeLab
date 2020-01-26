@@ -9,8 +9,7 @@
   -webkit-touch-callout: none;
 }
 
-.op,
-.end {
+.op {
   position: fixed;
   top: 0;
   right: 0;
@@ -40,12 +39,16 @@
   }
 }
 
+
 .end {
-  display: none;
+  position: absolute;
+  top: 50vh;
+  height: 50vh;
+  width: 100vw;
 }
 
-.ended {
-  display: flex;
+.hide {
+  display: none;
 }
 
 .op>* {

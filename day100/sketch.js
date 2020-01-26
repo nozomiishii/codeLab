@@ -31,42 +31,33 @@ function windowResized() {
 
 let monsterInterval;
 
+let captures = [];
+let num = 0
 
 function createMonsters() {
-  let constrains = {
-    video: {
-      width: 46,
-      height: 46
-    }
-  }
-  capture2 = createCapture(constrains, () => console.log('capture ready.'));
-  capture2.elt.setAttribute('playsinline', '');
-  capture2.hide();
   monsterInterval = setInterval(() => {
-    capture2.loadPixels();
-    const image64 = capture2.canvas.toDataURL();
-    img = loadImage(image64);
-    // capture.updatePixels();
-    monsters.push(new Monster(img));
-    // console.log(monsters);
-  }, 2000);
+    captures.push(capture.get());
 
+    monsters.push(new Monster(captures[num]));
+    num++
+  }, 3000);
 }
 
 function setup() {
   createCanvas(ww, wh);
-
-  let constrains = {
+  let constraints = {
     video: {
-      width: ww / 2,
-      height: wh / 2
-    }
-  }
-
-
-  capture = createCapture(constrains, () => console.log('capture ready.'));
+      mandatory: {
+        maxWidth: 320,
+        maxHeight: 240
+      },
+    },
+    audio: false
+  };
+  capture = createCapture(constraints, () => console.log('capture ready.'));
   capture.elt.setAttribute('playsinline', '');
   capture.hide();
+
 
   player = new Player(capture);
 }

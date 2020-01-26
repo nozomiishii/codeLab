@@ -17,6 +17,7 @@ let playerLife = 3;
 let capture;
 
 const end = document.querySelector('.end');
+const hide = document.querySelector('.hide');
 const displayScore = document.querySelector('.end p');
 
 // let exploded = false;
@@ -29,7 +30,6 @@ function windowResized() {
 }
 
 let monsterInterval;
-
 let monsterImgs = [];
 
 function createMonsters() {
@@ -109,6 +109,7 @@ function draw() {
       if (dx < monster.size && dy < monster.size) {
         clearInterval(monsterInterval);
         background(238);
+        hide.classList.remove('hide');
         return dead = true;
       }
     }
@@ -118,13 +119,14 @@ function draw() {
     background(238);
     textAlign(CENTER);
     textSize(16);
-    text('DEAD', width / 2, height * .3)
+    text('DEAD', width / 2, height * .2)
     imageMode(CENTER);
-    player.show(width / 2, height * .5)
-    text(`Score:${totalScore}`, width / 2, height * .6);
-
+    player.show(width / 2, height * .3)
+    text(`Score:${totalScore}`, width / 2, height * .4);
   }
 }
+
+
 
 function mousePressed() {
   beam = new Beam(
