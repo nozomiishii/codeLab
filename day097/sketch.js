@@ -147,3 +147,12 @@ window.addEventListener('click', () => {
   );
   beams.push(beam);
 });
+
+window.addEventListener('touchstart', () => {
+  console.log('shoot');
+  beam = new Beam(
+    mouseX,
+    mouseY,
+  );
+  beams.push(beam);
+});

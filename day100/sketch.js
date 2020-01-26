@@ -108,13 +108,23 @@ function draw() {
     background(238);
     textAlign(CENTER);
     textSize(16);
-    text('DEAD', width / 2, height * .3)
+    fill(random(255), random(255), random(255))
+    text('戦い疲れたら一休みだ', width / 2, height * .3)
     player.show(width / 2 - 30, height * .5)
     text(`Score:${totalScore}`, width / 2, height * .6);
   }
 }
 
 window.addEventListener('click', () => {
+  console.log('shoot');
+  beam = new Beam(
+    mouseX,
+    mouseY,
+  );
+  beams.push(beam);
+});
+
+window.addEventListener('touchstart', () => {
   console.log('shoot');
   beam = new Beam(
     mouseX,
