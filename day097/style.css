@@ -151,3 +151,9 @@ textarea {
   border-radius: 2px;
   padding: 5px;
 }
+
+.reloadBtn {
+  background: #E4AE48;
+  padding: 10px;
+  margin: 20px;
+}

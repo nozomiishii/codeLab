@@ -40,6 +40,7 @@
   <!-- write html code here -->
 
   <div class="end hide">
+    <button id='reloadBtn' class="btn reloadBtn">Again!!</button>
     <form id="rank-player">
       <input type="text" name="name" placeholder="write your name" autocomplete="off" required>
       <button class="btn">submit!</button>
@@ -61,6 +62,11 @@
         event.preventDefault();
       }
       lastTouchEndTime = now;
+    });
+
+    const reloadBtn = document.getElementById('reloadBtn');
+    reloadBtn.addEventListener('click', () => {
+      location.reload();
     });
   </script>
   <script>

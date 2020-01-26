@@ -135,6 +135,7 @@ function draw() {
     imageMode(CENTER);
     player.show(width / 2, height * .4)
     text(`Score:${totalScore}`, width / 2, height * .4);
+
   }
 }
 
