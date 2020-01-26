@@ -35,23 +35,33 @@ let monsterImgs = [];
 function createMonsters() {
   fetch(monstersApi)
     .then(response => response.json())
-    .then(json => {
-      for (let i = 0; i < 10; i++) {
-        img = loadImage(json.data[i].images.original.url);
-        img.loadPixels();
+    .then(async json => {
+      for (let i = 0; i < 20; i++) {
+        img = await loadImage(json.data[i].images.original.url);
         monsterImgs.push(img);
       }
-      monsterInterval = setInterval(() => {
-        randomImg = Math.floor(Math.random() * monsterImgs.length);
-        monsters.push(new Monster(monsterImgs[randomImg]));
-      }, 1500);
     })
     .catch(err => console.log(err));
 }
 
+function preload() {
+  createMonsters();
+}
+
+let monsterCount = 0
 start.addEventListener('click', function () {
   op.classList.add('start');
-  createMonsters();
+  monsterInterval = setInterval(() => {
+    if (monsterCount == monsterImgs.length) {
+      monsterCount = 0;
+    }
+    // console.log(monsterCount);
+    // ! the null of delay is the reason why animation stops
+    if (monsterImgs[monsterCount]['gifProperties']['delay'] > 0) {
+      monsters.push(new Monster(monsterImgs[monsterCount]));
+    }
+    monsterCount++
+  }, 1500);
 });
 
 
@@ -70,6 +80,7 @@ function setup() {
   capture.hide();
 
   player = new Player(capture);
+
 
 }
 
