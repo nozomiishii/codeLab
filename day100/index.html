@@ -43,6 +43,15 @@
     }, {
       passive: false
     });
+
+    let lastTouchEndTime = 0;
+    window.addEventListener('touchend', (event) => {
+      const now = new Date().getTime();
+      if ((now - lastTouchEndTime) < 350) {
+        event.preventDefault();
+      }
+      lastTouchEndTime = now;
+    });
   </script>
   <script src="class.js"></script>
   <script src="sketch.js"></script>
