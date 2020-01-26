@@ -140,10 +140,10 @@ function draw() {
 
 
 
-function mouseMoved() {
+window.addEventListener('click', () => {
   beam = new Beam(
     mouseX,
     mouseY,
   );
   beams.push(beam);
-}
+});
