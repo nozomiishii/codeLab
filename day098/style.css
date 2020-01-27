@@ -102,14 +102,19 @@ textarea {
   top: 0;
   background: rgba(0, 0, 0, 0.6);
   display: none;
+
 }
 
 .modal-content {
-  height: 100vh;
+  height: 50vh;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #ecf0f1;
+  color: #56C400;
+  margin: 20vh auto;
 }
 
 .modal-content form>* {
