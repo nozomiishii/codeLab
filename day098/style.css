@@ -19,11 +19,11 @@ input,
 textarea {
   font-size: 18px;
   -webkit-user-select: auto;
+  border: 1px solid #288FA8;
 }
 
 
 .op {
-  padding-top: 18vh;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -66,7 +66,6 @@ textarea {
 .main-title h1:nth-child(2) {
   font-size: 4em;
 }
-
 
 .start {
   animation: starting 1s both;
@@ -169,5 +168,9 @@ textarea {
 @media all and (max-width: 1000px) {
   .op {
     font-size: 26px;
+  }
+
+  .modal-content {
+    width: 90vw;
   }
 }
