@@ -26,3 +26,25 @@ for (modalTrigger of modalTriggers) {
     }
   });
 }
+
+
+// const loggedOutLinks = document.querySelectorAll('.logged-out');
+// const loggedInLinks = document.querySelectorAll('.logged-In');
+// const setupUI = (user) => {
+//   if (user) {
+//     // db.collection('users').doc(user.uid).get().then(doc => {
+//     //   const html = `
+//     //     <div>Logged in as ${user.email}</div>
+//     //     <div>${doc.data().bio}</div>
+//     //   `
+//     //   accountDetails.innerHTML = html;
+
+//     // })
+//     loggedInLinks.forEach(item => item.style.display = 'block');
+//     loggedOutLinks.forEach(item => item.style.display = 'none');
+//   } else {
+//     accountDetails.innerHTML = "";
+//     loggedInLinks.forEach(item => item.style.display = 'none');
+//     loggedOutLinks.forEach(item => item.style.display = 'block');
+//   }
+// }

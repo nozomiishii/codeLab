@@ -91,8 +91,14 @@ textarea {
 }
 
 .nav-bar a {
+  display: inline-block;
   color: #678a74;
+  padding: 10px;
+}
 
+.nav-bar a:hover {
+  background-color: #288FA8;
+  color: white;
 }
 
 .modal {
@@ -100,7 +106,7 @@ textarea {
   width: 100vw;
   position: absolute;
   top: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(30, 56, 0, 0.6);
   display: none;
 
 }
@@ -112,8 +118,8 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ecf0f1;
-  color: #56C400;
+  background-color: white;
+  color: #288FA8;
   margin: 20vh auto;
 }
 
