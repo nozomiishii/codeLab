@@ -13,6 +13,7 @@ KUSAYARI / くさやり
 Day97 - colorBeam6 -
 
 現状、ぼくの最高傑作です。
+初心者からシューティングゲーム作れるまでになりました。感動！
 
 https://nozomiishii.github.io/codeLab/day097/
 
