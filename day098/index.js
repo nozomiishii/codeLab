@@ -27,24 +27,23 @@ for (modalTrigger of modalTriggers) {
   });
 }
 
+const main = document.getElementById('main');
 
-// const loggedOutLinks = document.querySelectorAll('.logged-out');
-// const loggedInLinks = document.querySelectorAll('.logged-In');
-// const setupUI = (user) => {
-//   if (user) {
-//     // db.collection('users').doc(user.uid).get().then(doc => {
-//     //   const html = `
-//     //     <div>Logged in as ${user.email}</div>
-//     //     <div>${doc.data().bio}</div>
-//     //   `
-//     //   accountDetails.innerHTML = html;
-
-//     // })
-//     loggedInLinks.forEach(item => item.style.display = 'block');
-//     loggedOutLinks.forEach(item => item.style.display = 'none');
-//   } else {
-//     accountDetails.innerHTML = "";
-//     loggedInLinks.forEach(item => item.style.display = 'none');
-//     loggedOutLinks.forEach(item => item.style.display = 'block');
-//   }
-// }
+const setupMessages = (data) => {
+  if (data.length) {
+    let html = "";
+    data.forEach(doc => {
+      const div = `
+       <div class="message-style">
+        <h2>${doc.data().message}</h2>
+        <h1>${doc.data().icon}</h1>
+        <h4>${doc.data().code}</h4>
+       <div>
+      `
+      html += div;
+    });
+    main.innerHTML = html;
+  } else {
+    main.innerHTML = '<h5 class="message-style">Login is a must to see it</h5>'
+  }
+}

@@ -2,30 +2,17 @@ auth.onAuthStateChanged(user => {
   if (user) {
     console.log('user logged in: ', user);
     // get data 
-    // db.collection('guides').onSnapshot(snapshot => {
-    //   setupGuides(snapshot.docs);
-    //   setupUI(user);
-    // }, err => {
-    //   console.log(err.message);
-    // });
-  } else {
+    db.collection('messages').onSnapshot(snapshot => {
+      setupMessages(snapshot.docs);
 
+    }, err => {
+      console.log(err.message);
+    });
+  } else {
     console.log('user logged out');
-    // setupGuides([]);
+    setupMessages([]);
   }
 })
-
-
-// // sign up 
-// const signupForm = document.getElementById('signup-form');
-
-// signupForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   const email = signupForm["signup-email"].value;
-//   const password = signupForm["signup-password"].value;
-//   auth.createUserWithEmailAndPassowrd(email, password)
-// })
-
 
 // logout 
 const logout = document.getElementById("logout");

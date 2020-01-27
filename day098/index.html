@@ -25,25 +25,34 @@
 </head>
 
 <body>
+  <div class="op" id='start'>
+    <div class="main-title">
+      <h1>INVITATION</h1>
+      <h1>🦋</h1>
+    </div>
+    <h4>START!!</h4>
+  </div>
+
   <div class="logo">
     <img src="favcon.png" alt="site-logo">
   </div>
-  <div class="main">
-    <ul id="nav-bar" class="nav-bar">
-      <!-- <li class="logged-in">
-        <a href="#" class="modal-trigger" data-target="modal-account">Account</a>
-      </li> -->
-      <li class="logged-in">
-        <a href="#" id="logout">Logout</a>
-      </li>
-      <li class="logged-out">
-        <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
-      </li>
-      <!-- <li class="logged-out">
-        <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
-      </li> -->
-    </ul>
+  <ul id="nav-bar" class="nav-bar">
+    <!-- <li class="logged-in">
+      <a href="#" class="modal-trigger" data-target="modal-account">Account</a>
+    </li> -->
+    <li class="logged-in">
+      <a href="#" id="logout">Logout</a>
+    </li>
+    <li class="logged-out">
+      <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
+    </li>
+    <!-- <li class="logged-out">
+      <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
+    </li> -->
+  </ul>
+  <div id="main">
   </div>
+
 
   <!-- SIGN UP MODAL -->
   <div id="modal-signup" class="modal">
@@ -113,7 +122,6 @@
 
   <script src="auth.js"></script>
   <script src="index.js"></script>
-
   <script>
     // window.addEventListener('touchmove', function (event) {
     //   event.preventDefault();
@@ -121,12 +129,12 @@
     //   passive: false
     // });
 
-    // const start = document.getElementById('start');
-    // const op = document.querySelector('.op');
+    const start = document.getElementById('start');
+    const op = document.querySelector('.op');
 
-    // start.addEventListener('click', function () {
-    //   op.classList.add('start');
-    // });
+    start.addEventListener('click', function () {
+      op.classList.add('start');
+    });
   </script>
 </body>
 
