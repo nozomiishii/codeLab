@@ -27,23 +27,71 @@ for (modalTrigger of modalTriggers) {
   });
 }
 
+
 const main = document.getElementById('main');
+const info = document.getElementById('info');
+const lbc = document.getElementById('lbc');
+const best = document.getElementById('best');
+
+function geolocation(lat, lng) {
+  lbc.innerHTML = `<div id="map"></div>`
+  map = L.map('map').setView([lat, lng], 16);
+  L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>',
+      maxZoom: 20
+    }
+  ).addTo(map);
+
+  L.marker([lat, lng]).addTo(map)
+    .bindPopup('🐞')
+    .openPopup();
+}
 
 const setupMessages = (data) => {
   if (data.length) {
-    let html = "";
+    let lat, lng;
+    let infoContent = "";
+    let bestContent = "";
+
+    console.log(data);
     data.forEach(doc => {
-      const div = `
+      const divInfo = `
        <div class="message-style">
-        <h2>${doc.data().message}</h2>
-        <h1>${doc.data().icon}</h1>
-        <h4>${doc.data().code}</h4>
+        <h2>${doc.data().message1}</h2>
+        <h2>${doc.data().message2}</h2>
        <div>
       `
-      html += div;
+      infoContent += divInfo;
+
+      lat = doc.data().lat;
+      lng = doc.data().lng;
+
+      const divBest = `
+        <div class="message-style">
+         <h2>${doc.data().message3}</h2>
+         <h2>${doc.data().icon}</h2>
+        <div>
+       `
+      bestContent += divBest;
     });
-    main.innerHTML = html;
+    info.innerHTML = infoContent;
+    best.innerHTML = bestContent;
+    geolocation(lat, lng);
   } else {
-    main.innerHTML = '<h5 class="message-style">Login is a must to see it.</h5>'
+    main.innerHTML = '<h5 class="needLogin">Login is a must to see it.</h5>'
+  }
+}
+
+const loggedOutLinks = document.querySelectorAll('.logged-out');
+const loggedInLinks = document.querySelectorAll('.logged-In');
+
+const setupUI = (user) => {
+  if (user) {
+    loggedInLinks.forEach(item => item.style.display = 'block');
+    loggedOutLinks.forEach(item => item.style.display = 'none');
+  } else {
+    loggedInLinks.forEach(item => item.style.display = 'none');
+    loggedOutLinks.forEach(item => item.style.display = 'block');
   }
 }

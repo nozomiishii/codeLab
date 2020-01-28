@@ -2,14 +2,13 @@ auth.onAuthStateChanged(user => {
   if (user) {
     console.log('user logged in: ', user);
     // get data 
-    db.collection('messages').onSnapshot(snapshot => {
+    db.collection('messages').get().then(snapshot => {
       setupMessages(snapshot.docs);
-
-    }, err => {
-      console.log(err.message);
+      setupUI(user);
     });
   } else {
     console.log('user logged out');
+    setupUI();
     setupMessages([]);
   }
 })
@@ -31,5 +30,22 @@ loginForm.addEventListener('submit', (e) => {
     const modal = document.querySelector('#modal-login');
     modal.style.display = 'none';
     loginForm.reset();
+    location.reload();
   })
+})
+
+// signup 
+const signupForm = document.getElementById('signup-form');
+
+signupForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = signupForm["signup-email"].value;
+  const password = signupForm["signup-password"].value;
+
+  auth.createUserWithEmailAndPassword(email, password).then(() => {
+    const modal = document.getElementById('modal-signup');
+    modal.style.display = "none";
+    signupForm.reset();
+    location.reload();
+  });
 })
