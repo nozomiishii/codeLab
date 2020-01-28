@@ -10,12 +10,11 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day98 - INVITATION -
+Day99 - ladybird_club -
 
-mail: kusayari@github.com
-pass: wwwwww
+テントウムシ　ハ　コウフク　ヲ　ハコブ
 
-https://nozomiishii.github.io/codeLab/day097/
+https://nozomiishii.github.io/codeLab/day099/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
