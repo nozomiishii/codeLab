@@ -10,10 +10,10 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day97 - colorBeam6 -
+Day98 - INVITATION -
 
-現状、ぼくの最高傑作です。
-初心者からシューティングゲーム作れるまでになりました。感動！
+mail: kusayari@github.com
+pass: wwwwww
 
 https://nozomiishii.github.io/codeLab/day097/
 
