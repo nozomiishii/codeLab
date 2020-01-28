@@ -22,7 +22,7 @@ html {
   bottom: 0;
   height: 100vh;
   z-index: 100;
-  background: #E5E5E5;
+  background: white;
   animation: rainbow 4s infinite linear;
   display: flex;
   align-items: center;
