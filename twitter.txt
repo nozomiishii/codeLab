@@ -16,16 +16,16 @@ Day100 - KUSAYARI -
 
 https://nozomiishii.github.io/codeLab/day100/
 
-#kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
+#kusayari #くさやり #100DaysOfCode #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
 
 
 
 day100達成できた！！（ぎりぎりだった。）
 いったん、くさやり活動はやめにして
-にげられないnode.jsと戦う日々を送ってきます。
+にげられないnode.jsと戦ってきます。
 見てくれていたフォロワーさんありがとうございました。
-自分との戦いみたいなかんじでいいかんじで締めれたんじゃないでしょうか！
-3月くらいにまた毎日作品投稿を再開します。
+Day100は"自分との戦い"みたいないいかんじで締めれたんじゃないでしょうか！
+3月にまた毎日作品投稿を再開します。
 見て楽しい作品を発表していけたらと思っています。
 
