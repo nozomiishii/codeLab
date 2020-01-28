@@ -10,19 +10,22 @@ https://nozomiishii.github.io/codeLab/day059/
 
 
 KUSAYARI / くさやり
-Day99 - ladybird_club -
+Day100 - KUSAYARI -
 
-テントウムシ　ハ　コウフク　ヲ　ハコブ
+くさをやりつづけて。
 
-https://nozomiishii.github.io/codeLab/day099/
+https://nozomiishii.github.io/codeLab/day100/
 
 #kusayari #くさやり #code #programming #p5js #javascript #webdev #codenewbie #developers  #プログラミング初心者 #プログラミング学習 #駆け出しエンジニアと繋がりたい 
 
 
-day100
 
-day100達成できた。
-褒めて！
 
-自分との戦いみたいなかんじでいいかんじで締めれたんじゃないでしょうか
+day100達成できた！！（ぎりぎりだった。）
+いったん、くさやり活動はやめにして
+にげられないnode.jsと戦う日々を送ってきます。
+見てくれていたフォロワーさんありがとうございました。
+自分との戦いみたいなかんじでいいかんじで締めれたんじゃないでしょうか！
+3月くらいにまた毎日作品投稿を再開します。
+見て楽しい作品を発表していけたらと思っています。
 
