@@ -44,6 +44,6 @@ const setupMessages = (data) => {
     });
     main.innerHTML = html;
   } else {
-    main.innerHTML = '<h5 class="message-style">Login is a must to see it</h5>'
+    main.innerHTML = '<h5 class="message-style">Login is a must to see it.</h5>'
   }
 }
